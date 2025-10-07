@@ -21,18 +21,23 @@ function App() {
         const existingToken = LocalStorageHelper.getAccessToken();
         
         if (!existingToken) {
-          // Se não tem token, busca um novo
-          const authResponse = await ApiService.initAuth();
-          if (authResponse && authResponse.accessToken) {
-            LocalStorageHelper.setAccessToken(authResponse.accessToken);
+          // Se não tem token, tenta buscar um novo
+          try {
+            const authResponse = await ApiService.initAuth();
+            if (authResponse && authResponse.accessToken) {
+              LocalStorageHelper.setAccessToken(authResponse.accessToken);
+            }
+          } catch (apiError) {
+            // Se falhar na API, continua sem token (modo offline)
+            console.warn('Running in offline mode without API token');
           }
         }
         
         setIsInitialized(true);
       } catch (err) {
         console.error('Failed to initialize app:', err);
-        setError('Falha ao inicializar a aplicação. Por favor, recarregue a página.');
-        setIsInitialized(true); // Continua mesmo com erro
+        // Continua mesmo com erro
+        setIsInitialized(true);
       }
     };
 
