@@ -1,7 +1,7 @@
 import axios from 'axios';
 import LocalStorageHelper from './localStorage';
 
-const BASE_URL = 'https://horarios-ufcat-api.vercel.app/';
+const BASE_URL = 'https://horarios-ufcat-api.vercel.app';
 
 const apiClient = axios.create({
   baseURL: BASE_URL,

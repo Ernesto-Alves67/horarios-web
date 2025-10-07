@@ -109,7 +109,7 @@ function WeeklyScreen() {
   useEffect(() => {
     // Carrega os horários do localStorage
     const schedules = LocalStorageHelper.getSchedules();
-    
+    console.log(schedules)
     if (schedules && schedules.length > 0) {
       // Organiza por dia da semana
       const organized = {

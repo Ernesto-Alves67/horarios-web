@@ -272,23 +272,12 @@ function SigaaScreen() {
       <IframeContainer>
         <Iframe
           ref={iframeRef}
-          src="https://sig.ufcat.edu.br/sigaa/"
+          src="https://sigaa.sistemas.ufcat.edu.br/sigaa/mobile/touch/public/principal.jsf"
           title="SIGAA"
-          sandbox="allow-same-origin allow-scripts allow-forms"
+          sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-top-navigation-by-user-activation"
         />
       </IframeContainer>
       
-      <Instructions>
-        <h3>Como usar:</h3>
-        <ol>
-          <li>Clique em "Abrir SIGAA" para acessar o sistema</li>
-          <li>Faça login com suas credenciais</li>
-          <li>Navegue até o seu comprovante de matrícula</li>
-          <li>Salve a página como HTML (Ctrl+S ou Cmd+S)</li>
-          <li>Volte aqui e clique em "Carregar Arquivo HTML"</li>
-          <li>Selecione o arquivo HTML que você salvou</li>
-        </ol>
-      </Instructions>
     </Container>
   );
 }

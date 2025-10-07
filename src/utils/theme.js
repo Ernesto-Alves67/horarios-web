@@ -6,7 +6,7 @@
 const theme = {
   colors: {
     // Cores principais da UFCAT
-    ufcatGreen: '#00A859',
+    ufcatGreen: '#018786',
     ufcatBlack: '#1C1C1C',
     
     // Cores de fundo
@@ -26,7 +26,7 @@ const theme = {
     info: '#007AFF',
     
     // Cores de navegação
-    navBackground: '#00A859',
+    navBackground: '#297A7D',
     navText: '#FFFFFF',
     navTextSecondary: 'rgba(255, 255, 255, 0.7)',
     
