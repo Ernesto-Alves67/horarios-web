@@ -90,7 +90,7 @@ export const lightTheme = {
   colors: {
     ...commonColors,
     background: '#FFFFFF',
-    backgroundToggleTheme: '#121212',
+    backgroundToggleTheme: '#A0A0A0A0',
     backgroundDark: '#F5F5F5',
     grayElements: '#F0F0F0',
     cardBackground: '#FFFFFF',
@@ -113,7 +113,7 @@ export const darkTheme = {
   colors: {
     ...commonColors,
     background: '#121212',
-    backgroundToggleTheme: '#FFFFFF',
+    backgroundToggleTheme: '#333333',
     backgroundDark: '#1E1E1E',
     grayElements: '#2D2D2D',
     cardBackground: '#1E1E1E',
