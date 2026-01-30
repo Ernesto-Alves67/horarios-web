@@ -3,7 +3,7 @@ import * as StatusComps from '../components/StatusComponents';
 import LocalStorageHelper from '../services/localStorage';
 import DeviceInfo from '../utils/deviceInfo';
 import ApiService from '../services/api';
-import { parseScheduleFromHTML, extractUserData } from '../utils/sigaaParser';
+import { parseScheduleFromHTML, extractUserData, readFileWithEncoding, detectCharsetFromHtml } from '../utils/sigaaParser';
 
 
 
@@ -32,62 +32,55 @@ function StatusScreen() {
     setMessage(null);
 
     try {
-      const reader = new FileReader();
-      
-      reader.onload = async (e) => {
-        const htmlContent = e.target.result;
-        
-        // Parse HTML to extract schedule information
-        const schedules = parseScheduleFromHTML(htmlContent);
-        if (schedules && schedules.length > 0) {
-          // Save schedules to localStorage
-          LocalStorageHelper.setSchedules(schedules);
-          LocalStorageHelper.setFileLoaded(true);
-          setHasSchedule(true); // Update local state immediately
-          
-          // Extract user info
-          const userData = extractUserData(htmlContent);
-          if (userData) {
-            LocalStorageHelper.setUserData(userData);
-            setUserData(userData); // Update local state immediately
-            
-            // Register or update device info
-            await registerDevice(userData);
-          }
-          
-          setMessage({ 
-            text: `Horário carregado com sucesso! ${schedules.length} aula(s) encontrada(s).`, 
-            error: false 
-          });
-        } else {
-          setMessage({ 
-            text: 'Nenhuma aula encontrada no arquivo. Verifique se o arquivo está correto.', 
-            error: true 
-          });
+      // 1️⃣ Primeiro tenta UTF-8
+      let htmlContent = await readFileWithEncoding(file, 'utf-8');
+
+      // 2️⃣ Detecta charset real
+      const detectedCharset = detectCharsetFromHtml(htmlContent);
+
+      // 3️⃣ Se for diferente, relê
+      if (detectedCharset && detectedCharset !== 'utf-8') {
+        htmlContent = await readFileWithEncoding(file, detectedCharset);
+      }
+
+      // 4️⃣ Processa HTML normalmente
+      const schedules = parseScheduleFromHTML(htmlContent);
+
+      if (schedules && schedules.length > 0) {
+        LocalStorageHelper.setSchedules(schedules);
+        LocalStorageHelper.setFileLoaded(true);
+        setHasSchedule(true);
+
+        const userData = extractUserData(htmlContent);
+        if (userData) {
+          LocalStorageHelper.setUserData(userData);
+          setUserData(userData);
+          await registerDevice(userData);
         }
-        
-        setIsLoading(false);
-      };
-      
-      reader.onerror = () => {
-        setMessage({ text: 'Erro ao ler o arquivo.', error: true });
-        setIsLoading(false);
-      };
-      
-      // O SIGAA utiliza encoding windows-1252 (ANSI)
-      reader.readAsText(file, 'windows-1252');
+
+        setMessage({
+          text: `Horário carregado com sucesso! ${schedules.length} aula(s) encontrada(s).`,
+          error: false
+        });
+      } else {
+        setMessage({
+          text: 'Nenhuma aula encontrada no arquivo. Verifique se o arquivo está correto.',
+          error: true
+        });
+      }
+
     } catch (error) {
       console.error('Error processing file:', error);
       setMessage({ text: 'Erro ao processar o arquivo.', error: true });
+    } finally {
       setIsLoading(false);
     }
   };
 
-  
   const registerDevice = async (userData) => {
     try {
       const registerBody = DeviceInfo.createRegisterBody(userData);
-      
+
       if (LocalStorageHelper.isFirstAccess()) {
         await ApiService.registerUser(registerBody);
         LocalStorageHelper.setFirstAccess(false);
@@ -103,11 +96,11 @@ function StatusScreen() {
     // Verifica se há horários carregados
     const schedules = LocalStorageHelper.getSchedules();
     setHasSchedule(schedules && schedules.length > 0);
-    
+
     // Carrega dados do usuário
     const user = LocalStorageHelper.getUserData();
     setUserData(user);
-    
+
     // Obtém informações do dispositivo
     const info = DeviceInfo.getDeviceInfo();
     setDeviceInfo(info);
@@ -117,7 +110,7 @@ function StatusScreen() {
   return (
     <StatusComps.Container>
       <StatusComps.Title>Status</StatusComps.Title>
-      
+
       <StatusComps.Card>
         <StatusComps.CardTitle>Status do Sistema</StatusComps.CardTitle>
         <StatusComps.InfoRow>
@@ -177,7 +170,7 @@ function StatusScreen() {
         <StatusComps.FileLabel htmlFor="file-upload">
           {isLoading ? 'Carregando...' : 'Carregar Arquivo HTML'}
         </StatusComps.FileLabel>
-        <StatusComps.Button 
+        <StatusComps.Button
           onClick={() => window.open('https://sigaa.sistemas.ufcat.edu.br/sigaa/mobile/touch/public/principal.jsf', '_blank')}
         >
           Entrar no SIGAA

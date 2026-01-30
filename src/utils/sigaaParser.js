@@ -237,3 +237,26 @@ export const extractUserData = (html) => {
   
   return userData;
 };
+
+
+export const detectCharsetFromHtml = (html) => {
+  // <meta charset="utf-8">
+  const charsetMatch = html.match(/<meta\s+charset=["']?([^"'>\s]+)/i);
+  if (charsetMatch) return charsetMatch[1].toLowerCase();
+
+  // <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  const httpEquivMatch = html.match(
+    /<meta\s+http-equiv=["']content-type["'][^>]*charset=([^"'>\s]+)/i
+  );
+  if (httpEquivMatch) return httpEquivMatch[1].toLowerCase();
+
+  return null;
+};
+
+export const readFileWithEncoding = (file, encoding) =>
+  new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = e => resolve(e.target.result);
+    reader.onerror = reject;
+    reader.readAsText(file, encoding);
+  });
