@@ -90,7 +90,11 @@ export const ClassItem = styled.div`
 `;
 
 export const ClassTime = styled.div`
-  font-size: ${props => props.theme.fontSize.xs};
+  font-size: ${props => props.theme.fontSize.sm};
+
+  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    font-size: 10px;
+  }
   color: ${props => props.theme.colors.textSecondary};
   font-weight: ${props => props.theme.fontWeight.medium};
   margin-bottom: 4px;
@@ -98,13 +102,21 @@ export const ClassTime = styled.div`
 
 export const ClassName = styled.div`
   font-size: ${props => props.theme.fontSize.sm};
+
+  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    font-size: 10px;
+  }
   font-weight: ${props => props.theme.fontWeight.semibold};
   color: ${props => props.theme.colors.textPrimary};
   margin-bottom: 4px;
 `;
 
 export const ClassLocation = styled.div`
-  font-size: ${props => props.theme.fontSize.xs};
+  font-size: ${props => props.theme.fontSize.sm};
+
+  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    font-size: 10px;
+  }
   color: ${props => props.theme.colors.textSecondary};
 `;
 
@@ -160,7 +172,7 @@ export const GridHeader = styled.th`
   text-align: center;
   border-bottom: 2px solid ${props => props.theme.colors.backgroundDark};
   font-weight: ${props => props.theme.fontWeight.bold};
-  font-size: ${props => props.theme.fontSize.sm};
+  font-size: ${props => props.theme.fontSize.md};
 
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
     font-size: 10px;

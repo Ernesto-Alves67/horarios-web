@@ -16,6 +16,9 @@
 src/
 ├── components/        # Componentes reutilizáveis
 │   └── Layout.jsx    # Layout principal com navegação
+│   ├── DailyComponents.jsx      # estilos e layouts tela inicial
+│   ├── WeeklyComponents.jsx      # estilos e layouts tela semanal
+│   ├── StatusComponents.jsx      # estilos e layouts tela informações do estudante
 ├── screens/          # Telas da aplicação
 │   ├── DailyScreen.jsx      # Visualização diária
 │   ├── WeeklyScreen.jsx     # Visualização semanal
