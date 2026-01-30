@@ -5,6 +5,8 @@ import ApiService from '../services/api';
 import DeviceInfo from '../utils/deviceInfo';
 import { parseScheduleFromHTML, extractUserData } from '../utils/sigaaParser';
 
+// ====================== Deprecated Screen ========================== //
+
 const Container = styled.div`
   max-width: 100%;
   margin: 0 auto;
@@ -166,7 +168,8 @@ function SigaaScreen() {
         setIsLoading(false);
       };
       
-      reader.readAsText(file);
+      // O SIGAA utiliza encoding windows-1252 (ANSI), importante forçar na leitura
+      reader.readAsText(file, 'windows-1252');
     } catch (error) {
       console.error('Error processing file:', error);
       setMessage({ text: 'Erro ao processar o arquivo.', error: true });

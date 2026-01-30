@@ -2,6 +2,8 @@ import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { useTheme } from '../context/ThemeContext';
 
+// ====================== Styles ========================== //
+
 const LayoutContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -32,12 +34,19 @@ const Logo = styled.div`
   align-items: center;
   justify-content: center;
   color: white;
+  margin-right: 4px;
   font-weight: ${props => props.theme.fontWeight.bold};
   font-size: ${props => props.theme.fontSize.xl};
     img {
-    width: 100%; /* Ocupa todo o container reduzido */
+    width: 52px; /* Ocupa todo o container reduzido */
     height: auto;
   };
+`;
+
+const BackgroundForLogo = styled.div`
+  border-radius: ${props => props.theme.borderRadius.md};
+  padding: 4px;
+  background-color: ${props => props.theme.colors.backgroundToggleTheme};
 `;
 
 const Title = styled.h1`
@@ -45,7 +54,10 @@ const Title = styled.h1`
   font-weight: ${props => props.theme.fontWeight.bold};
   color: ${props => props.theme.colors.textPrimary};
   margin: 0;
-  margin-top: 0.75rem;
+  margin-top: 0.8rem;
+  @media (max-width: ${props => props.theme.breakpoints.mobile}) {
+    margin-top: 1.20rem;
+  }
 `;
 
 const ThemeToggle = styled.button`
@@ -80,7 +92,7 @@ const MainContent = styled.main`
 `;
 
 const BottomNav = styled.nav`
-  background-color: ${props => props.theme.colors.navBackground};
+  background-color: ${props => props.theme.colors.ufcatGreen};
   display: flex;
   justify-content: space-around;
   padding: ${props => props.theme.spacing.sm} 0;
@@ -171,6 +183,9 @@ const screens = [
   // },
 ];
 
+
+// ====================== Layout Component ========================== //
+/* Definition of the main Layout component */
 function Layout() {
   const location = useLocation();
   const navigate = useNavigate();

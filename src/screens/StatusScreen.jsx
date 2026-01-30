@@ -5,6 +5,8 @@ import DeviceInfo from '../utils/deviceInfo';
 import ApiService from '../services/api';
 import { parseScheduleFromHTML, extractUserData } from '../utils/sigaaParser';
 
+// ====================== Styles ========================== //
+
 const Container = styled.div`
   max-width: 600px;
   margin: 0 auto;
@@ -92,13 +94,12 @@ const Button = styled.button`
   }
 `;
 
-const WarningText = styled.p`
-  color: ${props => props.theme.colors.warning};
-  font-size: ${props => props.theme.fontSize.sm};
-  text-align: center;
-  margin-top: ${props => props.theme.spacing.md};
-`;
-
+// const WarningText = styled.p`
+//   color: ${props => props.theme.colors.warning};
+//   font-size: ${props => props.theme.fontSize.sm};
+//   text-align: center;
+//   margin-top: ${props => props.theme.spacing.md};
+// `;
 
 const Controls = styled.div`
   display: flex;
@@ -128,6 +129,9 @@ const FileLabel = styled.label`
   }
 `;
 
+/*==================================================================================================== */
+
+/* Definition of the StatusScreen component */
 function StatusScreen() {
   const [hasSchedule, setHasSchedule] = useState(false);
   const [userData, setUserData] = useState(null);
@@ -192,7 +196,8 @@ function StatusScreen() {
         setIsLoading(false);
       };
       
-      reader.readAsText(file);
+      // O SIGAA utiliza encoding windows-1252 (ANSI)
+      reader.readAsText(file, 'windows-1252');
     } catch (error) {
       console.error('Error processing file:', error);
       setMessage({ text: 'Erro ao processar o arquivo.', error: true });

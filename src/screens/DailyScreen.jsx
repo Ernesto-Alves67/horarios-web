@@ -1,76 +1,7 @@
 import { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import * as Daily from '../components/DailyComponents';
 import LocalStorageHelper from '../services/localStorage';
 
-const Container = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-`;
-
-const Title = styled.h2`
-  color: ${props => props.theme.colors.textPrimary};
-  font-size: ${props => props.theme.fontSize.xxl};
-  font-weight: ${props => props.theme.fontWeight.bold};
-  margin-bottom: ${props => props.theme.spacing.lg};
-  text-align: center;
-`;
-
-const DateDisplay = styled.div`
-  text-align: center;
-  color: ${props => props.theme.colors.textSecondary};
-  font-size: ${props => props.theme.fontSize.lg};
-  margin-bottom: ${props => props.theme.spacing.xl};
-`;
-
-const ClassCard = styled.div`
-  background-color: ${props => props.theme.colors.cardBackground};
-  border-radius: ${props => props.theme.borderRadius.lg};
-  padding: ${props => props.theme.spacing.lg};
-  margin-bottom: ${props => props.theme.spacing.md};
-  box-shadow: ${props => props.theme.shadows.md};
-  border-left: 4px solid ${props => props.theme.colors.ufcatGreen};
-`;
-
-const ClassTime = styled.div`
-  font-size: ${props => props.theme.fontSize.sm};
-  color: ${props => props.theme.colors.textSecondary};
-  font-weight: ${props => props.theme.fontWeight.medium};
-  margin-bottom: ${props => props.theme.spacing.sm};
-`;
-
-const ClassName = styled.h3`
-  font-size: ${props => props.theme.fontSize.lg};
-  font-weight: ${props => props.theme.fontWeight.bold};
-  color: ${props => props.theme.colors.textPrimary};
-  margin: 0 0 ${props => props.theme.spacing.sm} 0;
-`;
-
-const ClassDetails = styled.div`
-  font-size: ${props => props.theme.fontSize.md};
-  color: ${props => props.theme.colors.textSecondary};
-  margin-top: ${props => props.theme.spacing.sm};
-`;
-
-const EmptyState = styled.div`
-  text-align: center;
-  padding: ${props => props.theme.spacing.xxl};
-  color: ${props => props.theme.colors.textSecondary};
-`;
-
-const EmptyIcon = styled.div`
-  font-size: 64px;
-  margin-bottom: ${props => props.theme.spacing.lg};
-`;
-
-const EmptyText = styled.p`
-  font-size: ${props => props.theme.fontSize.lg};
-  margin-bottom: ${props => props.theme.spacing.sm};
-`;
-
-const EmptySubtext = styled.p`
-  font-size: ${props => props.theme.fontSize.md};
-  color: ${props => props.theme.colors.textLight};
-`;
 
 function DailyScreen() {
   const [todayClasses, setTodayClasses] = useState([]);
@@ -83,7 +14,7 @@ function DailyScreen() {
     if (schedules) {
       // Filtra as aulas de hoje
       const dayOfWeek = currentDate.getDay(); // 0 = Domingo, 1 = Segunda, etc.
-      const daysMap = ['domingo', 'segunda', 'terca', 'quarta', 'quinta', 'sexta', 'sabado'];
+      const daysMap = ['domingo', 'segunda', 'terca', 'quarta', 'quinta', 'sexta'];
       const todayName = daysMap[dayOfWeek];
       
       const classes = schedules.filter(schedule => 
@@ -107,34 +38,33 @@ function DailyScreen() {
   };
 
   return (
-    <Container>
-      <Title>Aulas de Hoje</Title>
-      <DateDisplay>{formatDate(currentDate)}</DateDisplay>
-      
+    <Daily.Container>
+      <Daily.Title>Aulas de Hoje</Daily.Title>
+      <Daily.DateDisplay>{formatDate(currentDate)}</Daily.DateDisplay>
       {todayClasses.length === 0 ? (
-        <EmptyState>
-          <EmptyIcon>📚</EmptyIcon>
-          <EmptyText>Nenhuma aula hoje!</EmptyText>
-          <EmptySubtext>
+        <Daily.EmptyState>
+          <Daily.EmptyIcon>📚</Daily.EmptyIcon>
+          <Daily.EmptyText>Nenhuma aula hoje!</Daily.EmptyText>
+          <Daily.EmptySubtext>
             Carregue seu horário através da página SIGAA para visualizar suas aulas.
-          </EmptySubtext>
-        </EmptyState>
+          </Daily.EmptySubtext>
+        </Daily.EmptyState>
       ) : (
         todayClasses.map((classItem, index) => (
-          <ClassCard key={index}>
-            <ClassTime>
+          <Daily.ClassCard key={index}>
+            <Daily.ClassTime>
               {classItem.startTime} - {classItem.endTime}
-            </ClassTime>
-            <ClassName>{classItem.subject || 'Disciplina'}</ClassName>
-            <ClassDetails>
+            </Daily.ClassTime>
+            <Daily.ClassName>{classItem.subject || 'Disciplina'}</Daily.ClassName>
+            <Daily.ClassDetails>
               {classItem.teacher && <div>Professor(a): {classItem.teacher}</div>}
               {classItem.location && <div>Local: {classItem.location}</div>}
               {classItem.type && <div>Tipo: {classItem.type}</div>}
-            </ClassDetails>
-          </ClassCard>
+            </Daily.ClassDetails>
+          </Daily.ClassCard>
         ))
       )}
-    </Container>
+    </Daily.Container>
   );
 }
 

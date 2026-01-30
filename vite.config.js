@@ -13,7 +13,7 @@ export default defineConfig({
         name: 'Horários UFCAT',
         short_name: 'Horários',
         description: 'Aplicação para facilitar a visualização de horários da Universidade Federal de Catalão (UFCAT)',
-        theme_color: '#00A859',
+        theme_color: '#018786',
         background_color: '#ffffff',
         display: 'standalone',
         icons: [
