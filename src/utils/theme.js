@@ -32,6 +32,7 @@ const baseConfig = {
     xxs: '2px',
     xs: '4px',
     sm: '8px',
+    mmd: '12px',
     md: '16px',
     lg: '24px',
     xl: '32px',

@@ -10,7 +10,11 @@ export const Title = styled.h2`
   font-size: ${props => props.theme.fontSize.xxl};
   font-weight: ${props => props.theme.fontWeight.bold};
   margin-bottom: ${props => props.theme.spacing.lg};
+  background: ${props => `linear-gradient(90deg, ${props.theme.colors.UfcatRed}, ${props.theme.colors.UfcatOrange}, ${props.theme.colors.UfcatOrangeDark})`};
   text-align: center;
+  border-radius: ${props => props.theme.borderRadius.lg};
+  padding: ${props => props.theme.spacing.mmd};
+  margin-top: ${props => props.theme.spacing.mmd};
 `;
 
 export const DateDisplay = styled.div`

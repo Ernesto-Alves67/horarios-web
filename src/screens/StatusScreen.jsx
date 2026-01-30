@@ -109,7 +109,6 @@ function StatusScreen() {
 
   return (
     <StatusComps.Container>
-      <StatusComps.Title>Status</StatusComps.Title>
 
       <StatusComps.Card>
         <StatusComps.CardTitle>Status do Sistema</StatusComps.CardTitle>
@@ -125,7 +124,7 @@ function StatusScreen() {
       </StatusComps.Card>
       {userData && (
         <StatusComps.Card>
-          <StatusComps.CardTitle>Dados do Usuário</StatusComps.CardTitle>
+          <StatusComps.CardTitle>Dados do Aluno</StatusComps.CardTitle>
           {userData.nome && (
             <StatusComps.InfoRow>
               <StatusComps.InfoLabel>Nome:</StatusComps.InfoLabel>
@@ -148,7 +147,7 @@ function StatusScreen() {
       )}
 
 
-      <StatusComps.Card>
+      {/* <StatusComps.Card>
         <StatusComps.CardTitle>Sobre</StatusComps.CardTitle>
         <StatusComps.InfoRow>
           <StatusComps.InfoLabel>Versão:</StatusComps.InfoLabel>
@@ -158,7 +157,7 @@ function StatusScreen() {
           <StatusComps.InfoLabel>Plataforma:</StatusComps.InfoLabel>
           <StatusComps.InfoValue>Progressive Web App</StatusComps.InfoValue>
         </StatusComps.InfoRow>
-      </StatusComps.Card>
+      </StatusComps.Card> */}
       <StatusComps.Controls>
         <StatusComps.FileInput
           ref={fileInputRef}

@@ -20,6 +20,7 @@ export const Card = styled.div`
   border-radius: ${props => props.theme.borderRadius.lg};
   padding: ${props => props.theme.spacing.lg};
   margin-bottom: ${props => props.theme.spacing.md};
+  margin-top: ${props => props.theme.spacing.md};
   box-shadow: ${props => props.theme.shadows.md};
 `;
 

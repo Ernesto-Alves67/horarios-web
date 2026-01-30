@@ -5,10 +5,10 @@
 
 export const TIME_SLOTS = {
   'M': { // Morning
-    '1': { start: '07:00', end: '07:50', label: 'M1' },
-    '2': { start: '07:50', end: '08:40', label: 'M2' },
-    '3': { start: '08:55', end: '09:45', label: 'M3' },
-    '4': { start: '09:45', end: '10:35', label: 'M4' },
+    '1': { start: '07:10', end: '08:00', label: 'M1' },
+    '2': { start: '08:00', end: '08:45', label: 'M2' },
+    '3': { start: '08:45', end: '09:40', label: 'M3' },
+    '4': { start: '09:45', end: '10:50', label: 'M4' },
     '5': { start: '10:50', end: '11:40', label: 'M5' },
     '6': { start: '11:40', end: '12:30', label: 'M6' }
   },

@@ -7,7 +7,7 @@ import { TIME_SLOTS } from '../utils/sigaaParser';
 
 function WeeklyScreen() {
   const [weekSchedule, setWeekSchedule] = useState({});
-  const [viewMode, setViewMode] = useState('list'); // 'list' or 'grid'
+  const [viewMode, setViewMode] = useState('grid'); // 'list' or 'grid'
   const [selectedClass, setSelectedClass] = useState(null);
 
   useEffect(() => {
@@ -77,6 +77,16 @@ function WeeklyScreen() {
     });
   };
 
+  // Filtra as linhas vazias no final da tabela
+  const lastActiveSlotIndex = flattenedSlots.reduce((lastIndex, slot, index) => {
+    const hasClass = Object.keys(dayNames).some(dayKey => !!getClassForSlot(dayKey, slot));
+    return hasClass ? index : lastIndex;
+  }, -1);
+
+  const visibleSlots = lastActiveSlotIndex !== -1 
+    ? flattenedSlots.slice(0, lastActiveSlotIndex + 1) 
+    : flattenedSlots;
+
   if (!hasAnySchedule) {
     return (
       <Weekly.Container>
@@ -94,8 +104,8 @@ function WeeklyScreen() {
 
   return (
     <Weekly.Container>
-      <Weekly.HeaderContainer>
-        <Weekly.Title style={{ marginBottom: 0 }}>Semana</Weekly.Title>
+      {/* <Weekly.HeaderContainer>
+
         <Weekly.ViewToggle>
           <Weekly.ToggleButton 
             $active={viewMode === 'list'} 
@@ -110,7 +120,7 @@ function WeeklyScreen() {
             Grade
           </Weekly.ToggleButton>
         </Weekly.ViewToggle>
-      </Weekly.HeaderContainer>
+      </Weekly.HeaderContainer> */}
 
       {viewMode === 'list' ? (
         <Weekly.WeekContainer>
@@ -146,7 +156,7 @@ function WeeklyScreen() {
               </tr>
             </Weekly.GridHead>
             <tbody>
-              {flattenedSlots.map((slot, index) => (
+              {visibleSlots.map((slot, index) => (
                 <tr key={`${slot.label}-${index}`}>
                   {Object.keys(dayNames).map(dayKey => {
                     const classItem = getClassForSlot(dayKey, slot);

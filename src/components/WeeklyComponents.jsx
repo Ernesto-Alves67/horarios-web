@@ -73,6 +73,7 @@ export const DayHeader = styled.div`
   border-radius: ${props => props.theme.borderRadius.md};
   font-weight: ${props => props.theme.fontWeight.bold};
   font-size: ${props => props.theme.fontSize.lg};
+
   margin-bottom: ${props => props.theme.spacing.md};
   text-align: center;
 `;
@@ -93,7 +94,7 @@ export const ClassTime = styled.div`
   font-size: ${props => props.theme.fontSize.sm};
 
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-    font-size: 10px;
+    font-size: 16px;
   }
   color: ${props => props.theme.colors.textSecondary};
   font-weight: ${props => props.theme.fontWeight.medium};
@@ -104,7 +105,7 @@ export const ClassName = styled.div`
   font-size: ${props => props.theme.fontSize.sm};
 
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-    font-size: 10px;
+    font-size: 16px;
   }
   font-weight: ${props => props.theme.fontWeight.semibold};
   color: ${props => props.theme.colors.textPrimary};
@@ -115,7 +116,7 @@ export const ClassLocation = styled.div`
   font-size: ${props => props.theme.fontSize.sm};
 
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-    font-size: 10px;
+    font-size: 12px;
   }
   color: ${props => props.theme.colors.textSecondary};
 `;
@@ -155,6 +156,10 @@ export const GridContainer = styled.div`
   border-radius: ${props => props.theme.borderRadius.lg};
   box-shadow: ${props => props.theme.shadows.md};
   padding: ${props => props.theme.spacing.xxs};
+  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
+    padding: 0px;
+    margin: -8px;
+  }
 `;
 
 export const GridTable = styled.table`
@@ -175,7 +180,7 @@ export const GridHeader = styled.th`
   font-size: ${props => props.theme.fontSize.md};
 
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-    font-size: 10px;
+    font-size: 16px;
   }
   background: transparent;
   color: white;
@@ -193,7 +198,7 @@ export const GridClassItem = styled.div`
   font-size: ${props => props.theme.fontSize.sm};
 
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-    font-size: 10px;
+    font-size: 11px;
   }
 
   background-color: ${props => {
