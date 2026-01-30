@@ -301,7 +301,7 @@ function StatusScreen() {
           {isLoading ? 'Carregando...' : 'Carregar Arquivo HTML'}
         </FileLabel>
         <Button 
-          onClick={() => window.open('https://sig.ufcat.edu.br/sigaa/', '_blank')}
+          onClick={() => window.open('https://sigaa.sistemas.ufcat.edu.br/sigaa/mobile/touch/public/principal.jsf', '_blank')}
         >
           Abrir SIGAA
         </Button>
