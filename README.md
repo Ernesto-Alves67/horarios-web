@@ -8,13 +8,11 @@ Progressive Web App (PWA) que permite aos estudantes da UFCAT (Universidade Fede
 
 - ✅ Visualização das aulas do dia
 - ✅ Visualização semanal completa
-- ✅ Status do sistema e informações do dispositivo
-- ✅ Carregamento de horários via arquivo HTML do SIGAA
+- ✅ Carregamento de horários via arquivo do comporvante de matriculas em HTML obtido no SIGAA
 - ✅ PWA instalável (pode ser instalado como app no iOS, Android e Desktop)
 - ✅ Armazenamento local de dados (substitui DataStore do Android)
 - ✅ Registro automático de informações do dispositivo
-- ✅ Funciona offline após instalação
-
+- ✅ Funciona offline.
 ## 📱 Como usar
 
 ### Instalando como App
@@ -87,7 +85,7 @@ public/               # Arquivos públicos
 
 ### Pré-requisitos
 
-- Node.js 18+ 
+- Node.js 22+ 
 - npm ou yarn
 
 ### Instalação
@@ -122,14 +120,6 @@ npm run preview
 npm run lint
 ```
 
-## 🌐 Deploy
-
-A aplicação pode ser facilmente deployada em qualquer plataforma de hospedagem estática:
-
-- **Vercel**: `vercel deploy`
-- **Netlify**: Conecte o repositório GitHub
-- **GitHub Pages**: Configure o GitHub Actions
-- **Firebase Hosting**: `firebase deploy`
 
 ## 📊 Diferenças do Android
 

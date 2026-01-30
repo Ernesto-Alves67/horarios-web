@@ -1,9 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import theme from '../utils/theme';
 import LocalStorageHelper from '../services/localStorage';
 import DeviceInfo from '../utils/deviceInfo';
 import ApiService from '../services/api';
+import { parseScheduleFromHTML, extractUserData } from '../utils/sigaaParser';
 
 const Container = styled.div`
   max-width: 600px;
@@ -11,35 +11,35 @@ const Container = styled.div`
 `;
 
 const Title = styled.h2`
-  color: ${theme.colors.textPrimary};
-  font-size: ${theme.fontSize.xxl};
-  font-weight: ${theme.fontWeight.bold};
-  margin-bottom: ${theme.spacing.lg};
+  color: ${props => props.theme.colors.textPrimary};
+  font-size: ${props => props.theme.fontSize.xxl};
+  font-weight: ${props => props.theme.fontWeight.bold};
+  margin-bottom: ${props => props.theme.spacing.lg};
   text-align: center;
 `;
 
 const Card = styled.div`
-  background-color: ${theme.colors.cardBackground};
-  border-radius: ${theme.borderRadius.lg};
-  padding: ${theme.spacing.lg};
-  margin-bottom: ${theme.spacing.md};
-  box-shadow: ${theme.shadows.md};
+  background-color: ${props => props.theme.colors.cardBackground};
+  border-radius: ${props => props.theme.borderRadius.lg};
+  padding: ${props => props.theme.spacing.lg};
+  margin-bottom: ${props => props.theme.spacing.md};
+  box-shadow: ${props => props.theme.shadows.md};
 `;
 
 const CardTitle = styled.h3`
-  font-size: ${theme.fontSize.lg};
-  font-weight: ${theme.fontWeight.bold};
-  color: ${theme.colors.textPrimary};
-  margin: 0 0 ${theme.spacing.md} 0;
-  padding-bottom: ${theme.spacing.sm};
-  border-bottom: 2px solid ${theme.colors.ufcatGreen};
+  font-size: ${props => props.theme.fontSize.lg};
+  font-weight: ${props => props.theme.fontWeight.bold};
+  color: ${props => props.theme.colors.textPrimary};
+  margin: 0 0 ${props => props.theme.spacing.md} 0;
+  padding-bottom: ${props => props.theme.spacing.sm};
+  border-bottom: 2px solid ${props => props.theme.colors.ufcatGreen};
 `;
 
 const InfoRow = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: ${theme.spacing.sm} 0;
-  border-bottom: 1px solid ${theme.colors.grayElements};
+  padding: ${props => props.theme.spacing.sm} 0;
+  border-bottom: 1px solid ${props => props.theme.colors.grayElements};
   
   &:last-child {
     border-bottom: none;
@@ -47,44 +47,44 @@ const InfoRow = styled.div`
 `;
 
 const InfoLabel = styled.span`
-  color: ${theme.colors.textSecondary};
-  font-size: ${theme.fontSize.md};
-  font-weight: ${theme.fontWeight.medium};
+  color: ${props => props.theme.colors.textSecondary};
+  font-size: ${props => props.theme.fontSize.md};
+  font-weight: ${props => props.theme.fontWeight.medium};
 `;
 
 const InfoValue = styled.span`
-  color: ${theme.colors.textPrimary};
-  font-size: ${theme.fontSize.md};
-  font-weight: ${theme.fontWeight.semibold};
+  color: ${props => props.theme.colors.textPrimary};
+  font-size: ${props => props.theme.fontSize.md};
+  font-weight: ${props => props.theme.fontWeight.semibold};
   text-align: right;
   flex: 1;
-  margin-left: ${theme.spacing.md};
+  margin-left: ${props => props.theme.spacing.md};
 `;
 
 const StatusBadge = styled.span`
   display: inline-block;
   padding: 4px 12px;
-  border-radius: ${theme.borderRadius.md};
-  font-size: ${theme.fontSize.sm};
-  font-weight: ${theme.fontWeight.semibold};
-  background-color: ${props => props.$success ? theme.colors.success : theme.colors.error};
+  border-radius: ${props => props.theme.borderRadius.md};
+  font-size: ${props => props.theme.fontSize.sm};
+  font-weight: ${props => props.theme.fontWeight.semibold};
+  background-color: ${props => props.$success ? props.theme.colors.ufcatGreen : props.theme.colors.UfcatRed};
   color: white;
 `;
 
 const Button = styled.button`
   width: 100%;
-  padding: ${theme.spacing.md};
-  background-color: ${theme.colors.ufcatGreen};
+  padding: ${props => props.theme.spacing.md};
+  background-color: ${props => props.theme.colors.ufcatGreen};
   color: white;
   border: none;
-  border-radius: ${theme.borderRadius.md};
-  font-size: ${theme.fontSize.md};
-  font-weight: ${theme.fontWeight.semibold};
+  border-radius: ${props => props.theme.borderRadius.md};
+  font-size: ${props => props.theme.fontSize.md};
+  font-weight: ${props => props.theme.fontWeight.semibold};
   cursor: pointer;
-  transition: all ${theme.transitions.fast};
+  transition: all ${props => props.theme.transitions.fast};
   
   &:hover {
-    background-color: #008f4d;
+    background-color: ${props => props.theme.colors.ufcatGreenDark};
   }
   
   &:active {
@@ -93,17 +93,17 @@ const Button = styled.button`
 `;
 
 const WarningText = styled.p`
-  color: ${theme.colors.warning};
-  font-size: ${theme.fontSize.sm};
+  color: ${props => props.theme.colors.warning};
+  font-size: ${props => props.theme.fontSize.sm};
   text-align: center;
-  margin-top: ${theme.spacing.md};
+  margin-top: ${props => props.theme.spacing.md};
 `;
 
 
 const Controls = styled.div`
   display: flex;
-  gap: ${theme.spacing.sm};
-  margin-bottom: ${theme.spacing.md};
+  gap: ${props => props.theme.spacing.sm};
+  margin-bottom: ${props => props.theme.spacing.md};
   flex-wrap: wrap;
 `;
 
@@ -112,17 +112,19 @@ const FileInput = styled.input`
 `;
 
 const FileLabel = styled.label`
-  padding: ${theme.spacing.sm} ${theme.spacing.md};
-  background-color: ${theme.colors.ufcatGreen};
+  width: 100%;
+  padding: ${props => props.theme.spacing.md} ${props => props.theme.spacing.md};
+  background-color: ${props => props.theme.colors.ufcatGreen};
   color: white;
-  border-radius: ${theme.borderRadius.md};
-  font-size: ${theme.fontSize.sm};
-  font-weight: ${theme.fontWeight.semibold};
+  border-radius: ${props => props.theme.borderRadius.md};
+  font-size: ${props => props.theme.fontSize.sm};
+  font-weight: ${props => props.theme.fontWeight.semibold};
   cursor: pointer;
-  transition: all ${theme.transitions.fast};
+  transition: all ${props => props.theme.transitions.fast};
+  text-align: center;
   
   &:hover {
-    background-color: #008f4d;
+    background-color: ${props => props.theme.colors.ufcatGreenDark};
   }
 `;
 
@@ -159,11 +161,13 @@ function StatusScreen() {
           // Save schedules to localStorage
           LocalStorageHelper.setSchedules(schedules);
           LocalStorageHelper.setFileLoaded(true);
+          setHasSchedule(true); // Update local state immediately
           
           // Extract user info
           const userData = extractUserData(htmlContent);
           if (userData) {
             LocalStorageHelper.setUserData(userData);
+            setUserData(userData); // Update local state immediately
             
             // Register or update device info
             await registerDevice(userData);
@@ -196,55 +200,7 @@ function StatusScreen() {
     }
   };
 
-  const parseScheduleFromHTML = (html) => {
-    // Create a temporary DOM parser
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    
-    const schedules = [];
-    
-    // This is a simplified parser - adjust based on actual SIGAA HTML structure
-    // Look for table rows with schedule information
-    const rows = doc.querySelectorAll('table tr');
-    
-    rows.forEach(row => {
-      const cells = row.querySelectorAll('td');
-      if (cells.length >= 4) {
-        const schedule = {
-          subject: cells[0]?.textContent?.trim(),
-          day: cells[1]?.textContent?.trim()?.toLowerCase(),
-          startTime: cells[2]?.textContent?.trim(),
-          endTime: cells[3]?.textContent?.trim(),
-          location: cells[4]?.textContent?.trim() || '',
-          teacher: cells[5]?.textContent?.trim() || '',
-          type: cells[6]?.textContent?.trim() || '',
-        };
-        
-        if (schedule.subject && schedule.day) {
-          schedules.push(schedule);
-        }
-      }
-    });
-    
-    return schedules;
-  };
-
-  const extractUserData = (html) => {
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(html, 'text/html');
-    
-    // Extract user data from HTML - adjust based on actual structure
-    const userData = {
-      nome: doc.querySelector('.nome-aluno')?.textContent?.trim() || '',
-      matricula: doc.querySelector('.matricula')?.textContent?.trim() || '',
-      curso: doc.querySelector('.curso')?.textContent?.trim() || '',
-      formacao: doc.querySelector('.formacao')?.textContent?.trim() || '',
-      periodoLetivo: doc.querySelector('.periodo')?.textContent?.trim() || '',
-    };
-    
-    return userData;
-  };
-
+  
   const registerDevice = async (userData) => {
     try {
       const registerBody = DeviceInfo.createRegisterBody(userData);
@@ -257,7 +213,6 @@ function StatusScreen() {
       }
     } catch (error) {
       console.error('Failed to register/update device:', error);
-      // Don't show error to user as this is a background operation
     }
   };
 
@@ -322,7 +277,7 @@ function StatusScreen() {
         <CardTitle>Sobre</CardTitle>
         <InfoRow>
           <InfoLabel>Versão:</InfoLabel>
-          <InfoValue>1.0.0-web</InfoValue>
+          <InfoValue>1.0.0</InfoValue>
         </InfoRow>
         <InfoRow>
           <InfoLabel>Plataforma:</InfoLabel>

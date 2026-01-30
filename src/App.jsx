@@ -4,9 +4,9 @@ import Layout from './components/Layout';
 import DailyScreen from './screens/DailyScreen';
 import WeeklyScreen from './screens/WeeklyScreen';
 import StatusScreen from './screens/StatusScreen';
-import SigaaScreen from './screens/SigaaScreen';
 import ApiService from './services/api';
 import LocalStorageHelper from './services/localStorage';
+import { ThemeProvider } from './context/ThemeContext';
 import './App.css';
 
 function App() {
@@ -32,7 +32,8 @@ function App() {
             console.warn('Running in offline mode without API token');
           }
         }
-        
+        //espera 2 segundos para simular loading
+        await new Promise(resolve => setTimeout(resolve, 1000));
         setIsInitialized(true);
       } catch (err) {
         console.error('Failed to initialize app:', err);
@@ -48,15 +49,27 @@ function App() {
     return (
       <div style={{
         display: 'flex',
+        flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
         height: '100vh',
-        backgroundColor: '#00A859',
+        backgroundColor: '#018786',
         color: 'white',
         fontSize: '24px',
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        gap: '20px'
       }}>
-        Carregando...
+        <div style={{ 
+          borderRadius: '35%',
+          padding: '50px',
+          backgroundColor: '#ffffff', 
+          alignItems: 'center',
+          display: 'flex',
+        }}>
+            <img src="/ic_logo_ufcat.svg" alt="Logo da UFCAT" style={{ height: '120px', width: '120px', objectFit: 'contain' }} />
+          
+          </div>
+          <h2 style={{ margin: 0 }}>Horários</h2>
       </div>
     );
   }
@@ -80,17 +93,18 @@ function App() {
   }
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Navigate to="/daily" replace />} />
-          <Route path="daily" element={<DailyScreen />} />
-          <Route path="weekly" element={<WeeklyScreen />} />
-          <Route path="status" element={<StatusScreen />} />
-          <Route path="sigaa" element={<SigaaScreen />} />
-        </Route>
-      </Routes>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Navigate to="/daily" replace />} />
+            <Route path="daily" element={<DailyScreen />} />
+            <Route path="weekly" element={<WeeklyScreen />} />
+            <Route path="status" element={<StatusScreen />} />
+          </Route>
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 
