@@ -15,18 +15,34 @@ export const TIME_SLOTS = {
   'T': { // Afternoon
     '1': { start: '13:00', end: '13:50', label: 'T1' },
     '2': { start: '13:50', end: '14:40', label: 'T2' },
-    '3': { start: '14:55', end: '15:45', label: 'T3' },
-    '4': { start: '15:45', end: '16:35', label: 'T4' },
+    '3': { start: '14:40', end: '15:30', label: 'T3' },
+    '4': { start: '15:50', end: '16:40', label: 'T4' },
     '5': { start: '16:50', end: '17:40', label: 'T5' },
     '6': { start: '17:40', end: '18:30', label: 'T6' }
   },
   'N': { // Night
-    '1': { start: '19:00', end: '19:50', label: 'N1' },
-    '2': { start: '19:50', end: '20:40', label: 'N2' },
-    '3': { start: '20:55', end: '21:45', label: 'N3' },
-    '4': { start: '21:45', end: '22:35', label: 'N4' }
+    '1': { start: '18:20', end: '19:05', label: 'N1' },
+    '2': { start: '19:15', end: '20:00', label: 'N2' },
+    '3': { start: '20:00', end: '20:45', label: 'N3' },
+    '4': { start: '21:05', end: '21:50', label: 'N4' },
+    '5': { start: '21:50', end: '22:35', label: 'N5' }
   }
 };
+
+const DAYS = {
+  '2': 'Segunda',
+  '3': 'Terça',
+  '4': 'Quarta',
+  '5': 'Quinta',
+  '6': 'Sexta',
+  '7': 'Sábado'
+};
+
+const normalizeDayKey = (label) =>
+  label
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase();
 
 export const parseHorario = (horario) => {
   if (!horario) return [];
@@ -40,15 +56,6 @@ export const parseHorario = (horario) => {
   
   const regex = /([2-7]+)([MTN])(\d+)/g;
   let match;
-  
-  const dayMap = {
-    '2': 'segunda',
-    '3': 'terca',
-    '4': 'quarta',
-    '5': 'quinta',
-    '6': 'sexta',
-    '7': 'sabado'
-  };
   
   const timeSlots = TIME_SLOTS;
   
@@ -65,9 +72,9 @@ export const parseHorario = (horario) => {
       const endTime = timeSlots[shift][lastSlot].end;
       
       days.forEach(dayNum => {
-        if (dayMap[dayNum]) {
+        if (DAYS[dayNum]) {
           schedules.push({
-            day: dayMap[dayNum],
+            day: normalizeDayKey(DAYS[dayNum]),
             startTime: startTime,
             endTime: endTime
           });

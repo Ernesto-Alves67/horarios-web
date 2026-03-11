@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import * as Weekly from '../components/WeeklyComponents';
-import LocalStorageHelper from '../services/localStorage';
-import { TIME_SLOTS } from '../utils/sigaaParser';
+import * as Weekly from '../../components/weekly/WeeklyComponents';
+import LocalStorageHelper from '../../services/localStorage';
+import { TIME_SLOTS } from '../../utils/sigaaParser';
 
 
 
