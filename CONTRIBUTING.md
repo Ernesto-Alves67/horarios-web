@@ -239,36 +239,6 @@ Para sugerir uma nova funcionalidade:
 4. **Sugira** como poderia ser implementada
 5. **Adicione** mockups/wireframes se possível
 
-## 🧪 Adicionando Testes
-
-Planeje adicionar testes? Ótimo!
-
-```bash
-# Instale dependências de teste
-npm install -D vitest @testing-library/react @testing-library/jest-dom
-```
-
-Estrutura:
-```
-src/
-├── components/
-│   ├── Layout.jsx
-│   └── Layout.test.jsx
-```
-
-Exemplo:
-```jsx
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
-import Layout from './Layout';
-
-describe('Layout', () => {
-  it('renders navigation', () => {
-    render(<Layout />);
-    expect(screen.getByText('Horários')).toBeInTheDocument();
-  });
-});
-```
 
 ## 📚 Documentação
 
@@ -299,10 +269,8 @@ function calculateWeeklyHours(schedules) {
 - [ ] Melhorar acessibilidade (ARIA labels)
 
 ### Média Prioridade
-- [ ] Adicionar modo escuro
 - [ ] Exportar horários para PDF
 - [ ] Notificações de aula próxima
-- [ ] Sincronização com Google Calendar
 
 ### Baixa Prioridade
 - [ ] Animações de transição

@@ -1,7 +1,8 @@
 import axios from 'axios';
 import LocalStorageHelper from './localStorage';
 
-const BASE_URL = 'https://horarios-ufcat-api.vercel.app';
+//pegar do env
+const BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:3000';
 
 const apiClient = axios.create({
   baseURL: BASE_URL,
