@@ -38,23 +38,7 @@ function DailyScreen() {
         </Daily.EmptyState>
       ) : (
         todayClasses.map((classItem, index) => (
-          // <Daily.ClassCard key={`${classItem.subject}-${index}`}>
-          //   <Daily.ClassTime>
-          //     {classItem.startTime} - {classItem.endTime}
-          //   </Daily.ClassTime>
-          //   <Daily.ClassName>{classItem.subject || 'Disciplina'}</Daily.ClassName>
-            
-          //   <Daily.ClassDetails>
-          //     {classItem.teacher && <div><strong>Professor(a):</strong> {classItem.teacher}</div>}
-          //     {classItem.location && <div><strong>Local:</strong> {classItem.location}</div>}
-          //     {classItem.type && <div><strong>Tipo:</strong> {classItem.type}</div>}
-          //   </Daily.ClassDetails>
-          // </Daily.ClassCard>
-
           <ClassCard key={`${classItem.subject}-${index}`} classItem={classItem} />
-
-          
-
         ))
       )}
     </Daily.Container>

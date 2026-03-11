@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import * as StatusComps from '../../components/status/StatusComponents';
+import * as Status_S from './styles';
 import { useDisciplinas } from '../../hooks/useDisciplinas';
 import EditarDisciplinaModal from '../../components/status/EditarDisciplinaModal';
 import UserModal from '../../components/status/UserModal';
@@ -82,79 +82,79 @@ function StatusScreen() {
   };
 
   return (
-    <StatusComps.Container>
+    <Status_S.Container>
       {message && (
         <div style={{ color: message.error ? 'red' : 'green', marginBottom: 10 }}>
           {message.text}
         </div>
       )}
 
-      <StatusComps.Card>
-        <StatusComps.CardTitle>Status do Sistema</StatusComps.CardTitle>
-        <StatusComps.InfoRow>
-          <StatusComps.InfoLabel>Horários Carregados:</StatusComps.InfoLabel>
-          <StatusComps.InfoValue>
-            <StatusComps.StatusBadge $success={hasSchedule}>
+      {/* <Status_S.Card>
+        <Status_S.CardTitle>Status do Sistema</Status_S.CardTitle>
+        <Status_S.InfoRow>
+          <Status_S.InfoLabel>Horários Carregados:</Status_S.InfoLabel>
+          <Status_S.InfoValue>
+            <Status_S.StatusBadge $success={hasSchedule}>
               {hasSchedule ? 'Sim' : 'Não'}
-            </StatusComps.StatusBadge>
-          </StatusComps.InfoValue>
-        </StatusComps.InfoRow>
-      </StatusComps.Card>
+            </Status_S.StatusBadge>
+          </Status_S.InfoValue>
+        </Status_S.InfoRow>
+      </Status_S.Card> */}
 
-      <StatusComps.Card>
-        <StatusComps.CardTitle>Dados do Aluno</StatusComps.CardTitle>
+      <Status_S.Card>
+        <Status_S.CardTitle>Dados do Discente</Status_S.CardTitle>
         {userData ? (
           <>
-            <StatusComps.InfoRow>
-              <StatusComps.InfoLabel>Nome:</StatusComps.InfoLabel>
-              <StatusComps.InfoValue>{userData.nome}</StatusComps.InfoValue>
-            </StatusComps.InfoRow>
+            <Status_S.InfoRow>
+              <Status_S.InfoLabel>Nome:</Status_S.InfoLabel>
+              <Status_S.InfoValue>{userData.nome}</Status_S.InfoValue>
+            </Status_S.InfoRow>
             
-            <StatusComps.InfoRow>
-              <StatusComps.InfoLabel>Matrícula:</StatusComps.InfoLabel>
-              <StatusComps.InfoValue>{userData.matricula}</StatusComps.InfoValue>
-            </StatusComps.InfoRow>
+            <Status_S.InfoRow>
+              <Status_S.InfoLabel>Matrícula:</Status_S.InfoLabel>
+              <Status_S.InfoValue>{userData.matricula}</Status_S.InfoValue>
+            </Status_S.InfoRow>
 
-            <StatusComps.InfoRow>
-              <StatusComps.InfoLabel>Curso:</StatusComps.InfoLabel>
-              <StatusComps.InfoValue>{userData.curso}</StatusComps.InfoValue>
-            </StatusComps.InfoRow>
+            <Status_S.InfoRow>
+              <Status_S.InfoLabel>Curso:</Status_S.InfoLabel>
+              <Status_S.InfoValue>{userData.curso}</Status_S.InfoValue>
+            </Status_S.InfoRow>
 
           </>
         ) : (
-          <StatusComps.InfoRow>
-            <StatusComps.InfoLabel>Dados:</StatusComps.InfoLabel>
-            <StatusComps.InfoValue>Não preenchidos</StatusComps.InfoValue>
-          </StatusComps.InfoRow>
+          <Status_S.InfoRow>
+            <Status_S.InfoLabel>Dados:</Status_S.InfoLabel>
+            <Status_S.InfoValue>Não preenchidos</Status_S.InfoValue>
+          </Status_S.InfoRow>
         )}
-        <StatusComps.AddButton onClick={() => setModalState({ type: 'user' })}>
-          Editar Dados do Aluno
-        </StatusComps.AddButton>
-      </StatusComps.Card>
+        <Status_S.AddButton onClick={() => setModalState({ type: 'user' })}>
+          Editar Dados
+        </Status_S.AddButton>
+      </Status_S.Card>
 
-      <StatusComps.Controls>
-        <StatusComps.FileInput
+      <Status_S.Controls>
+        <Status_S.FileInput
           ref={fileInputRef} type="file" accept=".html"
           onChange={handleFileUpload} id="file-upload"
         />
-        <StatusComps.FileLabel htmlFor="file-upload">
+        <Status_S.FileLabel htmlFor="file-upload">
           {isLoading ? 'Carregando...' : 'Carregar Arquivo HTML'}
-        </StatusComps.FileLabel>
+        </Status_S.FileLabel>
         
-        <StatusComps.AddButton onClick={() => setModalState({ type: 'subject', mode: 'add' })}>
+        <Status_S.AddButton onClick={() => setModalState({ type: 'subject', mode: 'add' })}>
           Adicionar Disciplina Manualmente
-        </StatusComps.AddButton>
+        </Status_S.AddButton>
         
         {hasSchedule && (
-          <StatusComps.AddButton onClick={() => setModalState({ type: 'subject', mode: 'edit', index: '0' })}>
+          <Status_S.AddButton onClick={() => setModalState({ type: 'subject', mode: 'edit', index: '0' })}>
             Editar Disciplina
-          </StatusComps.AddButton>
+          </Status_S.AddButton>
         )}
         
-        <StatusComps.Button onClick={() => window.open('https://sigaa.sistemas.ufcat.edu.br/sigaa/mobile/touch/public/principal.jsf', '_blank')}>
+        <Status_S.Button onClick={() => window.open('https://sigaa.sistemas.ufcat.edu.br/sigaa/mobile/touch/public/principal.jsf', '_blank')}>
           Entrar no SIGAA
-        </StatusComps.Button>
-      </StatusComps.Controls>
+        </Status_S.Button>
+      </Status_S.Controls>
 
       {modalState.type === 'subject' && (
         <EditarDisciplinaModal 
@@ -180,7 +180,7 @@ function StatusScreen() {
           }} 
         />
       )}
-    </StatusComps.Container>
+    </Status_S.Container>
   );
 }
 
