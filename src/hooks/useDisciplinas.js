@@ -36,5 +36,15 @@ export function useDisciplinas() {
     setUserData(data);
   }
 
-  return { schedules, userData, hasSchedule, saveSubject, deleteSubject, setUserData , saveUserData};
+  return {
+    schedules,
+    setSchedules,
+    userData,
+    setUserData,
+    hasSchedule,
+    setHasSchedule,
+    saveSubject,
+    deleteSubject,
+    saveUserData
+  };
 }

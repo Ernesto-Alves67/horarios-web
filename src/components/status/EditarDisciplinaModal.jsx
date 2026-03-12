@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import * as StatusComps from './StatusComponents';
+import * as StatusComps from '../../screens/status/styles';
 import { TIME_SLOTS } from '../../utils/sigaaParser';
 import { DIAS, EMPTY_FORM, getSlotsFromTimes } from '../../utils/horarioUtils';
 

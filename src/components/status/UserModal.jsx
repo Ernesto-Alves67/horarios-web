@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as StatusComps from './StatusComponents';
+import * as StatusComps from '../../screens/status/styles';
 
 const EMPTY_USER = { nome: '', matricula: '', curso: '', periodoLetivo: '', formacao: '' };
 

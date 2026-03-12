@@ -1,9 +1,8 @@
 
-// import React from 'react';
 import * as S from '../../screens/weekly/styles';
 import { DAY_NAMES } from '../../utils/horarioUtils';
 
-function WeeklyGrid( visibleSlots, getClassForSlot, setSelectedClass }) {
+function WeeklyGrid({ visibleSlots = [], getClassForSlot, setSelectedClass }) {
   return (
     <S.GridContainer>
       <S.GridTable>
@@ -95,6 +94,4 @@ function ClassDetailModal({ classItem, onClose }) {
   );
 }
 
-
-
-export default {WeeklyGrid, ClassDetailModal};
+export { WeeklyGrid, ClassDetailModal };
