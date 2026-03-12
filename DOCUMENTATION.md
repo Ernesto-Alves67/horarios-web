@@ -14,28 +14,53 @@
 
 ```
 src/
-├── components/        # Componentes reutilizáveis
-│   └── Layout.jsx    # Layout principal com navegação
-│   ├── DailyComponents.jsx      # estilos e layouts tela inicial
-│   ├── WeeklyComponents.jsx      # estilos e layouts tela semanal
-│   ├── StatusComponents.jsx      # estilos e layouts tela informações do estudante
-├── screens/          # Telas da aplicação
-│   ├── DailyScreen.jsx      # Visualização diária
-│   ├── WeeklyScreen.jsx     # Visualização semanal
-│   ├── StatusScreen.jsx     # Status e informações
-│   └── SigaaScreen.jsx      # Carregamento de horários
-├── services/         # Serviços e APIs
-│   ├── api.js               # Comunicação com backend
-│   └── localStorage.js      # Gerenciamento de dados locais
-├── utils/            # Utilitários
-│   ├── deviceInfo.js        # Informações do dispositivo
-│   ├── sigaaParser.js        # Helper para extração de dados das diciplinas
-│   └── theme.js             # Tema e estilos
-├── App.jsx           # Componente principal
-└── main.jsx          # Ponto de entrada
-
-public/               # Arquivos públicos
-├── pwa-192x192.png  # Ícone PWA 192x192
-├── pwa-512x512.png  # Ícone PWA 512x512
-└── apple-touch-icon.png  # Ícone iOS
+│   App.css
+│   App.jsx
+│   index.css
+│   main.jsx
+│
+├───assets
+│       react.svg
+│
+├───components
+│   │   Layout.jsx
+│   │
+│   ├───daily
+│   │       DailyComponents.jsx
+│   │
+│   ├───status
+│   │       EditarDisciplinaModal.jsx
+│   │       UserModal.jsx
+│   │
+│   └───weekly
+│           WeeklyComponents.jsx
+│
+├───context
+│       ThemeContext.jsx
+│
+├───hooks
+│       useDisciplinas.js
+│
+├───screens
+│   ├───daily
+│   │       DailyScreen.jsx
+│   │       styles.js
+│   │
+│   ├───status
+│   │       StatusScreen.jsx
+│   │       styles.js
+│   │
+│   └───weekly
+│           styles.js
+│           WeeklyScreen.jsx
+│
+├───services
+│       api.js
+│       localStorage.js
+│
+└───utils
+        deviceInfo.js
+        horarioUtils.js
+        sigaaParser.js
+        theme.js
 ```

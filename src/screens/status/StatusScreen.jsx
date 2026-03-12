@@ -6,7 +6,7 @@ import UserModal from '../../components/status/UserModal';
 import ApiService from '../../services/api';
 import DeviceInfo from '../../utils/deviceInfo';
 import LocalStorageHelper from '../../services/localStorage';
-import { parseScheduleFromHTML, extractUserData, readFileWithEncoding, detectCharsetFromHtml } from '../../utils/sigaaParser';
+import { processarArquivoHtml, readFileWithEncoding, detectCharsetFromHtml } from '../../utils/sigaaParser';
 
 function StatusScreen() {
   const { 
@@ -55,7 +55,8 @@ function StatusScreen() {
         htmlContent = await readFileWithEncoding(file, detectedCharset);
       }
 
-      const parsedSchedules = parseScheduleFromHTML(htmlContent);
+      const parsedSchedules = processarArquivoHtml(htmlContent);
+
 
       if (parsedSchedules && parsedSchedules.length > 0) {
         LocalStorageHelper.setSchedules(parsedSchedules);
@@ -63,13 +64,8 @@ function StatusScreen() {
         setSchedules(parsedSchedules);
         setHasSchedule(true);
 
-        const extractedUser = extractUserData(htmlContent);
-        if (extractedUser) {
-          saveUserData(extractedUser);
-          await registerDevice(extractedUser);
-        }
-
-        setMessage({ text: `Horário carregado com sucesso! ${parsedSchedules.length} aula(s).`, error: false });
+        const totalUnicos = new Set(parsedSchedules.map(s => s.codigo)).size;
+        setMessage({ text: `Horário carregado com sucesso! ${totalUnicos} aula(s).`, error: false });
       } else {
         setMessage({ text: 'Nenhuma aula encontrada no arquivo.', error: true });
       }

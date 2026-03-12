@@ -11,8 +11,8 @@ Progressive Web App (PWA) que permite aos estudantes da UFCAT (Universidade Fede
 - ✅ Carregamento de horários via arquivo do comporvante de matriculas em HTML obtido no SIGAA
 - ✅ PWA instalável (pode ser instalado como app no iOS, Android e Desktop)
 - ✅ Armazenamento local de dados (substitui DataStore do Android)
-- ✅ Registro automático de informações do dispositivo
 - ✅ Funciona offline.
+
 ## 📱 Como usar
 
 ### Instalando como App
@@ -39,7 +39,7 @@ Progressive Web App (PWA) que permite aos estudantes da UFCAT (Universidade Fede
 1. Acesse a aba "SIGAA" no app
 2. Clique em "Abrir SIGAA"
 3. Faça login com suas credenciais da UFCAT
-4. Navegue até seu comprovante de matrícula
+4. Navegue até seu comprovante de matrícula ou comprovante de solicitacao de matrícula
 5. Salve a página como HTML (Ctrl+S ou Cmd+S)
 6. Volte ao app e clique em "Carregar Arquivo HTML"
 7. Selecione o arquivo salvo
@@ -60,7 +60,6 @@ Progressive Web App (PWA) que permite aos estudantes da UFCAT (Universidade Fede
 
 - Todos os dados são armazenados localmente no dispositivo
 - Nenhuma informação pessoal é compartilhada com terceiros
-- Comunicação com API apenas para autenticação e registro de dispositivo
 - Código fonte aberto e auditável
 
 ## 📄 Licença
