@@ -263,9 +263,8 @@ function calculateWeeklyHours(schedules) {
 ## 🎯 Áreas que Precisam de Contribuição
 
 ### Alta Prioridade
-- [ ] Melhorar parser HTML do SIGAA
 - [ ] Adicionar testes automatizados
-- [ ] Criar ícones PWA personalizados
+- [ ] Melhorar ícones PWA personalizados
 - [ ] Melhorar acessibilidade (ARIA labels)
 
 ### Média Prioridade
@@ -274,9 +273,7 @@ function calculateWeeklyHours(schedules) {
 
 ### Baixa Prioridade
 - [ ] Animações de transição
-- [ ] Temas personalizáveis
-- [ ] Widget para home screen
-- [ ] Compartilhar horário via link
+- [ ] Compartilhar app com amigos
 
 ## ❓ Dúvidas?
 
