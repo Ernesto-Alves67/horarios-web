@@ -23,13 +23,13 @@ function WeeklyScreen() {
 
   return (
     <Weekly.Container>
-      <Weekly.Title>Horário Semanal</Weekly.Title>
 
       {!hasAnySchedule ? (
         <Weekly.EmptyState>
           <p>Nenhum horário carregado.</p>
         </Weekly.EmptyState>
       ) : (
+        
         <WeeklyGrid
           visibleSlots={visibleSlots}
           getClassForSlot={findClass}

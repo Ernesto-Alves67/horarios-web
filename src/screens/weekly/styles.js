@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  position: sticky;
+  top: 0;
   max-width: 1200px;
   margin: 0 auto;
 `;
@@ -169,10 +171,15 @@ export const GridTable = styled.table`
 `;
 
 export const GridHead = styled.thead`
+  position: sticky;
+  top: 0;
+  z-index: 10;
   background: ${props => `linear-gradient(90deg, ${props.theme.colors.UfcatRed}, ${props.theme.colors.UfcatOrange}, ${props.theme.colors.UfcatOrangeDark})`};
 `;
 
 export const GridHeader = styled.th`
+  position: sticky;
+  top: 0;
   padding: ${props => props.theme.spacing.sm};
   text-align: center;
   border-bottom: 2px solid ${props => props.theme.colors.backgroundDark};
