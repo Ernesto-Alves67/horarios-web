@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
-import DailyScreen from './screens/DailyScreen';
-import WeeklyScreen from './screens/WeeklyScreen';
-import StatusScreen from './screens/StatusScreen';
+import DailyScreen from './screens/daily/DailyScreen';
+import WeeklyScreen from './screens/weekly/WeeklyScreen';
+import StatusScreen from './screens/status/StatusScreen';
 import ApiService from './services/api';
 import LocalStorageHelper from './services/localStorage';
 import { ThemeProvider } from './context/ThemeContext';

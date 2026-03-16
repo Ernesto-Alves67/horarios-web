@@ -1,34 +1,46 @@
-
 /**
- * Utility to parse SIGAA HTML content
+ * Identifica o tipo de HTML exportado do SIGAA analisando o título da página.
+ *
+ * Procura um elemento <h3> e verifica se ele contém textos que indicam
+ * o tipo de comprovante gerado pelo sistema.
+ *
+ * @param {string} html - Conteúdo HTML completo da página exportada do SIGAA.
+ * @returns {"comprovante_solicitacao_matricula" | "comprovante_matricula" | "desconhecido"}
+ * Retorna o tipo de comprovante identificado.
  */
+const identificarTipoHtml = (html) => {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, "text/html");
 
-export const TIME_SLOTS = {
-  'M': { // Morning
-    '1': { start: '07:10', end: '08:00', label: 'M1' },
-    '2': { start: '08:00', end: '08:45', label: 'M2' },
-    '3': { start: '08:45', end: '09:40', label: 'M3' },
-    '4': { start: '09:45', end: '10:50', label: 'M4' },
-    '5': { start: '10:50', end: '11:40', label: 'M5' },
-    '6': { start: '11:40', end: '12:30', label: 'M6' }
-  },
-  'T': { // Afternoon
-    '1': { start: '13:00', end: '13:50', label: 'T1' },
-    '2': { start: '13:50', end: '14:40', label: 'T2' },
-    '3': { start: '14:55', end: '15:45', label: 'T3' },
-    '4': { start: '15:45', end: '16:35', label: 'T4' },
-    '5': { start: '16:50', end: '17:40', label: 'T5' },
-    '6': { start: '17:40', end: '18:30', label: 'T6' }
-  },
-  'N': { // Night
-    '1': { start: '19:00', end: '19:50', label: 'N1' },
-    '2': { start: '19:50', end: '20:40', label: 'N2' },
-    '3': { start: '20:55', end: '21:45', label: 'N3' },
-    '4': { start: '21:45', end: '22:35', label: 'N4' }
+  const h3 = doc.querySelector("h3");
+
+  if (!h3) {
+    return "desconhecido";
   }
+
+  const titulo = h3.textContent
+    .replace(/\s+/g, " ")
+    .trim()
+    .toLowerCase();
+
+  if (titulo.includes("comprovante de solicitação de matrícula")) {
+    return "comprovante_solicitacao_matricula";
+  }
+
+  if (titulo.includes("comprovante de matrícula")) {
+    return "comprovante_matricula";
+  }
+
+  return "desconhecido";
 };
 
-export const parseHorario = (horario) => {
+const normalizeDayKey = (label) =>
+  label
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase();
+
+const parseHorario = (horario) => {
   if (!horario) return [];
   
   const schedules = [];
@@ -40,15 +52,6 @@ export const parseHorario = (horario) => {
   
   const regex = /([2-7]+)([MTN])(\d+)/g;
   let match;
-  
-  const dayMap = {
-    '2': 'segunda',
-    '3': 'terca',
-    '4': 'quarta',
-    '5': 'quinta',
-    '6': 'sexta',
-    '7': 'sabado'
-  };
   
   const timeSlots = TIME_SLOTS;
   
@@ -65,9 +68,9 @@ export const parseHorario = (horario) => {
       const endTime = timeSlots[shift][lastSlot].end;
       
       days.forEach(dayNum => {
-        if (dayMap[dayNum]) {
+        if (DAYS[dayNum]) {
           schedules.push({
-            day: dayMap[dayNum],
+            day: normalizeDayKey(DAYS[dayNum]),
             startTime: startTime,
             endTime: endTime
           });
@@ -79,7 +82,7 @@ export const parseHorario = (horario) => {
   return schedules;
 };
 
-export const parseScheduleFromHTML = (html) => {
+const parseHorariosDisciplinaComprovanteMatricula = (html) => {
   // Create a temporary DOM parser
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, 'text/html');
@@ -191,7 +194,7 @@ export const parseScheduleFromHTML = (html) => {
   return allSchedules;
 };
 
-export const extractUserData = (html) => {
+const extractUserData = (html) => {
   const parser = new DOMParser();
   const doc = parser.parseFromString(html, 'text/html');
   
@@ -238,6 +241,267 @@ export const extractUserData = (html) => {
   return userData;
 };
 
+/**
+ * Função específica para extrair horários do comprovante de solicitação de matrícula, que tem
+ *  uma estrutura diferente do comprovante de matrícula regular.
+ */
+const parseHorariosDisciplinaComprovanteSolicitacao = (html) => {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, "text/html");
+
+  const schedules = [];
+
+  const horariosTabela = associarTabelaHorarioDisciplaSelecionada(doc);
+  console.log("Tabela de horários associada:", horariosTabela);
+  horariosTabela.forEach(item => {
+
+    const horarios = parseHorario(item.horarioLimpo);
+
+    horarios.forEach((info) => {
+
+      schedules.push({
+        codigo: item.codigo,
+        subject: item.subject,
+        turma: item.turma,
+        day: info.day,
+        startTime: info.startTime,
+        endTime: info.endTime,
+        horarioCompleto: item.horarioLimpo
+      });
+
+    });
+
+  });
+  // tabela correta
+  const table = doc.querySelector("table.subFormulario");
+
+  if (!table) {
+    console.log("Tabela de horários flexíveis não encontrada.");
+    return [];
+  }
+
+  const rows = table.querySelectorAll("tr");
+
+  rows.forEach((row, index) => {
+    // pular header
+    if (index === 0) return;
+
+    const cells = row.querySelectorAll("td");
+
+    if (cells.length < 3) return;
+
+    try {
+      const componente = cells[0].textContent.trim();
+      const turma = cells[1].textContent.trim();
+      const horarioBruto = cells[2].textContent.trim();
+
+      // extrai código e nome
+      const codigo = componente.split(" - ")[0];
+      const subject = componente.split(" - ")[1] || componente;
+
+      // remove datas
+      const horarioLimpo = horarioBruto.replace(/\(.*?\)/g, "").trim();
+
+      const horarios = parseHorario(horarioLimpo);
+
+      horarios.forEach((info) => {
+        schedules.push({
+          codigo,
+          subject,
+          turma,
+          day: info.day,
+          startTime: info.startTime,
+          endTime: info.endTime,
+          horarioCompleto: horarioLimpo
+        });
+      });
+
+    } catch (e) {
+      console.error("Erro ao processar linha:", e);
+    }
+  });
+
+  return schedules;
+};  
+
+const associarTabelaHorarioDisciplaSelecionada = (doc) => {
+
+  const resultados = [];
+
+  const disciplinasMap = {};
+
+  // -----------------------------------------
+  // 1️⃣ Criar mapa codigo -> disciplina
+  // -----------------------------------------
+  const tabelaTurmas = [...doc.querySelectorAll("table")]
+    .find(t => t.textContent.includes("Turmas selecionadas"));
+
+  if (!tabelaTurmas) return resultados;
+
+  tabelaTurmas.querySelectorAll("tbody tr").forEach(row => {
+
+    const cells = row.querySelectorAll("td");
+    if (!cells.length) return;
+
+    const texto = cells[0].textContent.trim();
+
+    const partes = texto.split(" - ");
+
+    const codigo = partes[0]?.trim();
+    const subject = partes[1]?.trim();
+
+    const turma = cells[1]?.textContent.trim();
+
+    if (codigo) {
+      disciplinasMap[codigo] = { subject, turma };
+    }
+
+  });
+
+  // -----------------------------------------
+  // Encontrar tabela de horários
+  // -----------------------------------------
+  const tabelaHorarios = [...doc.querySelectorAll("table")]
+    .find(t => t.textContent.includes("Horários") && t.textContent.includes("Seg"));
+
+  if (!tabelaHorarios) return resultados;
+
+  const rows = tabelaHorarios.querySelectorAll("tr");
+
+  const diaMap = {
+    1: "2",
+    2: "3",
+    3: "4",
+    4: "5",
+    5: "6",
+    6: "7"
+  };
+
+  const horariosPorDisciplina = {};
+
+  rows.forEach((row, index) => {
+
+    if (index === 0) return;
+
+    const cells = row.querySelectorAll("td");
+
+    if (cells.length < 7) return;
+
+    const horarioTexto = cells[0].textContent.trim();
+    console.log("Processando horário:", horarioTexto);
+    let periodo = null;
+    let slot = null;
+
+    for (const p in TIME_SLOTS) {
+
+      for (const s in TIME_SLOTS[p]) {
+
+        const t = TIME_SLOTS[p][s];
+
+        const label = `${t.start} - ${t.end}`;
+
+        if (horarioTexto.includes(label)) {
+
+          periodo = p;
+          slot = s;
+
+        }
+
+      }
+
+    }
+
+    if (!periodo || !slot) return;
+
+    for (let i = 1; i <= 6; i++) {
+
+      const codigo = cells[i].textContent.trim();
+
+      if (!codigo || codigo === "---") continue;
+
+      const dia = diaMap[i];
+
+      if (!horariosPorDisciplina[codigo]) {
+        horariosPorDisciplina[codigo] = [];
+      }
+
+      horariosPorDisciplina[codigo].push({
+        dia,
+        periodo,
+        slot
+      });
+
+    }
+    console.log("Horários por disciplina até agora:", horariosPorDisciplina);
+  });
+
+  // -----------------------------------------
+  // 3️⃣ Montar horarioLimpo estilo SIGAA
+  // -----------------------------------------
+  for (const codigo in horariosPorDisciplina) {
+
+    const infos = horariosPorDisciplina[codigo];
+
+    const dias = [...new Set(infos.map(i => i.dia))].sort();
+
+    const periodo = infos[0].periodo;
+
+    // const slots = infos.map(i => i.slot).unique().join("");
+    const slots = [...new Set(infos.map(i => i.slot))].join("");
+
+    const horarioLimpo = `${dias.join("")}${periodo}${slots}`;
+
+    resultados.push({
+      codigo,
+      subject: disciplinasMap[codigo]?.subject || codigo,
+      turma: disciplinasMap[codigo]?.turma || "",
+      horarioLimpo
+    });
+
+  }
+
+  return resultados;
+
+};
+
+const DAYS = {
+  '2': 'Segunda',
+  '3': 'Terça',
+  '4': 'Quarta',
+  '5': 'Quinta',
+  '6': 'Sexta',
+  '7': 'Sábado'
+};
+
+/**
+ * Mapa de períodos e seus respectivos horários
+ */
+
+export const TIME_SLOTS = {
+  'M': { // Morning
+    '1': { start: '07:10', end: '08:00', label: 'M' },
+    '2': { start: '08:00', end: '08:50', label: 'M' },
+    '3': { start: '08:50', end: '09:40', label: 'M' },
+    '4': { start: '10:00', end: '10:50', label: 'M' },
+    '5': { start: '10:50', end: '11:40', label: 'M' },
+    '6': { start: '11:40', end: '12:30', label: 'M' }
+  },
+  'T': { // Afternoon
+    '1': { start: '13:00', end: '13:50', label: 'T' },
+    '2': { start: '13:50', end: '14:40', label: 'T' },
+    '3': { start: '14:40', end: '15:30', label: 'T' },
+    '4': { start: '15:50', end: '16:40', label: 'T' },
+    '5': { start: '16:40', end: '17:30', label: 'T' },
+    '6': { start: '17:30', end: '18:20', label: 'T' }
+  },
+  'N': { // Night
+    '1': { start: '18:20', end: '19:05', label: 'N' },
+    '2': { start: '19:15', end: '20:00', label: 'N' },
+    '3': { start: '20:00', end: '20:45', label: 'N' },
+    '4': { start: '21:05', end: '21:50', label: 'N' },
+    '5': { start: '21:50', end: '22:35', label: 'N' }
+  }
+};
 
 export const detectCharsetFromHtml = (html) => {
   // <meta charset="utf-8">
@@ -260,3 +524,29 @@ export const readFileWithEncoding = (file, encoding) =>
     reader.onerror = reject;
     reader.readAsText(file, encoding);
   });
+
+
+export const processarArquivoHtml = (html) => {
+  if (!html || typeof html !== "string") {
+    console.error("HTML inválido recebido para processamento.");
+    return [];
+  }
+
+  const tipo = identificarTipoHtml(html);
+  const extractedUser = extractUserData(html);
+  if (extractedUser) {
+    saveUserData(extractedUser);
+    // await registerDevice(extractedUser);
+  }
+  switch (tipo) {
+    case "comprovante_solicitacao_matricula":
+      return parseHorariosDisciplinaComprovanteSolicitacao(html);
+
+    case "comprovante_matricula":
+      return parseHorariosDisciplinaComprovanteMatricula(html);
+
+    default:
+      console.error("Tipo de HTML não reconhecido:", tipo);
+      return [];
+  }
+};
