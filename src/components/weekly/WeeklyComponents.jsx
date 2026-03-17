@@ -5,17 +5,9 @@ import { DAY_NAMES } from '../../utils/horarioUtils';
 function WeeklyGrid({ visibleSlots = [], getClassForSlot, setSelectedClass }) {
   return (
     <S.GridContainer>
-      <S.GridTable>
-        <S.GridHead>
-          <tr>
-            {Object.entries(DAY_NAMES).map(([key, label]) => (
-              <S.GridHeader key={key}>
-                {label.split('-')[0].substring(0, 3)}
-              </S.GridHeader>
-            ))}
-          </tr>
-        </S.GridHead>
-        {/* <tbody>
+
+        {/* Transformar em configuração 
+        <tbody>
           {visibleSlots.map((slot, index) => (
             <tr key={`${slot.label}-${index}`}>
               {Object.keys(DAY_NAMES).map((dayKey) => {
@@ -41,6 +33,7 @@ function WeeklyGrid({ visibleSlots = [], getClassForSlot, setSelectedClass }) {
           ))}
         </tbody> */}
 
+      <S.GridTable>
         <tbody>
           {visibleSlots
             .filter((slot) =>
@@ -126,4 +119,23 @@ function ClassDetailModal({ classItem, onClose }) {
   );
 }
 
-export { WeeklyGrid, ClassDetailModal };
+function WeeklyHeader(){
+  return (
+        <S.GridContainer>
+          <S.GridTableHeader> 
+            <S.GridHead>
+            <tr>
+              {Object.entries(DAY_NAMES).map(([key, label]) => (
+                <S.GridHeader key={key}>
+                  {label.split('-')[0].substring(0, 3)}
+                </S.GridHeader>
+              ))}
+            </tr>
+          </S.GridHead>
+          </S.GridTableHeader>
+        </S.GridContainer>
+
+  );
+}
+
+export { WeeklyGrid, ClassDetailModal, WeeklyHeader };

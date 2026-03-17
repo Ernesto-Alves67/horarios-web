@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  position: sticky;
-  top: 0;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: none;
+  padding-top: 45px; /* altura do header */
 `;
 
 export const Title = styled.h2`
@@ -153,11 +151,9 @@ export const EmptySubtext = styled.p`
 
 // Grid View Components
 export const GridContainer = styled.div`
-  overflow-x: hidden;
+  margin-top: 350px;
   background-color: ${props => props.theme.colors.cardBackground};
-  border-radius: ${props => props.theme.borderRadius.lg};
   box-shadow: ${props => props.theme.shadows.md};
-  padding: ${props => props.theme.spacing.xxs};
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
     padding: 0px;
     margin: -8px;
@@ -170,10 +166,20 @@ export const GridTable = styled.table`
   table-layout: fixed;
 `;
 
+export const GridTableHeader = styled.table`
+  z-index: 1000;
+  position: fixed;
+  left: 0;
+  right: 0; /* 🔥 importante */
+  width: 100%;
+  top: 60px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border-radius: ${props => props.theme.borderRadius.ssm};
+`;
+
 export const GridHead = styled.thead`
   position: sticky;
-  top: 0;
-  z-index: 10;
   background: ${props => `linear-gradient(90deg, ${props.theme.colors.UfcatRed}, ${props.theme.colors.UfcatOrange}, ${props.theme.colors.UfcatOrangeDark})`};
 `;
 
@@ -188,6 +194,7 @@ export const GridHeader = styled.th`
 
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
     font-size: 16px;
+    padding: none;
   }
   background: transparent;
   color: white;
@@ -205,7 +212,7 @@ export const GridClassItem = styled.div`
   font-size: ${props => props.theme.fontSize.sm};
 
   @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-    font-size: 11px;
+    font-size: 9px;
   }
 
   background-color: ${props => {
