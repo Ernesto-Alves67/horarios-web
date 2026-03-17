@@ -18,20 +18,20 @@ function App() {
     const initializeApp = async () => {
       try {
         // Verifica se já tem token
-        const existingToken = LocalStorageHelper.getAccessToken();
+        // const existingToken = LocalStorageHelper.getAccessToken();
         
-        if (!existingToken) {
-          // Se não tem token, tenta buscar um novo
-          try {
-            const authResponse = await ApiService.initAuth();
-            if (authResponse && authResponse.accessToken) {
-              LocalStorageHelper.setAccessToken(authResponse.accessToken);
-            }
-          } catch (apiError) {
-            // Se falhar na API, continua sem token (modo offline)
-            console.warn('Running in offline mode without API token');
-          }
-        }
+        // if (!existingToken) {
+        //   // Se não tem token, tenta buscar um novo
+        //   try {
+        //     const authResponse = await ApiService.initAuth();
+        //     if (authResponse && authResponse.accessToken) {
+        //       LocalStorageHelper.setAccessToken(authResponse.accessToken);
+        //     }
+        //   } catch (apiError) {
+        //     // Se falhar na API, continua sem token (modo offline)
+        //     console.warn('Running in offline mode without API token');
+        //   }
+        // }
         //espera 2 segundos para simular loading
         await new Promise(resolve => setTimeout(resolve, 1000));
         setIsInitialized(true);

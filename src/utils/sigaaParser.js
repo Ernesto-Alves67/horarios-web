@@ -526,7 +526,7 @@ export const readFileWithEncoding = (file, encoding) =>
   });
 
 
-export const processarArquivoHtml = (html) => {
+export const processarArquivoHtml = (html, saveUserDataCb) => {
   if (!html || typeof html !== "string") {
     console.error("HTML inválido recebido para processamento.");
     return [];
@@ -534,9 +534,8 @@ export const processarArquivoHtml = (html) => {
 
   const tipo = identificarTipoHtml(html);
   const extractedUser = extractUserData(html);
-  if (extractedUser) {
-    saveUserData(extractedUser);
-    // await registerDevice(extractedUser);
+  if (extractedUser && typeof saveUserDataCb === 'function') {
+    saveUserDataCb(extractedUser);
   }
   switch (tipo) {
     case "comprovante_solicitacao_matricula":

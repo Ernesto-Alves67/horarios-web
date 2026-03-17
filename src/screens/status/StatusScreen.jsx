@@ -17,6 +17,7 @@ function StatusScreen() {
   const [modalState, setModalState] = useState({ type: null, mode: 'add', index: null });
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState(null);
+  const [showClearConfirm, setShowClearConfirm] = useState(false);
   const fileInputRef = useRef(null);
 
   const closeModal = () => setModalState({ type: null, mode: 'add', index: null });
@@ -55,7 +56,7 @@ function StatusScreen() {
         htmlContent = await readFileWithEncoding(file, detectedCharset);
       }
 
-      const parsedSchedules = processarArquivoHtml(htmlContent);
+      const parsedSchedules = processarArquivoHtml(htmlContent, saveUserData);
 
 
       if (parsedSchedules && parsedSchedules.length > 0) {
@@ -75,6 +76,19 @@ function StatusScreen() {
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleClearData = () => {
+    LocalStorageHelper.setSchedules([]);
+    LocalStorageHelper.setFileLoaded(false);
+    saveUserData(null);
+    setSchedules([]);
+    setHasSchedule(false);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+    setMessage({ text: 'Dados e horários foram limpos.', error: false });
+    setShowClearConfirm(false);
   };
 
   return (
@@ -150,7 +164,32 @@ function StatusScreen() {
         <Status_S.Button onClick={() => window.open('https://sigaa.sistemas.ufcat.edu.br/sigaa/mobile/touch/public/principal.jsf', '_blank')}>
           Entrar no SIGAA
         </Status_S.Button>
+
+        <Status_S.Button onClick={() => setShowClearConfirm(true)} disabled={!hasSchedule && !userData}>
+          Limpar dados
+        </Status_S.Button>
       </Status_S.Controls>
+
+      {showClearConfirm && (
+        <Status_S.ModalOverlay onClick={() => setShowClearConfirm(false)}>
+          <Status_S.ModalBox onClick={e => e.stopPropagation()}>
+            <Status_S.ModalTitle>Confirmar limpeza</Status_S.ModalTitle>
+            <Status_S.FormGroup>
+              <Status_S.FormLabel>
+                Essa ação ira apagar os dados do usuário e todas as disciplinas carregadas?
+              </Status_S.FormLabel>
+            </Status_S.FormGroup>
+            <Status_S.ModalActions>
+              <Status_S.ModalButton $secondary onClick={() => setShowClearConfirm(false)}>
+                Cancelar
+              </Status_S.ModalButton>
+              <Status_S.ModalButton $danger onClick={handleClearData}>
+                Sim, limpar tudo
+              </Status_S.ModalButton>
+            </Status_S.ModalActions>
+          </Status_S.ModalBox>
+        </Status_S.ModalOverlay>
+      )}
 
       {modalState.type === 'subject' && (
         <EditarDisciplinaModal 
