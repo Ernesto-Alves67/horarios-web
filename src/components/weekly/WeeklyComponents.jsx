@@ -15,7 +15,7 @@ function WeeklyGrid({ visibleSlots = [], getClassForSlot, setSelectedClass }) {
             ))}
           </tr>
         </S.GridHead>
-        <tbody>
+        {/* <tbody>
           {visibleSlots.map((slot, index) => (
             <tr key={`${slot.label}-${index}`}>
               {Object.keys(DAY_NAMES).map((dayKey) => {
@@ -39,6 +39,38 @@ function WeeklyGrid({ visibleSlots = [], getClassForSlot, setSelectedClass }) {
               })}
             </tr>
           ))}
+        </tbody> */}
+
+        <tbody>
+          {visibleSlots
+            .filter((slot) =>
+              Object.keys(DAY_NAMES).some((dayKey) =>
+                getClassForSlot(dayKey, slot)
+              )
+            )
+            .map((slot, index) => (
+              <tr key={`${slot.label}-${index}`}>
+                {Object.keys(DAY_NAMES).map((dayKey) => {
+                  const classItem = getClassForSlot(dayKey, slot);
+
+                  return (
+                    <S.GridCell
+                      key={`${dayKey}-${slot.label}`}
+                      $hasContent={!!classItem}
+                    >
+                      {classItem && (
+                        <S.GridClassItem
+                          $period={slot.label.charAt(0)}
+                          onClick={() => setSelectedClass(classItem)}
+                        >
+                          {classItem.subject}
+                        </S.GridClassItem>
+                      )}
+                    </S.GridCell>
+                  );
+                })}
+              </tr>
+            ))}
         </tbody>
       </S.GridTable>
     </S.GridContainer>
