@@ -19,9 +19,10 @@ export const Card = styled.div`
   background-color: ${props => props.theme.colors.cardBackground};
   border-radius: ${props => props.theme.borderRadius.lg};
   padding: ${props => props.theme.spacing.lg};
-  margin-bottom: ${props => props.theme.spacing.md};
-  margin-top: ${props => props.theme.spacing.md};
   box-shadow: ${props => props.theme.shadows.md};
+  border-left: 4px solid ${props => props.$borderColor || 'transparent'};
+  margin-bottom: ${props => props.$compact ? props.theme.spacing.sm : props.theme.spacing.md};
+  margin-top: ${props => props.$compact ? props.theme.spacing.sm : props.theme.spacing.md};
 `;
 
 export const CardTitle = styled.h3`
