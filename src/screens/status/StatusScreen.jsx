@@ -3,17 +3,21 @@ import * as Status_S from './styles';
 import { useDisciplinas } from '../../hooks/useDisciplinas';
 import EditarDisciplinaModal from '../../components/status/EditarDisciplinaModal';
 import UserModal from '../../components/status/UserModal';
+import TutorialModal from '../../components/status/TutorialModal';
+import HelpView from './HelpView';
 import ApiService from '../../services/api';
 import DeviceInfo from '../../utils/deviceInfo';
 import LocalStorageHelper from '../../services/localStorage';
 import { processarArquivoHtml, readFileWithEncoding, detectCharsetFromHtml } from '../../utils/sigaaParser';
 
 function StatusScreen() {
-  const { 
-    schedules, setSchedules, userData, hasSchedule, setHasSchedule, 
-    saveSubject, deleteSubject, saveUserData 
+  const {
+    schedules, setSchedules, userData, hasSchedule, setHasSchedule,
+    saveSubject, deleteSubject, saveUserData
   } = useDisciplinas();
-  
+
+  const [currentView, setCurrentView] = useState('main');
+  const [showTutorial, setShowTutorial] = useState(false);
   const [modalState, setModalState] = useState({ type: null, mode: 'add', index: null });
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState(null);
@@ -91,12 +95,49 @@ function StatusScreen() {
     setShowClearConfirm(false);
   };
 
+  if (currentView === 'help') {
+    return (
+      <Status_S.Container>
+        <HelpView
+          onBack={() => setCurrentView('main')}
+          onShowTutorial={() => setShowTutorial(true)}
+        />
+        {showTutorial && <TutorialModal onClose={() => setShowTutorial(false)} />}
+      </Status_S.Container>
+    );
+  }
+
+  const handleOpenSigaa = () => {
+    const info = DeviceInfo.getDeviceInfo();
+    
+    // verifica se a string do nome do dispositivo contém 'Mobile'
+    const isMobile = info.deviceName.includes('Mobile');
+    
+    const urlSigaa = isMobile 
+      ? 'https://sigaa.sistemas.ufcat.edu.br/sigaa/mobile/touch/public/principal.jsf' // Link Mobile
+      : 'https://sigaa.sistemas.ufcat.edu.br/sigaa/verTelaLogin.do'; // Link Clássico (PC/Mac)
+
+    window.open(urlSigaa, '_blank');
+  };
+
   return (
     <Status_S.Container>
       {message && (
         <div style={{ color: message.error ? 'red' : 'green', marginBottom: 10 }}>
           {message.text}
         </div>
+      )}
+
+      {!hasSchedule && (
+        <Status_S.Card $borderColor="#FD841A">
+          <Status_S.CardTitle>Precisa de ajuda?</Status_S.CardTitle>
+          <p style={{ fontSize: '14px', marginBottom: '12px', color: '#666' }}>
+            Não sabe como carregar seus horários? Veja nosso tutorial rápido.
+          </p>
+          <Status_S.AddButton onClick={() => setShowTutorial(true)}>
+            🎥 Assistir Tutorial
+          </Status_S.AddButton>
+        </Status_S.Card>
       )}
 
       {/* <Status_S.Card>
@@ -111,7 +152,7 @@ function StatusScreen() {
         </Status_S.InfoRow>
       </Status_S.Card> */}
 
-      <Status_S.Card>
+      <Status_S.Card $borderColor="#018786">
         <Status_S.CardTitle>Dados do Discente</Status_S.CardTitle>
         {userData ? (
           <>
@@ -119,7 +160,7 @@ function StatusScreen() {
               <Status_S.InfoLabel>Nome:</Status_S.InfoLabel>
               <Status_S.InfoValue>{userData.nome}</Status_S.InfoValue>
             </Status_S.InfoRow>
-            
+
             <Status_S.InfoRow>
               <Status_S.InfoLabel>Matrícula:</Status_S.InfoLabel>
               <Status_S.InfoValue>{userData.matricula}</Status_S.InfoValue>
@@ -150,24 +191,40 @@ function StatusScreen() {
         <Status_S.FileLabel htmlFor="file-upload">
           {isLoading ? 'Carregando...' : 'Carregar Arquivo HTML'}
         </Status_S.FileLabel>
-        
+
         <Status_S.AddButton onClick={() => setModalState({ type: 'subject', mode: 'add' })}>
           Adicionar Disciplina Manualmente
         </Status_S.AddButton>
-        
+
         {hasSchedule && (
           <Status_S.AddButton onClick={() => setModalState({ type: 'subject', mode: 'edit', index: '0' })}>
             Editar Disciplina
           </Status_S.AddButton>
         )}
-        
-        <Status_S.Button onClick={() => window.open('https://sigaa.sistemas.ufcat.edu.br/sigaa/mobile/touch/public/principal.jsf', '_blank')}>
+
+        <Status_S.Button onClick={handleOpenSigaa}>
           Entrar no SIGAA
         </Status_S.Button>
 
         <Status_S.Button onClick={() => setShowClearConfirm(true)} disabled={!hasSchedule && !userData}>
           Limpar dados
         </Status_S.Button>
+
+        <button
+          onClick={() => setCurrentView('help')}
+          style={{
+            width: '100%',
+            background: 'none',
+            border: '1px solid var(--card-border)', // Ou use props.theme se preferir
+            borderRadius: '8px',
+            padding: '12px',
+            color: '#666',
+            fontSize: '14px',
+            cursor: 'pointer'
+          }}
+        >
+          ❓ Ajuda, Tutoriais e Sobre
+        </button>
       </Status_S.Controls>
 
       {showClearConfirm && (
@@ -191,8 +248,10 @@ function StatusScreen() {
         </Status_S.ModalOverlay>
       )}
 
+      {showTutorial && <TutorialModal onClose={() => setShowTutorial(false)} />}
+
       {modalState.type === 'subject' && (
-        <EditarDisciplinaModal 
+        <EditarDisciplinaModal
           mode={modalState.mode}
           initialIndex={modalState.index}
           schedules={schedules}
@@ -204,15 +263,15 @@ function StatusScreen() {
       )}
 
       {modalState.type === 'user' && (
-        <UserModal 
-          initialData={userData} 
-          onClose={closeModal} 
+        <UserModal
+          initialData={userData}
+          onClose={closeModal}
           onSave={async (data) => {
             saveUserData(data);
             // await registerDevice(data);
             setMessage({ text: 'Dados atualizados!', error: false });
             closeModal();
-          }} 
+          }}
         />
       )}
     </Status_S.Container>
