@@ -115,19 +115,20 @@ const IconWrapper = styled.div`
   justify-content: center;
   padding: 4px 16px;
   border-radius: 16px;
-  background-color: ${props => props.$active ? 'rgba(255, 255, 255, 0.2)' : 'transparent'};
+  background-color: ${props => props.$active ? 'rgba(255, 255, 255, 0.89)' : 'transparent'};
   transition: background-color 0.3s ease;
   
   svg {
     width: 24px;
     height: 24px;
+    color: ${props => props.$active ? 'rgba(27, 26, 26, 0.83)' : props.theme.colors.backgroundToggleTheme};
   }
 `;
 
 const NavItem = styled.button`
   background: none;
   border: none;
-  color: ${props => props.$active ? props.theme.colors.navText : props.theme.colors.navTextSecondary};
+  color: ${props => props.$active ? 'rgba(27, 26, 26, 0.83)' : 'rgba(247, 244, 244, 0.94)'};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -139,9 +140,9 @@ const NavItem = styled.button`
   font-weight: ${props => props.$active ? props.theme.fontWeight.bold : props.theme.fontWeight.normal};
   min-width: 70px;
   
-  &:hover {
-    color: ${props => props.theme.colors.navText};
-  }
+  // &:hover {
+  //   color: ${props => props.theme.colors.navText};
+  // }
 `;
 
 const screens = [
