@@ -9,6 +9,8 @@ import ApiService from '../../services/api';
 import DeviceInfo from '../../utils/deviceInfo';
 import LocalStorageHelper from '../../services/localStorage';
 import { processarArquivoHtml, readFileWithEncoding, detectCharsetFromHtml } from '../../utils/sigaaParser';
+import { extractTextFromPdf, parseSigaaPdfText } from '../../utils/pdfParser';
+import { parseHorario } from '../../utils/sigaaParser';
 
 function StatusScreen() {
   const {
@@ -41,46 +43,61 @@ function StatusScreen() {
   };
 
   const handleFileUpload = async (event) => {
-    const file = event.target.files[0];
-    if (!file) return;
+  const file = event.target.files[0];
+  if (!file) return;
 
-    if (file.type !== 'text/html') {
-      setMessage({ text: 'Por favor, selecione um arquivo HTML válido.', error: true });
-      return;
-    }
+  const isHtml = file.type === 'text/html' || file.name.endsWith('.html');
+  const isPdf = file.type === 'application/pdf' || file.name.endsWith('.pdf');
 
-    setIsLoading(true);
-    setMessage(null);
+  if (!isHtml && !isPdf) {
+    setMessage({ text: 'Selecione um arquivo HTML ou PDF válido.', error: true });
+    return;
+  }
 
-    try {
+  setIsLoading(true);
+  setMessage(null);
+
+  try {
+    let parsedSchedules = [];
+
+    if (isHtml) {
+      // logica html
       let htmlContent = await readFileWithEncoding(file, 'utf-8');
       const detectedCharset = detectCharsetFromHtml(htmlContent);
-
       if (detectedCharset && detectedCharset !== 'utf-8') {
         htmlContent = await readFileWithEncoding(file, detectedCharset);
       }
-
-      const parsedSchedules = processarArquivoHtml(htmlContent, saveUserData);
-
-
-      if (parsedSchedules && parsedSchedules.length > 0) {
-        LocalStorageHelper.setSchedules(parsedSchedules);
-        LocalStorageHelper.setFileLoaded(true);
-        setSchedules(parsedSchedules);
-        setHasSchedule(true);
-
-        const totalUnicos = new Set(parsedSchedules.map(s => s.codigo)).size;
-        setMessage({ text: `Horário carregado com sucesso! ${totalUnicos} aula(s).`, error: false });
-      } else {
-        setMessage({ text: 'Nenhuma aula encontrada no arquivo.', error: true });
+      parsedSchedules = processarArquivoHtml(htmlContent, saveUserData);
+    } 
+    else if (isPdf) {
+      // logica do pdf
+      const fullText = await extractTextFromPdf(file);
+      const { userData: pdfUser, schedules: pdfSchedules } = parseSigaaPdfText(fullText, parseHorario);
+      
+      if (pdfUser.nome || pdfUser.matricula) {
+        saveUserData(pdfUser);
       }
-    } catch (error) {
-      console.error('Error processing file:', error);
-      setMessage({ text: 'Erro ao processar o arquivo.', error: true });
-    } finally {
-      setIsLoading(false);
+      parsedSchedules = pdfSchedules;
     }
-  };
+
+    if (parsedSchedules && parsedSchedules.length > 0) {
+      LocalStorageHelper.setSchedules(parsedSchedules);
+      LocalStorageHelper.setFileLoaded(true);
+      setSchedules(parsedSchedules);
+      setHasSchedule(true);
+
+      const totalUnicos = new Set(parsedSchedules.map(s => s.codigo)).size;
+      setMessage({ text: `Horário carregado via ${isPdf ? 'PDF' : 'HTML'}! ${totalUnicos} aula(s).`, error: false });
+    } else {
+      setMessage({ text: 'Nenhuma aula encontrada no arquivo.', error: true });
+    }
+  } catch (error) {
+    console.error('Error processing file:', error);
+    setMessage({ text: 'Erro ao processar o arquivo.', error: true });
+  } finally {
+    setIsLoading(false);
+  }
+};
 
   const handleClearData = () => {
     LocalStorageHelper.setSchedules([]);
@@ -185,11 +202,14 @@ function StatusScreen() {
 
       <Status_S.Controls>
         <Status_S.FileInput
-          ref={fileInputRef} type="file" accept=".html"
-          onChange={handleFileUpload} id="file-upload"
+          ref={fileInputRef} 
+          type="file" 
+          accept=".html,.pdf"
+          onChange={handleFileUpload} 
+          id="file-upload"
         />
         <Status_S.FileLabel htmlFor="file-upload">
-          {isLoading ? 'Carregando...' : 'Carregar Arquivo HTML'}
+          {isLoading ? 'Carregando...' : 'Carregar Horários (PDF ou HTML)'}
         </Status_S.FileLabel>
 
         <Status_S.AddButton onClick={() => setModalState({ type: 'subject', mode: 'add' })}>
