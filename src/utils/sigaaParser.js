@@ -40,7 +40,7 @@ const normalizeDayKey = (label) =>
     .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase();
 
-const parseHorario = (horario) => {
+export const parseHorario = (horario) => {
   if (!horario) return [];
   
   const schedules = [];
