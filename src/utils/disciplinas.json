@@ -1,0 +1,2885 @@
+{
+    "CGEN - CENTRO DE GESTÃO E NEGÓCIOS": [
+        {
+            "nome_curso": "ADMINISTRAÇÃO",
+            "id_curso": "69670744",
+            "disciplinas": []
+        },
+        {
+            "nome_curso": "ADMINISTRAÇÃO PÚBLICA",
+            "id_curso": "69675831",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "CGN0081",
+                    "nome_disciplina": "DIREITO E LEGISLAÇÃO TRIBUTÁRIA"
+                },
+                {
+                    "codigo_disciplina": "CGN0125",
+                    "nome_disciplina": "ELABORAÇÃO DE TCC"
+                },
+                {
+                    "codigo_disciplina": "CGN0079",
+                    "nome_disciplina": "ELABORAÇÃO E GESTÃO DE PROJETO"
+                },
+                {
+                    "codigo_disciplina": "CGN0057",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR SUPERVISIONADO I"
+                },
+                {
+                    "codigo_disciplina": "CGN0080",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR SUPERVISIONADO II"
+                },
+                {
+                    "codigo_disciplina": "CGN0112",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR SUPERVISIONADO III"
+                },
+                {
+                    "codigo_disciplina": "CGN0119",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR SUPERVISIONADO IV"
+                },
+                {
+                    "codigo_disciplina": "HCS0076",
+                    "nome_disciplina": "FILOSOFIA E ÉTICA"
+                },
+                {
+                    "codigo_disciplina": "CGN0078",
+                    "nome_disciplina": "GESTÃO DE OPERAÇÕES E LOGÍSTICA II"
+                },
+                {
+                    "codigo_disciplina": "CGN0108",
+                    "nome_disciplina": "NEGOCIAÇÃO E ARBITRAGEM"
+                },
+                {
+                    "codigo_disciplina": "CGN0076",
+                    "nome_disciplina": "ORÇAMENTO PÚBLICO"
+                },
+                {
+                    "codigo_disciplina": "HCS0152",
+                    "nome_disciplina": "SEMINÁRIO INTEGRADOR"
+                },
+                {
+                    "codigo_disciplina": "CGN0082",
+                    "nome_disciplina": "SEMINÁRIO TEMÁTICO II NA LFE I"
+                },
+                {
+                    "codigo_disciplina": "CGN0083",
+                    "nome_disciplina": "SEMINÁRIO TEMÁTICO II NA LFE II"
+                },
+                {
+                    "codigo_disciplina": "CGN0084",
+                    "nome_disciplina": "SEMINÁRIO TEMÁTICO II NA LFE III"
+                }
+            ]
+        },
+        {
+            "nome_curso": "GESTÃO DO AGRONEGÓCIO",
+            "id_curso": "110027215",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "CGN0172",
+                    "nome_disciplina": "COMÉRCIO EXTERIOR E NEGÓCIOS INTERNACIONAIS NO AGRONEGÓCIO"
+                },
+                {
+                    "codigo_disciplina": "CGN0169",
+                    "nome_disciplina": "EMPREENDEDORISMO APLICADO NO AGRONEGÓCIO"
+                },
+                {
+                    "codigo_disciplina": "CGN0170",
+                    "nome_disciplina": "GESTÃO DA INOVAÇÃO E STARTUP NO AGRONEGÓCIO"
+                },
+                {
+                    "codigo_disciplina": "CGN0173",
+                    "nome_disciplina": "GESTÃO DE RISCOS NO AGRONEGÓCIO"
+                },
+                {
+                    "codigo_disciplina": "CGN0171",
+                    "nome_disciplina": "POLÍTICAS PÚBLICAS PARA O AGRONEGÓCIO"
+                },
+                {
+                    "codigo_disciplina": "CGN0174",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO"
+                }
+            ]
+        }
+    ],
+    "DESATQUI - DESATIVADO UNID. ACAD. ESP/QUIMICA": [
+        {
+            "nome_curso": "QUÍMICA",
+            "id_curso": "69670742",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "QUI0149",
+                    "nome_disciplina": "ANÁLISE INSTRUMENTAL"
+                },
+                {
+                    "codigo_disciplina": "QUI0084",
+                    "nome_disciplina": "ANÁLISE INSTRUMENTAL"
+                },
+                {
+                    "codigo_disciplina": "QUI0087",
+                    "nome_disciplina": "ANÁLISE INSTRUMENTAL EXPERIMENTAL"
+                },
+                {
+                    "codigo_disciplina": "QUI0136",
+                    "nome_disciplina": "BIOQUÍMICA"
+                },
+                {
+                    "codigo_disciplina": "IMT0276",
+                    "nome_disciplina": "CÁLCULO I"
+                },
+                {
+                    "codigo_disciplina": "IMT0277",
+                    "nome_disciplina": "CÁLCULO II"
+                },
+                {
+                    "codigo_disciplina": "FAE0014",
+                    "nome_disciplina": "DIDÁTICA E FORMAÇÃO DE PROFESSORES"
+                },
+                {
+                    "codigo_disciplina": "IMT0281",
+                    "nome_disciplina": "ELEMENTOS DE MATEMÁTICA"
+                },
+                {
+                    "codigo_disciplina": "QUI0152",
+                    "nome_disciplina": "ELETROQUÍMICA"
+                },
+                {
+                    "codigo_disciplina": "QUI0089",
+                    "nome_disciplina": "ELETROQUÍMICA"
+                },
+                {
+                    "codigo_disciplina": "QUI0088",
+                    "nome_disciplina": "ESTÁGIO SUPERVISIONADO 1"
+                },
+                {
+                    "codigo_disciplina": "QUI0097",
+                    "nome_disciplina": "ESTÁGIO SUPERVISIONADO 3"
+                },
+                {
+                    "codigo_disciplina": "IFC0151",
+                    "nome_disciplina": "FÍSICA 2"
+                },
+                {
+                    "codigo_disciplina": "IFC0152",
+                    "nome_disciplina": "FÍSICA 3"
+                },
+                {
+                    "codigo_disciplina": "FAE0202",
+                    "nome_disciplina": "FUNDAMENTOS FILOSÓFICOS E SÓCIO-HISTÓRICOS DA EDUCAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "FAE0108",
+                    "nome_disciplina": "FUNDAMENTOS HISTÓRICOS E FILOSÓFICOS DA EDUCAÇÃO BRASILEIRA"
+                },
+                {
+                    "codigo_disciplina": "QUI0159",
+                    "nome_disciplina": "FUNDAMENTOS MATEMÁTICOS APLICADOS À QUÍMICA"
+                },
+                {
+                    "codigo_disciplina": "QUI0091",
+                    "nome_disciplina": "INSTRUMENTAÇÃO PARA O ENSINO DE QUÍMICA 1"
+                },
+                {
+                    "codigo_disciplina": "QUI0138",
+                    "nome_disciplina": "INTRODUÇÃO AO CURSO DE LICENCIATURA EM QUÍMICA"
+                },
+                {
+                    "codigo_disciplina": "ILL0065",
+                    "nome_disciplina": "LIBRAS - LÍNGUA BRASILEIRA DE SINAIS"
+                },
+                {
+                    "codigo_disciplina": "QUI0120",
+                    "nome_disciplina": "MÉTODOS ESPECTROSCÓPICOS DE COMPOSTOS ORGÂNICOS"
+                },
+                {
+                    "codigo_disciplina": "FAE0109",
+                    "nome_disciplina": "PSICOLOGIA DA EDUCAÇÃO 1"
+                },
+                {
+                    "codigo_disciplina": "FAE0204",
+                    "nome_disciplina": "PSICOLOGIA DA EDUCAÇÃO I"
+                },
+                {
+                    "codigo_disciplina": "QUI0160",
+                    "nome_disciplina": "QUÍMICA ANALÍTICA QUANTITATIVA"
+                },
+                {
+                    "codigo_disciplina": "QUI0144",
+                    "nome_disciplina": "QUÍMICA ANALÍTICA QUANTITATIVA EXPERIMENTAL"
+                },
+                {
+                    "codigo_disciplina": "QUI0067",
+                    "nome_disciplina": "QUÍMICA E SOCIEDADE"
+                },
+                {
+                    "codigo_disciplina": "QUI0133",
+                    "nome_disciplina": "QUÍMICA EXPERIMENTAL"
+                },
+                {
+                    "codigo_disciplina": "QUI0158",
+                    "nome_disciplina": "QUÍMICA GERAL"
+                },
+                {
+                    "codigo_disciplina": "QUI0078",
+                    "nome_disciplina": "QUÍMICA ORGÂNICA 2"
+                },
+                {
+                    "codigo_disciplina": "QUI0151",
+                    "nome_disciplina": "SÍNTESE EM QUÍMICA INORGÂNICA"
+                },
+                {
+                    "codigo_disciplina": "QUI0086",
+                    "nome_disciplina": "SÍNTESE EM QUÍMICA INORGÂNICA"
+                },
+                {
+                    "codigo_disciplina": "QUI0075",
+                    "nome_disciplina": "TERMODINÂMICA QUÍMICA"
+                }
+            ]
+        },
+        {
+            "nome_curso": "QUÍMICA INDUSTRIAL",
+            "id_curso": "99530476",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "IMT0275",
+                    "nome_disciplina": "ÁLGEBRA LINEAR"
+                },
+                {
+                    "codigo_disciplina": "QUI0149",
+                    "nome_disciplina": "ANÁLISE INSTRUMENTAL"
+                },
+                {
+                    "codigo_disciplina": "QUI0150",
+                    "nome_disciplina": "ANÁLISE INSTRUMENTAL EXPERIMENTAL"
+                },
+                {
+                    "codigo_disciplina": "QUI0136",
+                    "nome_disciplina": "BIOQUÍMICA"
+                },
+                {
+                    "codigo_disciplina": "IMT0276",
+                    "nome_disciplina": "CÁLCULO I"
+                },
+                {
+                    "codigo_disciplina": "IMT0277",
+                    "nome_disciplina": "CÁLCULO II"
+                },
+                {
+                    "codigo_disciplina": "IMT0281",
+                    "nome_disciplina": "ELEMENTOS DE MATEMÁTICA"
+                },
+                {
+                    "codigo_disciplina": "QUI0152",
+                    "nome_disciplina": "ELETROQUÍMICA"
+                },
+                {
+                    "codigo_disciplina": "QUI0164",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR OBRIGATÓRIO"
+                },
+                {
+                    "codigo_disciplina": "IFC0152",
+                    "nome_disciplina": "FÍSICA 3"
+                },
+                {
+                    "codigo_disciplina": "QUI0153",
+                    "nome_disciplina": "FÍSICO-QUÍMICA INDUSTRIAL"
+                },
+                {
+                    "codigo_disciplina": "QUI0159",
+                    "nome_disciplina": "FUNDAMENTOS MATEMÁTICOS APLICADOS À QUÍMICA"
+                },
+                {
+                    "codigo_disciplina": "QUI0135",
+                    "nome_disciplina": "INTRODUÇÃO À QUÍMICA INDUSTRIAL"
+                },
+                {
+                    "codigo_disciplina": "QUI0120",
+                    "nome_disciplina": "MÉTODOS ESPECTROSCÓPICOS DE COMPOSTOS ORGÂNICOS"
+                },
+                {
+                    "codigo_disciplina": "IBT0234",
+                    "nome_disciplina": "MICROBIOLOGIA"
+                },
+                {
+                    "codigo_disciplina": "FEA0253",
+                    "nome_disciplina": "MINEROQUÍMICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0135",
+                    "nome_disciplina": "OPERAÇÕES UNITÁRIAS 2"
+                },
+                {
+                    "codigo_disciplina": "QUI0160",
+                    "nome_disciplina": "QUÍMICA ANALÍTICA QUANTITATIVA"
+                },
+                {
+                    "codigo_disciplina": "QUI0144",
+                    "nome_disciplina": "QUÍMICA ANALÍTICA QUANTITATIVA EXPERIMENTAL"
+                },
+                {
+                    "codigo_disciplina": "QUI0133",
+                    "nome_disciplina": "QUÍMICA EXPERIMENTAL"
+                },
+                {
+                    "codigo_disciplina": "QUI0158",
+                    "nome_disciplina": "QUÍMICA GERAL"
+                },
+                {
+                    "codigo_disciplina": "QUI0078",
+                    "nome_disciplina": "QUÍMICA ORGÂNICA 2"
+                },
+                {
+                    "codigo_disciplina": "QUI0151",
+                    "nome_disciplina": "SÍNTESE EM QUÍMICA INORGÂNICA"
+                },
+                {
+                    "codigo_disciplina": "QUI0075",
+                    "nome_disciplina": "TERMODINÂMICA QUÍMICA"
+                }
+            ]
+        }
+    ],
+    "FAE - FACULDADE DE EDUCAÇÃO": [
+        {
+            "nome_curso": "EDUCAÇÃO DO CAMPO",
+            "id_curso": "69675842",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "FAE0119",
+                    "nome_disciplina": "CIÊNCIAS DA NATUREZA - BIOLOGIA II"
+                },
+                {
+                    "codigo_disciplina": "FAE0120",
+                    "nome_disciplina": "CIÊNCIAS DA NATUREZA - FISICA I"
+                },
+                {
+                    "codigo_disciplina": "FAE0146",
+                    "nome_disciplina": "CIÊNCIAS DA NATUREZA: FÍSICA III"
+                },
+                {
+                    "codigo_disciplina": "FAE0118",
+                    "nome_disciplina": "CIÊNCIAS DA NATUREZA - QUÍMICA I"
+                },
+                {
+                    "codigo_disciplina": "FAE0144",
+                    "nome_disciplina": "CIÊNCIAS DA NATUREZA: QUÍMICA III"
+                },
+                {
+                    "codigo_disciplina": "FAE0147",
+                    "nome_disciplina": "DIDÁTICA E FORMAÇÃO DE PROFESSORES DO CAMPO"
+                },
+                {
+                    "codigo_disciplina": "FAE0116",
+                    "nome_disciplina": "EDUCAÇÃO ESPECIAL E INCLUSÃO"
+                },
+                {
+                    "codigo_disciplina": "FAE0155",
+                    "nome_disciplina": "ESTÁGIO DE DOCÊNCIA EM CIÊNCIAS DA NATUREZA NO ENSINO FUNDAMENTAL OU EJA I"
+                },
+                {
+                    "codigo_disciplina": "FAE0191",
+                    "nome_disciplina": "ESTÁGIO DE DOCÊNCIA EM CIÊNCIAS DA NATUREZA NO ENSINO MÉDIO OU EJA IV"
+                },
+                {
+                    "codigo_disciplina": "FAE0149",
+                    "nome_disciplina": "FUNDAMENTOS FILOSÓFICOS E SÓCIO HISTÓRICOS DA EDUCAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "FAE0188",
+                    "nome_disciplina": "GESTÃO E ORGANIZAÇÃO DO TRABALHO PEDAGÓGICO"
+                },
+                {
+                    "codigo_disciplina": "FAE0055",
+                    "nome_disciplina": "INTROD. ÀS CIÊNCIAS DA NATUREZA E EDUCAÇ. DO CAMPO"
+                },
+                {
+                    "codigo_disciplina": "FAE0056",
+                    "nome_disciplina": "LEITURA E PRODUÇÃO DE TEXTOS I"
+                },
+                {
+                    "codigo_disciplina": "FAE0057",
+                    "nome_disciplina": "LEITURA E PRODUÇÃO DE TEXTOS II"
+                },
+                {
+                    "codigo_disciplina": "FAE0187",
+                    "nome_disciplina": "LIBRAS"
+                },
+                {
+                    "codigo_disciplina": "FAE0058",
+                    "nome_disciplina": "MATEMÁTICA PARA CIÊNCIAS DA NATUREZA I"
+                },
+                {
+                    "codigo_disciplina": "FAE0154",
+                    "nome_disciplina": "PESQUISA EM EDUCAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "FAE0060",
+                    "nome_disciplina": "POLÍTICAS E GESTÃO DA EDUCAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "FAE0073",
+                    "nome_disciplina": "PSICOLOGIA DA EDUCAÇÃO I"
+                },
+                {
+                    "codigo_disciplina": "FAE0095",
+                    "nome_disciplina": "REALIDADE BRASILEIRA DO CAMPO"
+                },
+                {
+                    "codigo_disciplina": "FAE0096",
+                    "nome_disciplina": "SEMINÁRIO DE INTEGRAÇÃO I"
+                },
+                {
+                    "codigo_disciplina": "FAE0121",
+                    "nome_disciplina": "SEMINÁRIO DE INTEGRAÇÃO III"
+                },
+                {
+                    "codigo_disciplina": "FAE0143",
+                    "nome_disciplina": "SEMINÁRIO DE INTEGRAÇÃO V"
+                },
+                {
+                    "codigo_disciplina": "FAE0142",
+                    "nome_disciplina": "SEMINÁRIO DE INTEGRAÇÃO VII"
+                },
+                {
+                    "codigo_disciplina": "FAE0139",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO I"
+                },
+                {
+                    "codigo_disciplina": "FAE0192",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO II"
+                }
+            ]
+        },
+        {
+            "nome_curso": "PEDAGOGIA",
+            "id_curso": "69675820",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "FAE0183",
+                    "nome_disciplina": "ALFABETIZAÇÃO E LETRAMENTO II"
+                },
+                {
+                    "codigo_disciplina": "FAE0170",
+                    "nome_disciplina": "ARTE E EDUCAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "FAE0221",
+                    "nome_disciplina": "CURRÍCULO, CULTURA E AVALIAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "FAE0174",
+                    "nome_disciplina": "DIDÁTICA E FORMAÇÃO DE PROFESSORES"
+                },
+                {
+                    "codigo_disciplina": "FAE0223",
+                    "nome_disciplina": "ESTÁGIO E PRÁTICA DE ENSINO EM ANOS INICIAIS DO ENSINO FUNDAMENTAL E GESTÃO I"
+                },
+                {
+                    "codigo_disciplina": "FAE0212",
+                    "nome_disciplina": "ESTÁGIO E PRÁTICA DE ENSINO EM EDUCAÇÃO ESPECIAL E INCLUSÃO I"
+                },
+                {
+                    "codigo_disciplina": "FAE0211",
+                    "nome_disciplina": "ESTÁGIO E PRÁTICA DE ENSINO EM EDUCAÇÃO INFANTIL I"
+                },
+                {
+                    "codigo_disciplina": "FAE0220",
+                    "nome_disciplina": "FILOSOFIA DA EDUCAÇÃO I"
+                },
+                {
+                    "codigo_disciplina": "FAE0182",
+                    "nome_disciplina": "FUNDAMENTOS E METODOLOGIA DE CIÊNCIAS NATURAIS I"
+                },
+                {
+                    "codigo_disciplina": "FAE0210",
+                    "nome_disciplina": "FUNDAMENTOS E METODOLOGIA DE HISTÓRIA"
+                },
+                {
+                    "codigo_disciplina": "FAE0208",
+                    "nome_disciplina": "FUNDAMENTOS E METODOLOGIA DE LÍNGUA PORTUGUESA II"
+                },
+                {
+                    "codigo_disciplina": "FAE0185",
+                    "nome_disciplina": "FUNDAMENTOS E METODOLOGIA DE MATEMÁTICA II"
+                },
+                {
+                    "codigo_disciplina": "FAE0168",
+                    "nome_disciplina": "HISTÓRIA DA EDUCAÇÃO I"
+                },
+                {
+                    "codigo_disciplina": "FAE0172",
+                    "nome_disciplina": "LEITURA E PRODUÇÃO TEXTUAL"
+                },
+                {
+                    "codigo_disciplina": "FAE0209",
+                    "nome_disciplina": "LÍNGUA BRASILEIRA DE SINAIS E A EDUCAÇÃO BILÍNGUE PARA SURDOS"
+                },
+                {
+                    "codigo_disciplina": "FAE0184",
+                    "nome_disciplina": "POLÍTICAS EDUCACIONAIS E EDUCAÇÃO BÁSICA"
+                },
+                {
+                    "codigo_disciplina": "FAE0173",
+                    "nome_disciplina": "PSICOLOGIA DA EDUCAÇÃO I"
+                },
+                {
+                    "codigo_disciplina": "FAE0175",
+                    "nome_disciplina": "SEMINÁRIO DE INTEGRAÇÃO: EDUCAÇÃO, CULTURA, DIREITOS HUMANOS E SOCIEDADE"
+                },
+                {
+                    "codigo_disciplina": "FAE0186",
+                    "nome_disciplina": "SEMINÁRIO DE INTEGRAÇÃO: FORMAÇÃO DE PROFESSORES"
+                },
+                {
+                    "codigo_disciplina": "FAE0181",
+                    "nome_disciplina": "SOCIOLOGIA DA EDUCAÇÃO II"
+                },
+                {
+                    "codigo_disciplina": "FAE0222",
+                    "nome_disciplina": "TCC I"
+                },
+                {
+                    "codigo_disciplina": "FAE0226",
+                    "nome_disciplina": "TCC II"
+                }
+            ]
+        }
+    ],
+    "FENG - FACULDADE DE ENGENHARIA": [
+        {
+            "nome_curso": "ENGENHARIA CIVIL",
+            "id_curso": "69673261",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "IMT0275",
+                    "nome_disciplina": "ÁLGEBRA LINEAR"
+                },
+                {
+                    "codigo_disciplina": "FEA0006",
+                    "nome_disciplina": "ANÁLISE ESTRUTURAL 1"
+                },
+                {
+                    "codigo_disciplina": "FEA0007",
+                    "nome_disciplina": "ANÁLISE ESTRUTURAL 2"
+                },
+                {
+                    "codigo_disciplina": "IMT0276",
+                    "nome_disciplina": "CÁLCULO I"
+                },
+                {
+                    "codigo_disciplina": "IMT0277",
+                    "nome_disciplina": "CÁLCULO II"
+                },
+                {
+                    "codigo_disciplina": "IMT0278",
+                    "nome_disciplina": "CÁLCULO III"
+                },
+                {
+                    "codigo_disciplina": "IBT0184",
+                    "nome_disciplina": "CÁLCULO NUMÉRICO"
+                },
+                {
+                    "codigo_disciplina": "IMT0280",
+                    "nome_disciplina": "CÁLCULO VETORIAL"
+                },
+                {
+                    "codigo_disciplina": "FEA0021",
+                    "nome_disciplina": "CONSTRUÇÃO CIVIL 2"
+                },
+                {
+                    "codigo_disciplina": "FEA0027",
+                    "nome_disciplina": "DESENHO TÉCNICO 1"
+                },
+                {
+                    "codigo_disciplina": "FEA0034",
+                    "nome_disciplina": "DIREITO E LEGISLAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "FEA0036",
+                    "nome_disciplina": "ECONOMIA"
+                },
+                {
+                    "codigo_disciplina": "FEA0049",
+                    "nome_disciplina": "ENGENHARIA DE TRAFÉGO"
+                },
+                {
+                    "codigo_disciplina": "FEA0054",
+                    "nome_disciplina": "ERGONOMIA E SEGURANÇA NO TRABALHO"
+                },
+                {
+                    "codigo_disciplina": "FEA0061",
+                    "nome_disciplina": "ESTÁGIO SUPERVISIONADO"
+                },
+                {
+                    "codigo_disciplina": "FEA0062",
+                    "nome_disciplina": "ESTRUTURAS DE AÇO"
+                },
+                {
+                    "codigo_disciplina": "FEA0064",
+                    "nome_disciplina": "ESTRUTURAS DE CONCRETO ARMADO 2"
+                },
+                {
+                    "codigo_disciplina": "FEA0065",
+                    "nome_disciplina": "ESTRUTURAS DE CONCRETO ARMADO 3"
+                },
+                {
+                    "codigo_disciplina": "IFC0147",
+                    "nome_disciplina": "FÍSICA 1"
+                },
+                {
+                    "codigo_disciplina": "IFC0151",
+                    "nome_disciplina": "FÍSICA 2"
+                },
+                {
+                    "codigo_disciplina": "IFC0152",
+                    "nome_disciplina": "FÍSICA 3"
+                },
+                {
+                    "codigo_disciplina": "FEA0084",
+                    "nome_disciplina": "GEODÉSIA"
+                },
+                {
+                    "codigo_disciplina": "FEA0087",
+                    "nome_disciplina": "GEOLOGIA"
+                },
+                {
+                    "codigo_disciplina": "IMT0282",
+                    "nome_disciplina": "GEOMETRIA ANALÍTICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0116",
+                    "nome_disciplina": "HIDROLOGIA"
+                },
+                {
+                    "codigo_disciplina": "FEA0121",
+                    "nome_disciplina": "INTRODUÇÃO À ENGENHARIA CIVIL"
+                },
+                {
+                    "codigo_disciplina": "IFC0154",
+                    "nome_disciplina": "LABORATÓRIO DE FÍSICA 1"
+                },
+                {
+                    "codigo_disciplina": "IFC0155",
+                    "nome_disciplina": "LABORATÓRIO DE FÍSICA 2"
+                },
+                {
+                    "codigo_disciplina": "ILL0060",
+                    "nome_disciplina": "LEITURA E PRODUÇÃO DE TEXTOS TÉCNICO-ACADÊMICOS"
+                },
+                {
+                    "codigo_disciplina": "FEA0140",
+                    "nome_disciplina": "MATERIAIS DE CONSTRUÇÃO CIVIL 2"
+                },
+                {
+                    "codigo_disciplina": "FEA0141",
+                    "nome_disciplina": "MECÂNICA DAS ESTRUTURAS"
+                },
+                {
+                    "codigo_disciplina": "FEA0143",
+                    "nome_disciplina": "MECÂNICA DOS FLUIDOS"
+                },
+                {
+                    "codigo_disciplina": "FEA0159",
+                    "nome_disciplina": "OBRAS DE TERRA"
+                },
+                {
+                    "codigo_disciplina": "FEA0182",
+                    "nome_disciplina": "PONTES"
+                },
+                {
+                    "codigo_disciplina": "IMT0284",
+                    "nome_disciplina": "PROBABILIDADE E ESTATÍSTICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0194",
+                    "nome_disciplina": "PROJETO DE ESTRADAS 1"
+                },
+                {
+                    "codigo_disciplina": "FEA0200",
+                    "nome_disciplina": "PROJETO INTERDISCIPLINAR 1"
+                },
+                {
+                    "codigo_disciplina": "FEA0202",
+                    "nome_disciplina": "PROJETO INTERDISCIPLINAR 3"
+                },
+                {
+                    "codigo_disciplina": "QUI0163",
+                    "nome_disciplina": "QUÍMICA GERAL PRÁTICA"
+                },
+                {
+                    "codigo_disciplina": "QUI0161",
+                    "nome_disciplina": "QUÍMICA GERAL TEÓRICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0207",
+                    "nome_disciplina": "RESISTÊNCIA DOS MATERIAIS 1"
+                },
+                {
+                    "codigo_disciplina": "FEA0208",
+                    "nome_disciplina": "RESISTÊNCIA DOS MATERIAIS 2"
+                },
+                {
+                    "codigo_disciplina": "FEA0210",
+                    "nome_disciplina": "SANEAMENTO BÁSICO 1"
+                },
+                {
+                    "codigo_disciplina": "FEA0211",
+                    "nome_disciplina": "SANEAMENTO BÁSICO 2"
+                },
+                {
+                    "codigo_disciplina": "FEA0217",
+                    "nome_disciplina": "SISTEMAS ESTRUTURAIS"
+                },
+                {
+                    "codigo_disciplina": "FEA0243",
+                    "nome_disciplina": "SISTEMAS PREDIAIS 2"
+                },
+                {
+                    "codigo_disciplina": "FEA0238",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO 1"
+                },
+                {
+                    "codigo_disciplina": "FEA0240",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO 2"
+                }
+            ]
+        },
+        {
+            "nome_curso": "ENGENHARIA DE MINAS",
+            "id_curso": "69673263",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "IMT0275",
+                    "nome_disciplina": "ÁLGEBRA LINEAR"
+                },
+                {
+                    "codigo_disciplina": "FEA0221",
+                    "nome_disciplina": "AUTOMAÇÃO INDUSTRIAL E CONTROLE DE SISTEMAS"
+                },
+                {
+                    "codigo_disciplina": "FEA0010",
+                    "nome_disciplina": "AVALIAÇÃO ECONÔMICA DE JAZIDA"
+                },
+                {
+                    "codigo_disciplina": "IMT0276",
+                    "nome_disciplina": "CÁLCULO I"
+                },
+                {
+                    "codigo_disciplina": "IMT0277",
+                    "nome_disciplina": "CÁLCULO II"
+                },
+                {
+                    "codigo_disciplina": "IMT0278",
+                    "nome_disciplina": "CÁLCULO III"
+                },
+                {
+                    "codigo_disciplina": "IBT0184",
+                    "nome_disciplina": "CÁLCULO NUMÉRICO"
+                },
+                {
+                    "codigo_disciplina": "FEA0027",
+                    "nome_disciplina": "DESENHO TÉCNICO 1"
+                },
+                {
+                    "codigo_disciplina": "FEA0030",
+                    "nome_disciplina": "DESMONTE DE ROCHAS"
+                },
+                {
+                    "codigo_disciplina": "FEA0031",
+                    "nome_disciplina": "DIMENSIONAMENTO DE EQUIPAMENTOS DE LAVRA"
+                },
+                {
+                    "codigo_disciplina": "FEA0033",
+                    "nome_disciplina": "DIREITO E LEGISLAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "FEA0040",
+                    "nome_disciplina": "ECONOMIA MINERAL"
+                },
+                {
+                    "codigo_disciplina": "FEA0041",
+                    "nome_disciplina": "ELEMENTOS DE MÁQUINAS"
+                },
+                {
+                    "codigo_disciplina": "FEA0052",
+                    "nome_disciplina": "ERGONOMIA E SEGURANÇA DO TRABALHO"
+                },
+                {
+                    "codigo_disciplina": "FEA0055",
+                    "nome_disciplina": "ESTABILIDADE DE TALUDES NA MINERAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "FEA0056",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR OBRIGATÓRIO 1"
+                },
+                {
+                    "codigo_disciplina": "FEA0057",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR OBRIGATÓRIO 2"
+                },
+                {
+                    "codigo_disciplina": "FEA0068",
+                    "nome_disciplina": "FECHAMENTO DE MINA"
+                },
+                {
+                    "codigo_disciplina": "IFC0147",
+                    "nome_disciplina": "FÍSICA 1"
+                },
+                {
+                    "codigo_disciplina": "IFC0151",
+                    "nome_disciplina": "FÍSICA 2"
+                },
+                {
+                    "codigo_disciplina": "IFC0152",
+                    "nome_disciplina": "FÍSICA 3"
+                },
+                {
+                    "codigo_disciplina": "QUI0017",
+                    "nome_disciplina": "FÍSICO-QUÍMICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0071",
+                    "nome_disciplina": "FLOTAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "FEA0085",
+                    "nome_disciplina": "GEOESTATÍSTICA MULTIVARIÁVEL E SIMULAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "FEA0090",
+                    "nome_disciplina": "GEOLOGIA ESTRUTURAL"
+                },
+                {
+                    "codigo_disciplina": "IMT0282",
+                    "nome_disciplina": "GEOMETRIA ANALÍTICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0122",
+                    "nome_disciplina": "INTRODUÇÃO À ENGENHARIA DE MINAS"
+                },
+                {
+                    "codigo_disciplina": "FEA0125",
+                    "nome_disciplina": "INTRODUÇÃO AO PROCESSAMENTO MINERAL"
+                },
+                {
+                    "codigo_disciplina": "IFC0154",
+                    "nome_disciplina": "LABORATÓRIO DE FÍSICA 1"
+                },
+                {
+                    "codigo_disciplina": "IFC0155",
+                    "nome_disciplina": "LABORATÓRIO DE FÍSICA 2"
+                },
+                {
+                    "codigo_disciplina": "FEA0127",
+                    "nome_disciplina": "LAVRA SUBTERRÂNEA"
+                },
+                {
+                    "codigo_disciplina": "FEA0128",
+                    "nome_disciplina": "LAVRA SUPERFICIAL"
+                },
+                {
+                    "codigo_disciplina": "ILL0060",
+                    "nome_disciplina": "LEITURA E PRODUÇÃO DE TEXTOS TÉCNICO-ACADÊMICOS"
+                },
+                {
+                    "codigo_disciplina": "FEA0141",
+                    "nome_disciplina": "MECÂNICA DAS ESTRUTURAS"
+                },
+                {
+                    "codigo_disciplina": "FEA0143",
+                    "nome_disciplina": "MECÂNICA DOS FLUIDOS"
+                },
+                {
+                    "codigo_disciplina": "FEA0149",
+                    "nome_disciplina": "MÉTODOS ANALÍTICOS EM CARACTERIZAÇÃO MINERAL"
+                },
+                {
+                    "codigo_disciplina": "FEA0155",
+                    "nome_disciplina": "MINERALOGIA MICROSCÓPICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0164",
+                    "nome_disciplina": "PESQUISA MINERAL"
+                },
+                {
+                    "codigo_disciplina": "FEA0169",
+                    "nome_disciplina": "PILHA DE ESTÉRIL E BARRAGEM DE REJEITO"
+                },
+                {
+                    "codigo_disciplina": "FEA0171",
+                    "nome_disciplina": "PLANEJAMENTO DE MINA DE MÉDIO A LONGO PRAZO"
+                },
+                {
+                    "codigo_disciplina": "IMT0284",
+                    "nome_disciplina": "PROBABILIDADE E ESTATÍSTICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0191",
+                    "nome_disciplina": "PROCESSOS MAGNÉTICOS E GRAVIMÉTRICOS"
+                },
+                {
+                    "codigo_disciplina": "FEA0196",
+                    "nome_disciplina": "PROJETO DE MINERAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "FEA0205",
+                    "nome_disciplina": "PROSPECÇÃO MINERAL"
+                },
+                {
+                    "codigo_disciplina": "QUI0163",
+                    "nome_disciplina": "QUÍMICA GERAL PRÁTICA"
+                },
+                {
+                    "codigo_disciplina": "QUI0161",
+                    "nome_disciplina": "QUÍMICA GERAL TEÓRICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0207",
+                    "nome_disciplina": "RESISTÊNCIA DOS MATERIAIS 1"
+                },
+                {
+                    "codigo_disciplina": "FEA0236",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO"
+                }
+            ]
+        },
+        {
+            "nome_curso": "ENGENHARIA DE PRODUÇÃO",
+            "id_curso": "69673264",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "IMT0275",
+                    "nome_disciplina": "ÁLGEBRA LINEAR"
+                },
+                {
+                    "codigo_disciplina": "IBT0003",
+                    "nome_disciplina": "ALGORITMO E PROGRAMAÇÃO DE COMPUTADORES 2"
+                },
+                {
+                    "codigo_disciplina": "IMT0276",
+                    "nome_disciplina": "CÁLCULO I"
+                },
+                {
+                    "codigo_disciplina": "IMT0277",
+                    "nome_disciplina": "CÁLCULO II"
+                },
+                {
+                    "codigo_disciplina": "IMT0278",
+                    "nome_disciplina": "CÁLCULO III"
+                },
+                {
+                    "codigo_disciplina": "FEA0012",
+                    "nome_disciplina": "CIÊNCIA DOS MATERIAIS"
+                },
+                {
+                    "codigo_disciplina": "FEA0109",
+                    "nome_disciplina": "CIRCUITOS ELÉTRICOS"
+                },
+                {
+                    "codigo_disciplina": "FEA0026",
+                    "nome_disciplina": "CONTROLE ESTATÍSTICO DE PROCESSO"
+                },
+                {
+                    "codigo_disciplina": "FEA0027",
+                    "nome_disciplina": "DESENHO TÉCNICO 1"
+                },
+                {
+                    "codigo_disciplina": "FEA0039",
+                    "nome_disciplina": "ECONOMIA INDUSTRIAL"
+                },
+                {
+                    "codigo_disciplina": "CGN0028",
+                    "nome_disciplina": "EMPREENDEDORISMO"
+                },
+                {
+                    "codigo_disciplina": "FEA0050",
+                    "nome_disciplina": "ENGENHARIA DO TRABALHO"
+                },
+                {
+                    "codigo_disciplina": "FEA0051",
+                    "nome_disciplina": "ENGENHARIA ECONÔMICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0054",
+                    "nome_disciplina": "ERGONOMIA E SEGURANÇA NO TRABALHO"
+                },
+                {
+                    "codigo_disciplina": "FEA0060",
+                    "nome_disciplina": "ESTÁGIO SUPERVISIONADO"
+                },
+                {
+                    "codigo_disciplina": "FEA0069",
+                    "nome_disciplina": "FENÔMENOS DE TRANSPORTE 1"
+                },
+                {
+                    "codigo_disciplina": "IFC0147",
+                    "nome_disciplina": "FÍSICA 1"
+                },
+                {
+                    "codigo_disciplina": "IFC0151",
+                    "nome_disciplina": "FÍSICA 2"
+                },
+                {
+                    "codigo_disciplina": "IFC0152",
+                    "nome_disciplina": "FÍSICA 3"
+                },
+                {
+                    "codigo_disciplina": "IMT0282",
+                    "nome_disciplina": "GEOMETRIA ANALÍTICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0099",
+                    "nome_disciplina": "GESTÃO DA QUALIDADE"
+                },
+                {
+                    "codigo_disciplina": "FEA0101",
+                    "nome_disciplina": "GESTÃO DE CADEIA DE SUPRIMENTOS"
+                },
+                {
+                    "codigo_disciplina": "FEA0102",
+                    "nome_disciplina": "GESTÃO DE CUSTOS"
+                },
+                {
+                    "codigo_disciplina": "FEA0108",
+                    "nome_disciplina": "GESTÃO DE PROJETOS"
+                },
+                {
+                    "codigo_disciplina": "CGN0068",
+                    "nome_disciplina": "GESTÃO ESTRATÉGICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0123",
+                    "nome_disciplina": "INTRODUÇÃO À ENGENHARIA DE PRODUÇÃO"
+                },
+                {
+                    "codigo_disciplina": "IFC0154",
+                    "nome_disciplina": "LABORATÓRIO DE FÍSICA 1"
+                },
+                {
+                    "codigo_disciplina": "IFC0155",
+                    "nome_disciplina": "LABORATÓRIO DE FÍSICA 2"
+                },
+                {
+                    "codigo_disciplina": "ILL0060",
+                    "nome_disciplina": "LEITURA E PRODUÇÃO DE TEXTOS TÉCNICO-ACADÊMICOS"
+                },
+                {
+                    "codigo_disciplina": "FEA0156",
+                    "nome_disciplina": "MODELAGEM E SIMULAÇÃO DA DINÂMICA DE SISTEMAS"
+                },
+                {
+                    "codigo_disciplina": "FEA0166",
+                    "nome_disciplina": "PESQUISA OPERACIONAL 1"
+                },
+                {
+                    "codigo_disciplina": "FEA0175",
+                    "nome_disciplina": "PLANEJAMENTO E CONTROLE DA PRODUÇÃO 1"
+                },
+                {
+                    "codigo_disciplina": "FEA0177",
+                    "nome_disciplina": "PLANEJAMENTO E CONTROLE DA PRODUÇÃO 3"
+                },
+                {
+                    "codigo_disciplina": "IMT0284",
+                    "nome_disciplina": "PROBABILIDADE E ESTATÍSTICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0185",
+                    "nome_disciplina": "PROCESSOS DE FABRICAÇÃO 1"
+                },
+                {
+                    "codigo_disciplina": "FEA0198",
+                    "nome_disciplina": "PROJETO DO PRODUTO"
+                },
+                {
+                    "codigo_disciplina": "FEA0203",
+                    "nome_disciplina": "PROJETOS DE INSTALAÇÕES INDUSTRIAIS"
+                },
+                {
+                    "codigo_disciplina": "QUI0163",
+                    "nome_disciplina": "QUÍMICA GERAL PRÁTICA"
+                },
+                {
+                    "codigo_disciplina": "QUI0161",
+                    "nome_disciplina": "QUÍMICA GERAL TEÓRICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0213",
+                    "nome_disciplina": "SIMULAÇÃO DE SISTEMAS"
+                },
+                {
+                    "codigo_disciplina": "HCS0156",
+                    "nome_disciplina": "SOCIOLOGIA"
+                },
+                {
+                    "codigo_disciplina": "CGN0043",
+                    "nome_disciplina": "TEORIA DAS ORGANIZAÇÕES"
+                },
+                {
+                    "codigo_disciplina": "FEA0237",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO 1"
+                },
+                {
+                    "codigo_disciplina": "FEA0239",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO 2"
+                }
+            ]
+        },
+        {
+            "nome_curso": "ENGENHARIA MECÂNICA",
+            "id_curso": "99530208",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "IMT0275",
+                    "nome_disciplina": "ÁLGEBRA LINEAR"
+                },
+                {
+                    "codigo_disciplina": "IBT0002",
+                    "nome_disciplina": "ALGORITMO E PROGRAMAÇÃO DE COMPUTADORES 1"
+                },
+                {
+                    "codigo_disciplina": "FEA0221",
+                    "nome_disciplina": "AUTOMAÇÃO INDUSTRIAL E CONTROLE DE SISTEMAS"
+                },
+                {
+                    "codigo_disciplina": "IMT0276",
+                    "nome_disciplina": "CÁLCULO I"
+                },
+                {
+                    "codigo_disciplina": "IMT0277",
+                    "nome_disciplina": "CÁLCULO II"
+                },
+                {
+                    "codigo_disciplina": "IMT0278",
+                    "nome_disciplina": "CÁLCULO III"
+                },
+                {
+                    "codigo_disciplina": "FEA0106",
+                    "nome_disciplina": "CIÊNCIA DOS MATERIAIS"
+                },
+                {
+                    "codigo_disciplina": "FEA0109",
+                    "nome_disciplina": "CIRCUITOS ELÉTRICOS"
+                },
+                {
+                    "codigo_disciplina": "FEA0026",
+                    "nome_disciplina": "CONTROLE ESTATÍSTICO DE PROCESSO"
+                },
+                {
+                    "codigo_disciplina": "FEA0136",
+                    "nome_disciplina": "DESENHO DE MÁQUINAS"
+                },
+                {
+                    "codigo_disciplina": "FEA0093",
+                    "nome_disciplina": "DESENHO TÉCNICO"
+                },
+                {
+                    "codigo_disciplina": "FEA0129",
+                    "nome_disciplina": "DINÂMICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0034",
+                    "nome_disciplina": "DIREITO E LEGISLAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "FEA0041",
+                    "nome_disciplina": "ELEMENTOS DE MÁQUINAS"
+                },
+                {
+                    "codigo_disciplina": "FEA0050",
+                    "nome_disciplina": "ENGENHARIA DO TRABALHO"
+                },
+                {
+                    "codigo_disciplina": "FEA0051",
+                    "nome_disciplina": "ENGENHARIA ECONÔMICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0054",
+                    "nome_disciplina": "ERGONOMIA E SEGURANÇA NO TRABALHO"
+                },
+                {
+                    "codigo_disciplina": "FEA0060",
+                    "nome_disciplina": "ESTÁGIO SUPERVISIONADO"
+                },
+                {
+                    "codigo_disciplina": "FEA0105",
+                    "nome_disciplina": "ESTÁTICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0062",
+                    "nome_disciplina": "ESTRUTURAS DE AÇO"
+                },
+                {
+                    "codigo_disciplina": "IFC0151",
+                    "nome_disciplina": "FÍSICA 2"
+                },
+                {
+                    "codigo_disciplina": "IMT0282",
+                    "nome_disciplina": "GEOMETRIA ANALÍTICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0099",
+                    "nome_disciplina": "GESTÃO DA QUALIDADE"
+                },
+                {
+                    "codigo_disciplina": "FEA0077",
+                    "nome_disciplina": "INTRODUÇÃO À ENGENHARIA MECÂNICA"
+                },
+                {
+                    "codigo_disciplina": "IFC0154",
+                    "nome_disciplina": "LABORATÓRIO DE FÍSICA 1"
+                },
+                {
+                    "codigo_disciplina": "IFC0155",
+                    "nome_disciplina": "LABORATÓRIO DE FÍSICA 2"
+                },
+                {
+                    "codigo_disciplina": "IFC0156",
+                    "nome_disciplina": "LABORATÓRIO DE FÍSICA 3"
+                },
+                {
+                    "codigo_disciplina": "FEA0080",
+                    "nome_disciplina": "LEITURA E PRODUÇÃO DE TEXTO"
+                },
+                {
+                    "codigo_disciplina": "FEA0119",
+                    "nome_disciplina": "MÁQUINAS DE FLUXO E DESLOCAMENTO"
+                },
+                {
+                    "codigo_disciplina": "FEA0227",
+                    "nome_disciplina": "MEIO AMBIENTE E SUSTENTABILIDADE"
+                },
+                {
+                    "codigo_disciplina": "IMT0284",
+                    "nome_disciplina": "PROBABILIDADE E ESTATÍSTICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0235",
+                    "nome_disciplina": "PROJETO DE INSTALAÇÕES INDUSTRIAIS"
+                },
+                {
+                    "codigo_disciplina": "FEA0198",
+                    "nome_disciplina": "PROJETO DO PRODUTO"
+                },
+                {
+                    "codigo_disciplina": "FEA0222",
+                    "nome_disciplina": "REFRIGERAÇÃO, AR CONDICIONADO E VENTILAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "FEA0208",
+                    "nome_disciplina": "RESISTÊNCIA DOS MATERIAIS 2"
+                },
+                {
+                    "codigo_disciplina": "FEA0117",
+                    "nome_disciplina": "TERMODINÂMICA APLICADA"
+                },
+                {
+                    "codigo_disciplina": "FEA0228",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO 1"
+                },
+                {
+                    "codigo_disciplina": "FEA0239",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO 2"
+                },
+                {
+                    "codigo_disciplina": "FEA0124",
+                    "nome_disciplina": "TRATAMENTO TÉRMICO E SELEÇÃO DE MATERIAIS"
+                },
+                {
+                    "codigo_disciplina": "FEA0223",
+                    "nome_disciplina": "USINAGEM"
+                }
+            ]
+        }
+    ],
+    "IBIOTEC - INSTITUTO DE BIOTECNOLOGIA": [
+        {
+            "nome_curso": "CIÊNCIA DA COMPUTAÇÃO",
+            "id_curso": "109502827",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "IMT0275",
+                    "nome_disciplina": "ÁLGEBRA LINEAR"
+                },
+                {
+                    "codigo_disciplina": "IBT0006",
+                    "nome_disciplina": "ALGORITMOS E PROGRAMAÇÃO DE COMPUTADORES 1"
+                },
+                {
+                    "codigo_disciplina": "IBT0010",
+                    "nome_disciplina": "ANÁLISE E PROJETO DE ALGORITMOS"
+                },
+                {
+                    "codigo_disciplina": "IBT0031",
+                    "nome_disciplina": "BANCO DE DADOS 2"
+                },
+                {
+                    "codigo_disciplina": "IMT0276",
+                    "nome_disciplina": "CÁLCULO I"
+                },
+                {
+                    "codigo_disciplina": "IMT0277",
+                    "nome_disciplina": "CÁLCULO II"
+                },
+                {
+                    "codigo_disciplina": "IBT0058",
+                    "nome_disciplina": "COMPUTAÇÃO GRÁFICA"
+                },
+                {
+                    "codigo_disciplina": "IBT0063",
+                    "nome_disciplina": "DIREITO EM INFORMÁTICA"
+                },
+                {
+                    "codigo_disciplina": "IBT0078",
+                    "nome_disciplina": "ENGENHARIA DE SOFTWARE 2"
+                },
+                {
+                    "codigo_disciplina": "IBT0122",
+                    "nome_disciplina": "ESTRUTURA DE DADOS 1"
+                },
+                {
+                    "codigo_disciplina": "IFC0152",
+                    "nome_disciplina": "FÍSICA 3"
+                },
+                {
+                    "codigo_disciplina": "IBT0172",
+                    "nome_disciplina": "INTELIGÊNCIA ARTIFICIAL"
+                },
+                {
+                    "codigo_disciplina": "IBT0173",
+                    "nome_disciplina": "INTERAÇÃO HUMANO COMPUTADOR"
+                },
+                {
+                    "codigo_disciplina": "IBT0178",
+                    "nome_disciplina": "INTRODUÇÃO À COMPUTAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "IBT0208",
+                    "nome_disciplina": "LABORATÓRIO DE PROGRAMAÇÃO 1"
+                },
+                {
+                    "codigo_disciplina": "IBT0210",
+                    "nome_disciplina": "LABORATÓRIO DE PROGRAMAÇÃO 3"
+                },
+                {
+                    "codigo_disciplina": "IBT0211",
+                    "nome_disciplina": "LINGUAGENS DE PROGRAMAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "IBT0215",
+                    "nome_disciplina": "MATEMÁTICA DISCRETA"
+                },
+                {
+                    "codigo_disciplina": "IBT0249",
+                    "nome_disciplina": "ORGANIZAÇÃO DE COMPUTADORES"
+                },
+                {
+                    "codigo_disciplina": "IMT0284",
+                    "nome_disciplina": "PROBABILIDADE E ESTATÍSTICA"
+                },
+                {
+                    "codigo_disciplina": "IBT0263",
+                    "nome_disciplina": "PROCESSAMENTO DE IMAGENS"
+                },
+                {
+                    "codigo_disciplina": "IBT0278",
+                    "nome_disciplina": "PROGRAMAÇÃO ORIENTADA A OBJETOS"
+                },
+                {
+                    "codigo_disciplina": "IBT0283",
+                    "nome_disciplina": "PROJETO FINAL DE CURSO 1"
+                },
+                {
+                    "codigo_disciplina": "IBT0285",
+                    "nome_disciplina": "PROJETO FINAL DE CURSO 2"
+                },
+                {
+                    "codigo_disciplina": "IBT0337",
+                    "nome_disciplina": "REDES DE COMPUTADORES 1"
+                },
+                {
+                    "codigo_disciplina": "IBT0353",
+                    "nome_disciplina": "SISTEMAS OPERACIONAIS 1"
+                },
+                {
+                    "codigo_disciplina": "IBT0373",
+                    "nome_disciplina": "TEORIA DA COMPUTAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "IBT0390",
+                    "nome_disciplina": "TÓPICOS 1"
+                }
+            ]
+        },
+        {
+            "nome_curso": "CIÊNCIAS BIOLÓGICAS",
+            "id_curso": "69675802",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "IBT0357",
+                    "nome_disciplina": "ANATOMIA HUMANA"
+                },
+                {
+                    "codigo_disciplina": "IBT0594",
+                    "nome_disciplina": "AVALIAÇÃO DE IMPACTO AMBIENTAL"
+                },
+                {
+                    "codigo_disciplina": "IBT0595",
+                    "nome_disciplina": "BIOENSAIO"
+                },
+                {
+                    "codigo_disciplina": "IBT0415",
+                    "nome_disciplina": "BIOÉTICA E BIOSSEGURANÇA"
+                },
+                {
+                    "codigo_disciplina": "IBT0519",
+                    "nome_disciplina": "BIOFÍSICA E FISIOLOGIA ANIMAL COMPARATIVA"
+                },
+                {
+                    "codigo_disciplina": "IBT0416",
+                    "nome_disciplina": "BIOLOGIA CELULAR"
+                },
+                {
+                    "codigo_disciplina": "IBT0455",
+                    "nome_disciplina": "BIOQUÍMICA E METABOLISMO"
+                },
+                {
+                    "codigo_disciplina": "IBT0596",
+                    "nome_disciplina": "BIOTECNOLOGIA"
+                },
+                {
+                    "codigo_disciplina": "IMT0285",
+                    "nome_disciplina": "CÁLCULO I"
+                },
+                {
+                    "codigo_disciplina": "IBT0067",
+                    "nome_disciplina": "ECOLOGIA DE POPULAÇÕES"
+                },
+                {
+                    "codigo_disciplina": "IBT0068",
+                    "nome_disciplina": "ECOLOGIA DE SISTEMAS"
+                },
+                {
+                    "codigo_disciplina": "IMT0286",
+                    "nome_disciplina": "ELEMENTOS DE PROBABILIDADE E ESTATÍSTICA"
+                },
+                {
+                    "codigo_disciplina": "IBT0456",
+                    "nome_disciplina": "EMBRIOLOGIA COMPARATIVA"
+                },
+                {
+                    "codigo_disciplina": "IBT0597",
+                    "nome_disciplina": "ESTÁGIO SUPERVISIONADO I"
+                },
+                {
+                    "codigo_disciplina": "IBT0598",
+                    "nome_disciplina": "ESTÁGIO SUPERVISIONADO II"
+                },
+                {
+                    "codigo_disciplina": "FAE0023",
+                    "nome_disciplina": "FILOSOFIA DA CIÊNCIA"
+                },
+                {
+                    "codigo_disciplina": "IFC0158",
+                    "nome_disciplina": "FÍSICA GERAL"
+                },
+                {
+                    "codigo_disciplina": "IBT0152",
+                    "nome_disciplina": "GENÉTICA II"
+                },
+                {
+                    "codigo_disciplina": "FEA0038",
+                    "nome_disciplina": "GEOLOGIA"
+                },
+                {
+                    "codigo_disciplina": "IBT0417",
+                    "nome_disciplina": "INTRODUÇÃO À PROFISSÃO DO BIÓLOGO"
+                },
+                {
+                    "codigo_disciplina": "IBT0231",
+                    "nome_disciplina": "MÉTODOS E TÉCNICAS DE PESQUISA"
+                },
+                {
+                    "codigo_disciplina": "IBT0239",
+                    "nome_disciplina": "MORFOLOGIA E SISTEMÁTICA DE CRIPTÓGAMAS"
+                },
+                {
+                    "codigo_disciplina": "IBT0240",
+                    "nome_disciplina": "MORFOLOGIA E SISTEMÁTICA DE FANERÓGAMAS"
+                },
+                {
+                    "codigo_disciplina": "IBT0520",
+                    "nome_disciplina": "PALEONTOLOGIA"
+                },
+                {
+                    "codigo_disciplina": "IBT0410",
+                    "nome_disciplina": "ZOOLOGIA DE INVERTEBRADOS I"
+                },
+                {
+                    "codigo_disciplina": "IBT0753",
+                    "nome_disciplina": "ZOOLOGIA DE VERTEBRADOS"
+                }
+            ]
+        },
+        {
+            "nome_curso": "CIÊNCIAS DA COMPUTAÇÃO",
+            "id_curso": "69673258",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "IMT0275",
+                    "nome_disciplina": "ÁLGEBRA LINEAR"
+                },
+                {
+                    "codigo_disciplina": "IMT0276",
+                    "nome_disciplina": "CÁLCULO I"
+                },
+                {
+                    "codigo_disciplina": "IMT0277",
+                    "nome_disciplina": "CÁLCULO II"
+                },
+                {
+                    "codigo_disciplina": "IFC0152",
+                    "nome_disciplina": "FÍSICA 3"
+                },
+                {
+                    "codigo_disciplina": "IMT0284",
+                    "nome_disciplina": "PROBABILIDADE E ESTATÍSTICA"
+                }
+            ]
+        },
+        {
+            "nome_curso": "EDUCAÇÃO FÍSICA",
+            "id_curso": "110185704",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "IBT0885",
+                    "nome_disciplina": "ANATOMIA DO MOVIMENTO HUMANO I"
+                },
+                {
+                    "codigo_disciplina": "IBT0849",
+                    "nome_disciplina": "CULTURA GÍMNICA E CIRCENSE"
+                },
+                {
+                    "codigo_disciplina": "IBT0831",
+                    "nome_disciplina": "DESENVOLVIMENTO MOTOR E APRENDIZAGEM MOTORA"
+                },
+                {
+                    "codigo_disciplina": "IBT0847",
+                    "nome_disciplina": "EDUCAÇÃO FÍSICA ADAPTADA II"
+                },
+                {
+                    "codigo_disciplina": "IBT0863",
+                    "nome_disciplina": "EDUCAÇÃO FÍSICA, SAÚDE COLETIVA E INTERPROFISSIONALIDADE"
+                },
+                {
+                    "codigo_disciplina": "IBT0815",
+                    "nome_disciplina": "EDUCAÇÃO NUTRICIONAL"
+                },
+                {
+                    "codigo_disciplina": "IMT0286",
+                    "nome_disciplina": "ELEMENTOS DE PROBABILIDADE E ESTATÍSTICA"
+                },
+                {
+                    "codigo_disciplina": "IBT0833",
+                    "nome_disciplina": "ESTÁGIO E DOCÊNCIA I - EDUCAÇÃO FÍSICA"
+                },
+                {
+                    "codigo_disciplina": "IBT0861",
+                    "nome_disciplina": "ESTÁGIO E DOCÊNCIA I - LAZER E SAÚDE COLETIVA"
+                },
+                {
+                    "codigo_disciplina": "IBT0829",
+                    "nome_disciplina": "FISIOLOGIA APLICADA A EDUCAÇÃO FÍSICA I"
+                },
+                {
+                    "codigo_disciplina": "IBT0862",
+                    "nome_disciplina": "FISIOLOGIA DO EXERCÍCIO"
+                },
+                {
+                    "codigo_disciplina": "IBT0817",
+                    "nome_disciplina": "FUNDAMENTOS FILOSÓFICOS E SÓCIO-HISTÓRICOS DA EDUCAÇÃO FÍSICA"
+                },
+                {
+                    "codigo_disciplina": "IBT0818",
+                    "nome_disciplina": "FUNDAMENTOS HISTÓRICO-FILOSÓFICOS DA EXTENSÃO UNIVERSITÁRIA"
+                },
+                {
+                    "codigo_disciplina": "IBT0830",
+                    "nome_disciplina": "GESTÃO E POLÍTICAS EM EDUCAÇÃO FÍSICA"
+                },
+                {
+                    "codigo_disciplina": "IBT0819",
+                    "nome_disciplina": "INTRODUÇÃO AO PENSAMENTO CIENTÍFICO"
+                },
+                {
+                    "codigo_disciplina": "IBT0865",
+                    "nome_disciplina": "MEDIDAS E AVALIAÇÃO EM EDUCAÇÃO FÍSICA E ESPORTES"
+                },
+                {
+                    "codigo_disciplina": "IBT0838",
+                    "nome_disciplina": "METODOLOGIA DE ENSINO E PESQUISA EM BASQUETEBOL"
+                },
+                {
+                    "codigo_disciplina": "IBT0814",
+                    "nome_disciplina": "METODOLOGIA DE ENSINO E PESQUISA EM DANÇA"
+                },
+                {
+                    "codigo_disciplina": "IBT0821",
+                    "nome_disciplina": "METODOLOGIA DE ENSINO E PESQUISA EM FUTEBOL"
+                },
+                {
+                    "codigo_disciplina": "IBT0816",
+                    "nome_disciplina": "METODOLOGIA DE ENSINO E PESQUISA EM GINÁSTICA"
+                },
+                {
+                    "codigo_disciplina": "IBT0466",
+                    "nome_disciplina": "METODOLOGIA DE ENSINO E PESQUISA EM GINÁSTICA ESCOLAR II"
+                },
+                {
+                    "codigo_disciplina": "IBT0828",
+                    "nome_disciplina": "METODOLOGIA DE ENSINO E PESQUISA EM HANDEBOL"
+                },
+                {
+                    "codigo_disciplina": "IBT0832",
+                    "nome_disciplina": "METODOLOGIA DE ENSINO E PESQUISA EM LUTAS"
+                },
+                {
+                    "codigo_disciplina": "IBT0827",
+                    "nome_disciplina": "METODOLOGIA DE ENSINO E PESQUISA EM PRÁTICAS AQUÁTICAS"
+                },
+                {
+                    "codigo_disciplina": "IBT0478",
+                    "nome_disciplina": "METODOLOGIA DE ENSINO E PESQUISA EM PRÁTICAS AQUÁTICAS II"
+                },
+                {
+                    "codigo_disciplina": "IBT0826",
+                    "nome_disciplina": "METODOLOGIA DE ENSINO E PESQUISA EM VOLEIBOL"
+                },
+                {
+                    "codigo_disciplina": "IBT0860",
+                    "nome_disciplina": "NUTRIÇÃO APLICADA AO EXERCÍCIO E TREINAMENTO"
+                },
+                {
+                    "codigo_disciplina": "IBT0864",
+                    "nome_disciplina": "TEMAS E ATUALIDADES EM ATIVIDADES DE ACADEMIA"
+                }
+            ]
+        },
+        {
+            "nome_curso": "ENFERMAGEM",
+            "id_curso": "69673285",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "IBT0498",
+                    "nome_disciplina": "ANATOMIA GERAL E HUMANA"
+                },
+                {
+                    "codigo_disciplina": "IBT0027",
+                    "nome_disciplina": "ATIVIDADE FÍSICA E SAÚDE"
+                },
+                {
+                    "codigo_disciplina": "IBT0552",
+                    "nome_disciplina": "BIOLOGIA CELULAR"
+                },
+                {
+                    "codigo_disciplina": "IBT0050",
+                    "nome_disciplina": "BIOQUÍMICA"
+                },
+                {
+                    "codigo_disciplina": "IBT0524",
+                    "nome_disciplina": "CENTRO CIRÚRGICO/ CENTRAL DE MATERIAL E ESTERILIZAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "IGC0023",
+                    "nome_disciplina": "ECOLOGIA DA SAÚDE"
+                },
+                {
+                    "codigo_disciplina": "IBT0525",
+                    "nome_disciplina": "EPIDEMIOLOGIA"
+                },
+                {
+                    "codigo_disciplina": "IBT0562",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR OBRIGATÓRIO ATENÇÃO BÁSICA"
+                },
+                {
+                    "codigo_disciplina": "IBT0561",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR OBRIGATÓRIO HOSPITALAR"
+                },
+                {
+                    "codigo_disciplina": "IMT0078",
+                    "nome_disciplina": "ESTATÍSTICA DESCRITIVA"
+                },
+                {
+                    "codigo_disciplina": "HCS0075",
+                    "nome_disciplina": "FILOSOFIA APLICADA À SAÚDE"
+                },
+                {
+                    "codigo_disciplina": "IBT0138",
+                    "nome_disciplina": "FISIOLOGIA HUMANA I"
+                },
+                {
+                    "codigo_disciplina": "IBT0530",
+                    "nome_disciplina": "GESTÃO EM SAÚDE E ENFERMAGEM I"
+                },
+                {
+                    "codigo_disciplina": "IBT0531",
+                    "nome_disciplina": "GRUPOS EM SAÚDE"
+                },
+                {
+                    "codigo_disciplina": "IBT0501",
+                    "nome_disciplina": "HISTOLOGIA CLÍNICA"
+                },
+                {
+                    "codigo_disciplina": "IBT0254",
+                    "nome_disciplina": "PARASITOLOGIA HUMANA"
+                },
+                {
+                    "codigo_disciplina": "IBT0257",
+                    "nome_disciplina": "PATOLOGIA HUMANA"
+                },
+                {
+                    "codigo_disciplina": "IBT0526",
+                    "nome_disciplina": "PROCESSO DE CUIDAR DO ADULTO E IDOSO II"
+                },
+                {
+                    "codigo_disciplina": "IBT0527",
+                    "nome_disciplina": "PROCESSO DE CUIDAR EM SAÚDE DA CRIANÇA E ADOLESCENTE I"
+                },
+                {
+                    "codigo_disciplina": "IBT0528",
+                    "nome_disciplina": "PROCESSO DE CUIDAR EM SAÚDE DA MULHER I"
+                },
+                {
+                    "codigo_disciplina": "IBT0270",
+                    "nome_disciplina": "PROCESSO DE CUIDAR EM SAÚDE E ENFERMAGEM I"
+                },
+                {
+                    "codigo_disciplina": "IBT0506",
+                    "nome_disciplina": "PROCESSO DE CUIDAR EM SAÚDE E ENFERMAGEM III"
+                },
+                {
+                    "codigo_disciplina": "IBT0323",
+                    "nome_disciplina": "PSICOLOGIA NO PROCESSO SAÚDE-DOENÇA"
+                },
+                {
+                    "codigo_disciplina": "IBT0502",
+                    "nome_disciplina": "SAÚDE COLETIVA I"
+                },
+                {
+                    "codigo_disciplina": "IBT0507",
+                    "nome_disciplina": "SEGURANÇA DO PACIENTE"
+                },
+                {
+                    "codigo_disciplina": "HCS0158",
+                    "nome_disciplina": "SOCIOLOGIA APLICADA À SAÚDE"
+                },
+                {
+                    "codigo_disciplina": "IBT0553",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO I"
+                },
+                {
+                    "codigo_disciplina": "IBT0563",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO II"
+                },
+                {
+                    "codigo_disciplina": "IBT0565",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO IV"
+                },
+                {
+                    "codigo_disciplina": "IBT0560",
+                    "nome_disciplina": "UTI, URGÊNCIA E EMERGÊNCIA"
+                }
+            ]
+        },
+        {
+            "nome_curso": "MEDICINA",
+            "id_curso": "93822759",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "IBT0803",
+                    "nome_disciplina": "ATENÇÃO À SAÚDE NA PRÁTICA COMUNITÁRIA 1"
+                },
+                {
+                    "codigo_disciplina": "IBT0775",
+                    "nome_disciplina": "ATENÇÃO À SAÚDE NA PRÁTICA COMUNITÁRIA 3"
+                },
+                {
+                    "codigo_disciplina": "IBT0785",
+                    "nome_disciplina": "ATENÇÃO À SAÚDE NA PRÁTICA COMUNITÁRIA 5"
+                },
+                {
+                    "codigo_disciplina": "IBT0800",
+                    "nome_disciplina": "ATENÇÃO À SAÚDE NA PRÁTICA COMUNITÁRIA 8"
+                },
+                {
+                    "codigo_disciplina": "IBT0804",
+                    "nome_disciplina": "CIÊNCIA, TECNOLOGIAS EM SAÚDE, ADOECIMENTO E CUIDADO 1"
+                },
+                {
+                    "codigo_disciplina": "IBT0776",
+                    "nome_disciplina": "CIÊNCIA, TECNOLOGIAS EM SAÚDE, ADOECIMENTO E CUIDADO 3"
+                },
+                {
+                    "codigo_disciplina": "IBT0786",
+                    "nome_disciplina": "CIÊNCIA, TECNOLOGIAS EM SAÚDE, ADOECIMENTO E CUIDADO 5"
+                },
+                {
+                    "codigo_disciplina": "IBT0801",
+                    "nome_disciplina": "CIÊNCIA, TECNOLOGIAS EM SAÚDE, ADOECIMENTO E CUIDADO 8"
+                },
+                {
+                    "codigo_disciplina": "IBT0812",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR OBRIGATÓRIO - ATENÇÃO BÁSICA"
+                },
+                {
+                    "codigo_disciplina": "IBT0888",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR OBRIGATÓRIO - ATENÇÃO BÁSICA 2"
+                },
+                {
+                    "codigo_disciplina": "IBT0882",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR OBRIGATÓRIO - ELETIVO 1"
+                },
+                {
+                    "codigo_disciplina": "IBT0893",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR OBRIGATÓRIO - ELETIVO 2"
+                },
+                {
+                    "codigo_disciplina": "IBT0879",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR OBRIGATÓRIO - SAÚDE DA CRIANÇA 1"
+                },
+                {
+                    "codigo_disciplina": "IBT0890",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR OBRIGATÓRIO - SAÚDE DA CRIANÇA 2"
+                },
+                {
+                    "codigo_disciplina": "IBT0881",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR OBRIGATÓRIO - SAÚDE DA MULHER 1"
+                },
+                {
+                    "codigo_disciplina": "IBT0892",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR OBRIGATÓRIO - SAÚDE DA MULHER 2"
+                },
+                {
+                    "codigo_disciplina": "IBT0880",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR OBRIGATÓRIO - SAÚDE DO ADULTO 1"
+                },
+                {
+                    "codigo_disciplina": "IBT0891",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR OBRIGATÓRIO - SAÚDE DO ADULTO 2"
+                },
+                {
+                    "codigo_disciplina": "IBT0813",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR OBRIGATÓRIO - URGÊNCIA E EMERGÊNCIA"
+                },
+                {
+                    "codigo_disciplina": "IBT0889",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR OBRIGATÓRIO - URGÊNCIA E EMERGÊNCIA 2"
+                },
+                {
+                    "codigo_disciplina": "IBT0767",
+                    "nome_disciplina": "HABILIDADES CLÍNICAS 1"
+                },
+                {
+                    "codigo_disciplina": "IBT0774",
+                    "nome_disciplina": "HABILIDADES CLÍNICAS 3"
+                },
+                {
+                    "codigo_disciplina": "IBT0784",
+                    "nome_disciplina": "HABILIDADES CLÍNICAS 5"
+                },
+                {
+                    "codigo_disciplina": "IBT0799",
+                    "nome_disciplina": "HABILIDADES CLÍNICAS 8"
+                },
+                {
+                    "codigo_disciplina": "IBT0766",
+                    "nome_disciplina": "NECESSIDADES DE SAÚDE E PLANOS TERAPÊUTICOS APLICADOS 1"
+                },
+                {
+                    "codigo_disciplina": "IBT0773",
+                    "nome_disciplina": "NECESSIDADES DE SAÚDE E PLANOS TERAPÊUTICOS APLICADOS 3"
+                },
+                {
+                    "codigo_disciplina": "IBT0783",
+                    "nome_disciplina": "NECESSIDADES DE SAÚDE E PLANOS TERAPÊUTICOS APLICADOS 5"
+                },
+                {
+                    "codigo_disciplina": "IBT0798",
+                    "nome_disciplina": "NECESSIDADES DE SAÚDE E PLANOS TERAPÊUTICOS APLICADOS 8"
+                }
+            ]
+        },
+        {
+            "nome_curso": "PSICOLOGIA",
+            "id_curso": "69675838",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "IMT0074",
+                    "nome_disciplina": "ESTATÍSTICA APLICADA À PSICOLOGIA I"
+                },
+                {
+                    "codigo_disciplina": "FAE0042",
+                    "nome_disciplina": "FUNDAMENTOS FILOSÓFICOS DA PSICOLOGIA I"
+                },
+                {
+                    "codigo_disciplina": "HCS0189",
+                    "nome_disciplina": "INTRODUÇÃO ÀS CIÊNCIAS SOCIAIS I"
+                },
+                {
+                    "codigo_disciplina": "IBT0206",
+                    "nome_disciplina": "LAB. DE ATIVID. INTEGR.: PSICOLOGIA COMO PROFISSÃO"
+                },
+                {
+                    "codigo_disciplina": "IBT0275",
+                    "nome_disciplina": "PROCESSOS PSICOLÓGICOS BÁSICOS"
+                }
+            ]
+        },
+        {
+            "nome_curso": "SISTEMAS DE INFORMAÇÃO",
+            "id_curso": "111545729",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "IBT924",
+                    "nome_disciplina": "ADMINISTRAÇÃO DE SISTEMAS DE INFORMAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "IMT0275",
+                    "nome_disciplina": "ÁLGEBRA LINEAR"
+                },
+                {
+                    "codigo_disciplina": "IBT0006",
+                    "nome_disciplina": "ALGORITMOS E PROGRAMAÇÃO DE COMPUTADORES 1"
+                },
+                {
+                    "codigo_disciplina": "IMT0281",
+                    "nome_disciplina": "ELEMENTOS DE MATEMÁTICA"
+                },
+                {
+                    "codigo_disciplina": "IBT0900",
+                    "nome_disciplina": "FUNDAMENTOS DE SISTEMAS DE INFORMAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "IBT0902",
+                    "nome_disciplina": "METODOLOGIA DE TRABALHO CIENTÍFICO"
+                }
+            ]
+        }
+    ],
+    "IEL - INSTITUTO DE ESTUDOS DA LINGUAGEM": [
+        {
+            "nome_curso": "LETRAS",
+            "id_curso": "69670721",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "ILL0259",
+                    "nome_disciplina": "CULTURA BRASILEIRA E ENSINO"
+                },
+                {
+                    "codigo_disciplina": "ILL0018",
+                    "nome_disciplina": "ESTÁGIO 1 - INGLÊS"
+                },
+                {
+                    "codigo_disciplina": "ILL0263",
+                    "nome_disciplina": "ESTÁGIO 1  LITERATURA"
+                },
+                {
+                    "codigo_disciplina": "ILL0222",
+                    "nome_disciplina": "ESTÁGIO 3  PORTUGUÊS"
+                },
+                {
+                    "codigo_disciplina": "ILL0297",
+                    "nome_disciplina": "ESTÁGIO EM ESTUDOS DA LINGUAGEM"
+                },
+                {
+                    "codigo_disciplina": "ILL0016",
+                    "nome_disciplina": "ESTÁGIO - PORTUGUÊS"
+                },
+                {
+                    "codigo_disciplina": "ILL0234",
+                    "nome_disciplina": "ESTUDOS SOBRE LETRAMENTO"
+                },
+                {
+                    "codigo_disciplina": "ILL0047",
+                    "nome_disciplina": "INGLÊS 5 (DP)"
+                },
+                {
+                    "codigo_disciplina": "ILL0049",
+                    "nome_disciplina": "INGLÊS 7 (DP)"
+                },
+                {
+                    "codigo_disciplina": "ILL0053",
+                    "nome_disciplina": "INTRODUÇÃO À METODOLOGIA DE PESQUISA"
+                },
+                {
+                    "codigo_disciplina": "ILL0208",
+                    "nome_disciplina": "INTRODUÇÃO AOS ESTUDOS DA LINGUAGEM"
+                },
+                {
+                    "codigo_disciplina": "ILL0260",
+                    "nome_disciplina": "INTRODUÇÃO AOS ESTUDOS LITERÁRIOS"
+                },
+                {
+                    "codigo_disciplina": "ILL0209",
+                    "nome_disciplina": "LATIM 1"
+                },
+                {
+                    "codigo_disciplina": "ILL0210",
+                    "nome_disciplina": "LEITURA E PRODUÇÃO TEXTUAL 1"
+                },
+                {
+                    "codigo_disciplina": "ILL0225",
+                    "nome_disciplina": "LEITURA E PRODUÇÃO TEXTUAL 2"
+                },
+                {
+                    "codigo_disciplina": "ILL0337",
+                    "nome_disciplina": "LÍNGUA ESTRANGEIRA 1 -INGLÊS"
+                },
+                {
+                    "codigo_disciplina": "ILL0299",
+                    "nome_disciplina": "LÍNGUA ESTRANGEIRA 3 - INGLÊS"
+                },
+                {
+                    "codigo_disciplina": "ILL0294",
+                    "nome_disciplina": "LÍNGUA ESTRANGEIRA - INGLÊS 1"
+                },
+                {
+                    "codigo_disciplina": "ILL0212",
+                    "nome_disciplina": "LÍNGUA PORTUGUESA: ENSINO, PESQUISA E EXTENSÃO"
+                },
+                {
+                    "codigo_disciplina": "ILL0326",
+                    "nome_disciplina": "LITERATURA BRASILEIRA 1"
+                },
+                {
+                    "codigo_disciplina": "ILL0265",
+                    "nome_disciplina": "LITERATURA BRASILEIRA 1"
+                },
+                {
+                    "codigo_disciplina": "ILL0267",
+                    "nome_disciplina": "LITERATURA BRASILEIRA 3"
+                },
+                {
+                    "codigo_disciplina": "ILL0268",
+                    "nome_disciplina": "LITERATURA INFANTIL E JUVENIL 1"
+                },
+                {
+                    "codigo_disciplina": "ILL0113",
+                    "nome_disciplina": "LITERATURA NORTE-AMERICANA"
+                },
+                {
+                    "codigo_disciplina": "ILL0269",
+                    "nome_disciplina": "LITERATURA PORTUGUESA 1"
+                },
+                {
+                    "codigo_disciplina": "ILL0213",
+                    "nome_disciplina": "MORFOLOGIA"
+                },
+                {
+                    "codigo_disciplina": "FAE0193",
+                    "nome_disciplina": "POLÍTICAS EDUCACIONAIS NO BRASIL"
+                },
+                {
+                    "codigo_disciplina": "FAE0260",
+                    "nome_disciplina": "POLÍTICAS EDUCACIONAIS NO BRASIL"
+                },
+                {
+                    "codigo_disciplina": "ILL0147",
+                    "nome_disciplina": "PRÁTICA ORAL DE INGLÊS"
+                },
+                {
+                    "codigo_disciplina": "FAE0276",
+                    "nome_disciplina": "PSICOLOGIA DA EDUCAÇÃO 1"
+                },
+                {
+                    "codigo_disciplina": "FAE0262",
+                    "nome_disciplina": "PSICOLOGIA DA EDUCAÇÃO I"
+                },
+                {
+                    "codigo_disciplina": "ILL0214",
+                    "nome_disciplina": "SEMINÁRIO DE INTEGRAÇÃO 1"
+                },
+                {
+                    "codigo_disciplina": "ILL0216",
+                    "nome_disciplina": "SEMINÁRIO DE INTEGRAÇÃO 3"
+                },
+                {
+                    "codigo_disciplina": "ILL0218",
+                    "nome_disciplina": "SEMINÁRIO DE INTEGRAÇÃO 5"
+                },
+                {
+                    "codigo_disciplina": "ILL0220",
+                    "nome_disciplina": "SINTAXE"
+                },
+                {
+                    "codigo_disciplina": "ILL0156",
+                    "nome_disciplina": "SOCIOLINGÜÍSTICA (DP)"
+                },
+                {
+                    "codigo_disciplina": "ILL0291",
+                    "nome_disciplina": "TEORIA DO TEATRO"
+                },
+                {
+                    "codigo_disciplina": "ILL0300",
+                    "nome_disciplina": "TÓPICOS DE LITERATURA PORTUGUESA"
+                }
+            ]
+        }
+    ],
+    "IF - INSTITUTO DE FÍSICA": [
+        {
+            "nome_curso": "FÍSICA",
+            "id_curso": "94357898",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "IMT0275",
+                    "nome_disciplina": "ÁLGEBRA LINEAR"
+                },
+                {
+                    "codigo_disciplina": "IBT0002",
+                    "nome_disciplina": "ALGORITMO E PROGRAMAÇÃO DE COMPUTADORES 1"
+                },
+                {
+                    "codigo_disciplina": "IMT0276",
+                    "nome_disciplina": "CÁLCULO I"
+                },
+                {
+                    "codigo_disciplina": "IMT0277",
+                    "nome_disciplina": "CÁLCULO II"
+                },
+                {
+                    "codigo_disciplina": "IMT0278",
+                    "nome_disciplina": "CÁLCULO III"
+                },
+                {
+                    "codigo_disciplina": "IMT0280",
+                    "nome_disciplina": "CÁLCULO VETORIAL"
+                },
+                {
+                    "codigo_disciplina": "IFC0114",
+                    "nome_disciplina": "ELETROMAGNETISMO 2"
+                },
+                {
+                    "codigo_disciplina": "IFC0151",
+                    "nome_disciplina": "FÍSICA 2"
+                },
+                {
+                    "codigo_disciplina": "IFC0150",
+                    "nome_disciplina": "FÍSICA 4"
+                },
+                {
+                    "codigo_disciplina": "IFC0141",
+                    "nome_disciplina": "FÍSICA GERAL"
+                },
+                {
+                    "codigo_disciplina": "IFC0104",
+                    "nome_disciplina": "FÍSICA MATEMÁTICA 2"
+                },
+                {
+                    "codigo_disciplina": "IMT0282",
+                    "nome_disciplina": "GEOMETRIA ANALÍTICA"
+                },
+                {
+                    "codigo_disciplina": "IFC0093",
+                    "nome_disciplina": "INTRODUÇÃO À FÍSICA"
+                },
+                {
+                    "codigo_disciplina": "IFC0154",
+                    "nome_disciplina": "LABORATÓRIO DE FÍSICA 1"
+                },
+                {
+                    "codigo_disciplina": "IFC0156",
+                    "nome_disciplina": "LABORATÓRIO DE FÍSICA 3"
+                },
+                {
+                    "codigo_disciplina": "IFC0160",
+                    "nome_disciplina": "LABORATÓRIO DE FÍSICA MODERNA"
+                },
+                {
+                    "codigo_disciplina": "IFC0118",
+                    "nome_disciplina": "LABORATÓRIO DE FÍSICA MODERNA 2"
+                },
+                {
+                    "codigo_disciplina": "IFC0163",
+                    "nome_disciplina": "MECÂNICA CLÁSSICA 1"
+                },
+                {
+                    "codigo_disciplina": "IFC0167",
+                    "nome_disciplina": "MECÂNICA ESTATÍSTICA"
+                },
+                {
+                    "codigo_disciplina": "IFC0168",
+                    "nome_disciplina": "MECÂNICA QUÂNTICA 1"
+                },
+                {
+                    "codigo_disciplina": "IFC0143",
+                    "nome_disciplina": "MÉTODOS COMPUTACIONAIS EM FÍSICA 2"
+                },
+                {
+                    "codigo_disciplina": "IFC0145",
+                    "nome_disciplina": "MÉTODOS COMPUTACIONAIS EM FÍSICA 4"
+                },
+                {
+                    "codigo_disciplina": "IMT0284",
+                    "nome_disciplina": "PROBABILIDADE E ESTATÍSTICA"
+                },
+                {
+                    "codigo_disciplina": "IFC0162",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO"
+                }
+            ]
+        }
+    ],
+    "IGEO - INSTITUTO DE GEOGRAFIA": [
+        {
+            "nome_curso": "GEOGRAFIA",
+            "id_curso": "69670730",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "IGC0147",
+                    "nome_disciplina": "CARTOGRAFIA I"
+                },
+                {
+                    "codigo_disciplina": "IGC0153",
+                    "nome_disciplina": "CLIMATOLOGIA I"
+                },
+                {
+                    "codigo_disciplina": "FAE0014",
+                    "nome_disciplina": "DIDÁTICA E FORMAÇÃO DE PROFESSORES"
+                },
+                {
+                    "codigo_disciplina": "IGC0196",
+                    "nome_disciplina": "DIDÁTICA PARA O ENSINO DE GEOGRAFIA"
+                },
+                {
+                    "codigo_disciplina": "IGC0201",
+                    "nome_disciplina": "DINÂMICA E PERCEPÇÃO DA PAISAGEM"
+                },
+                {
+                    "codigo_disciplina": "IGC0148",
+                    "nome_disciplina": "EDUCAÇÃO AMBIENTAL"
+                },
+                {
+                    "codigo_disciplina": "IGC0197",
+                    "nome_disciplina": "ESTÁGIO CURRICULAR SUPERVISIONADO II"
+                },
+                {
+                    "codigo_disciplina": "IGC0052",
+                    "nome_disciplina": "FUNDAMENTOS DE ASTRONOMIA"
+                },
+                {
+                    "codigo_disciplina": "IGC0149",
+                    "nome_disciplina": "FUNDAMENTOS DE ASTRONOMIA"
+                },
+                {
+                    "codigo_disciplina": "FAE0041",
+                    "nome_disciplina": "FUNDAMENTOS FILOSÓF. E SÓCIO-HIST. DA EDUCAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "FAE0251",
+                    "nome_disciplina": "FUNDAMENTOS FILOSÓFICOS E SÓCIO-HISTÓRICOS DA EDUCAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "IGC0150",
+                    "nome_disciplina": "GEOESTATÍSTICA"
+                },
+                {
+                    "codigo_disciplina": "IGC0059",
+                    "nome_disciplina": "GEOGRAFIA DA INDÚSTRIA"
+                },
+                {
+                    "codigo_disciplina": "IGC0226",
+                    "nome_disciplina": "GEOGRAFIA DE GOIÁS"
+                },
+                {
+                    "codigo_disciplina": "IGC0198",
+                    "nome_disciplina": "GEOGRAFIA E GEOPOLÍTICA"
+                },
+                {
+                    "codigo_disciplina": "IGC0154",
+                    "nome_disciplina": "GEOGRAFIA URBANA"
+                },
+                {
+                    "codigo_disciplina": "IGC0151",
+                    "nome_disciplina": "GEOLOGIA I"
+                },
+                {
+                    "codigo_disciplina": "IGC0155",
+                    "nome_disciplina": "GEOMORFOLOGIA I"
+                },
+                {
+                    "codigo_disciplina": "IGC0176",
+                    "nome_disciplina": "GEOPROCESSAMENTO"
+                },
+                {
+                    "codigo_disciplina": "IGC0101",
+                    "nome_disciplina": "HISTÓRIA DO PENSAMENTO GEOGRÁFICO"
+                },
+                {
+                    "codigo_disciplina": "IGC0108",
+                    "nome_disciplina": "LEVANTAMENTO E CLASSIFICAÇÃO DOS SOLOS TROPICAIS"
+                },
+                {
+                    "codigo_disciplina": "IGC0175",
+                    "nome_disciplina": "METODOLOGIA DA PESQUISA"
+                },
+                {
+                    "codigo_disciplina": "IGC0156",
+                    "nome_disciplina": "PEDOLOGIA"
+                },
+                {
+                    "codigo_disciplina": "IGC0183",
+                    "nome_disciplina": "PRÁTICAS PEDAGÓGICAS EM GEOGRAFIA FÍSICA"
+                },
+                {
+                    "codigo_disciplina": "IGC0184",
+                    "nome_disciplina": "PRÁTICAS PEDAGÓGICAS EM GEOGRAFIA HUMANA"
+                },
+                {
+                    "codigo_disciplina": "FAE0080",
+                    "nome_disciplina": "PSICOLOGIA DA EDUCAÇÃO I"
+                },
+                {
+                    "codigo_disciplina": "IGC0157",
+                    "nome_disciplina": "TEORIA E MÉTODO EM GEOGRAFIA"
+                },
+                {
+                    "codigo_disciplina": "IGC0199",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO I"
+                },
+                {
+                    "codigo_disciplina": "IGC0208",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO II"
+                },
+                {
+                    "codigo_disciplina": "IGC0138",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO (TCC)"
+                }
+            ]
+        }
+    ],
+    "IMTEC - INSTITUTO DE MATEMÁTICA E TECNOLOGIA": [
+        {
+            "nome_curso": "ENGENHARIA MECATRÔNICA",
+            "id_curso": "99530381",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "IMT0275",
+                    "nome_disciplina": "ÁLGEBRA LINEAR"
+                },
+                {
+                    "codigo_disciplina": "IBT0002",
+                    "nome_disciplina": "ALGORITMO E PROGRAMAÇÃO DE COMPUTADORES 1"
+                },
+                {
+                    "codigo_disciplina": "IBT0029",
+                    "nome_disciplina": "BANCO DE DADOS"
+                },
+                {
+                    "codigo_disciplina": "IMT0276",
+                    "nome_disciplina": "CÁLCULO I"
+                },
+                {
+                    "codigo_disciplina": "IMT0277",
+                    "nome_disciplina": "CÁLCULO II"
+                },
+                {
+                    "codigo_disciplina": "IMT0278",
+                    "nome_disciplina": "CÁLCULO III"
+                },
+                {
+                    "codigo_disciplina": "QUI0162",
+                    "nome_disciplina": "CÁLCULOS EM QUÍMICA"
+                },
+                {
+                    "codigo_disciplina": "FEA0109",
+                    "nome_disciplina": "CIRCUITOS ELÉTRICOS"
+                },
+                {
+                    "codigo_disciplina": "IMT0252",
+                    "nome_disciplina": "ELEMENTOS DE MÁQUINAS"
+                },
+                {
+                    "codigo_disciplina": "IMT0318",
+                    "nome_disciplina": "ESTÁGIO SUPERVISIONADO"
+                },
+                {
+                    "codigo_disciplina": "FEA0105",
+                    "nome_disciplina": "ESTÁTICA"
+                },
+                {
+                    "codigo_disciplina": "IBT0124",
+                    "nome_disciplina": "ESTRUTURAS DE DADOS"
+                },
+                {
+                    "codigo_disciplina": "IFC0151",
+                    "nome_disciplina": "FÍSICA 2"
+                },
+                {
+                    "codigo_disciplina": "IMT0282",
+                    "nome_disciplina": "GEOMETRIA ANALÍTICA"
+                },
+                {
+                    "codigo_disciplina": "CGN0064",
+                    "nome_disciplina": "GESTÃO DE PESSOAS"
+                },
+                {
+                    "codigo_disciplina": "ILL0046",
+                    "nome_disciplina": "INGLÊS INSTRUMENTAL II"
+                },
+                {
+                    "codigo_disciplina": "IMT0251",
+                    "nome_disciplina": "INTELIGÊNCIA ARTIFICIAL"
+                },
+                {
+                    "codigo_disciplina": "IMT0247",
+                    "nome_disciplina": "INTRODUÇÃO À ENGENHARIA MECATRÔNICA"
+                },
+                {
+                    "codigo_disciplina": "IMT0112",
+                    "nome_disciplina": "INTRODUÇÃO À ROBÓTICA"
+                },
+                {
+                    "codigo_disciplina": "IFC0154",
+                    "nome_disciplina": "LABORATÓRIO DE FÍSICA 1"
+                },
+                {
+                    "codigo_disciplina": "ILL0064",
+                    "nome_disciplina": "LEITURA E PRODUÇÃO TEXTUAL 1"
+                },
+                {
+                    "codigo_disciplina": "ILL0063",
+                    "nome_disciplina": "LEITURA E PRODUÇÃO TEXTUAL II"
+                },
+                {
+                    "codigo_disciplina": "IMT0120",
+                    "nome_disciplina": "LÓGICA DIGITAL"
+                },
+                {
+                    "codigo_disciplina": "FEA0242",
+                    "nome_disciplina": "MEIO AMBIENTE E SUSTENTABILIDADE"
+                },
+                {
+                    "codigo_disciplina": "IMT0254",
+                    "nome_disciplina": "MICROCONTROLADORES"
+                },
+                {
+                    "codigo_disciplina": "IMT0249",
+                    "nome_disciplina": "OTIMIZAÇÃO NUMÉRICA"
+                },
+                {
+                    "codigo_disciplina": "IMT0250",
+                    "nome_disciplina": "PESQUISA OPERACIONAL"
+                },
+                {
+                    "codigo_disciplina": "IMT0284",
+                    "nome_disciplina": "PROBABILIDADE E ESTATÍSTICA"
+                },
+                {
+                    "codigo_disciplina": "QUI0030",
+                    "nome_disciplina": "PROCESSOS QUÍMICOS"
+                },
+                {
+                    "codigo_disciplina": "QUI0161",
+                    "nome_disciplina": "QUÍMICA GERAL TEÓRICA"
+                },
+                {
+                    "codigo_disciplina": "IMT0219",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO"
+                },
+                {
+                    "codigo_disciplina": "IMT0248",
+                    "nome_disciplina": "VIBRAÇÕES MECÂNICAS"
+                }
+            ]
+        },
+        {
+            "nome_curso": "INTELIGÊNCIA ARTIFICIAL",
+            "id_curso": "111650182",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "IMT0351",
+                    "nome_disciplina": "FUNDAMENTOS DE LÓGICA PARA INTELIGÊNCIA ARTIFICIAL"
+                },
+                {
+                    "codigo_disciplina": "IMT0352",
+                    "nome_disciplina": "FUNDAMENTOS DE MATEMÁTICA PARA INTELIGÊNCIA ARTIFICAL"
+                },
+                {
+                    "codigo_disciplina": "IMT0350",
+                    "nome_disciplina": "INTELIGÊNCIA ARTIFICIAL E SOCIEDADE"
+                },
+                {
+                    "codigo_disciplina": "IMT0353",
+                    "nome_disciplina": "INTRODUÇÃO À PROGRAMAÇÃO"
+                }
+            ]
+        },
+        {
+            "nome_curso": "MATEMÁTICA",
+            "id_curso": "69678351",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "IMT0288",
+                    "nome_disciplina": "ÁLGEBRA LINEAR"
+                },
+                {
+                    "codigo_disciplina": "IMT0289",
+                    "nome_disciplina": "ÁLGEBRA MODERNA"
+                },
+                {
+                    "codigo_disciplina": "IMT0294",
+                    "nome_disciplina": "CÁLCULO V"
+                },
+                {
+                    "codigo_disciplina": "IMT0295",
+                    "nome_disciplina": "CÁLCULO VI"
+                },
+                {
+                    "codigo_disciplina": "IMT0297",
+                    "nome_disciplina": "EDUCAÇÃO MATEMÁTICA I"
+                },
+                {
+                    "codigo_disciplina": "IMT0299",
+                    "nome_disciplina": "ESTÁGIO SUPERVISIONADO I"
+                },
+                {
+                    "codigo_disciplina": "IMT0211",
+                    "nome_disciplina": "ESTÁGIO SUPERVISIONADO II"
+                },
+                {
+                    "codigo_disciplina": "IMT0091",
+                    "nome_disciplina": "GEOMETRIA ANALÍTICA"
+                },
+                {
+                    "codigo_disciplina": "IMT0271",
+                    "nome_disciplina": "MATEMÁTICA E ATUALIDADE"
+                },
+                {
+                    "codigo_disciplina": "IMT0307",
+                    "nome_disciplina": "MATEMÁTICA E PRÁTICAS DE INCLUSÃO COM ESTUDANTES PÚBLICO DA EDUCAÇÃO ESPECIAL"
+                },
+                {
+                    "codigo_disciplina": "IMT0194",
+                    "nome_disciplina": "METODOLOGIA DE PESQUISA CIENTÍFICA E ANÁLISE TEXTUAL"
+                },
+                {
+                    "codigo_disciplina": "IMT0309",
+                    "nome_disciplina": "POLÍTICAS EDUCACIONAIS DO BRASIL"
+                },
+                {
+                    "codigo_disciplina": "IMT0321",
+                    "nome_disciplina": "PRÁTICAS EXTENSIONISTAS III"
+                },
+                {
+                    "codigo_disciplina": "IMT0310",
+                    "nome_disciplina": "PROBABILIDADE E ESTATÍSTICA"
+                }
+            ]
+        },
+        {
+            "nome_curso": "MATEMÁTICA INDUSTRIAL",
+            "id_curso": "69673290",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "IMT0002",
+                    "nome_disciplina": "ÁLGEBRA I"
+                },
+                {
+                    "codigo_disciplina": "IMT0275",
+                    "nome_disciplina": "ÁLGEBRA LINEAR"
+                },
+                {
+                    "codigo_disciplina": "IBT0002",
+                    "nome_disciplina": "ALGORITMO E PROGRAMAÇÃO DE COMPUTADORES 1"
+                },
+                {
+                    "codigo_disciplina": "IMT0011",
+                    "nome_disciplina": "ANÁLISE I"
+                },
+                {
+                    "codigo_disciplina": "IBT0029",
+                    "nome_disciplina": "BANCO DE DADOS"
+                },
+                {
+                    "codigo_disciplina": "IMT0276",
+                    "nome_disciplina": "CÁLCULO I"
+                },
+                {
+                    "codigo_disciplina": "IMT0277",
+                    "nome_disciplina": "CÁLCULO II"
+                },
+                {
+                    "codigo_disciplina": "IMT0278",
+                    "nome_disciplina": "CÁLCULO III"
+                },
+                {
+                    "codigo_disciplina": "QUI0162",
+                    "nome_disciplina": "CÁLCULOS EM QUÍMICA"
+                },
+                {
+                    "codigo_disciplina": "IMT0280",
+                    "nome_disciplina": "CÁLCULO VETORIAL"
+                },
+                {
+                    "codigo_disciplina": "IMT0252",
+                    "nome_disciplina": "ELEMENTOS DE MÁQUINAS"
+                },
+                {
+                    "codigo_disciplina": "IMT0077",
+                    "nome_disciplina": "ESTATÍSTICA DESCRITIVA"
+                },
+                {
+                    "codigo_disciplina": "IBT0124",
+                    "nome_disciplina": "ESTRUTURAS DE DADOS"
+                },
+                {
+                    "codigo_disciplina": "IFC0151",
+                    "nome_disciplina": "FÍSICA 2"
+                },
+                {
+                    "codigo_disciplina": "IMT0282",
+                    "nome_disciplina": "GEOMETRIA ANALÍTICA"
+                },
+                {
+                    "codigo_disciplina": "CGN0064",
+                    "nome_disciplina": "GESTÃO DE PESSOAS"
+                },
+                {
+                    "codigo_disciplina": "ILL0046",
+                    "nome_disciplina": "INGLÊS INSTRUMENTAL II"
+                },
+                {
+                    "codigo_disciplina": "IMT0251",
+                    "nome_disciplina": "INTELIGÊNCIA ARTIFICIAL"
+                },
+                {
+                    "codigo_disciplina": "IMT0256",
+                    "nome_disciplina": "INTRODUÇÃO À MATEMÁTICA INDUSTRIAL"
+                },
+                {
+                    "codigo_disciplina": "IMT0112",
+                    "nome_disciplina": "INTRODUÇÃO À ROBÓTICA"
+                },
+                {
+                    "codigo_disciplina": "IFC0154",
+                    "nome_disciplina": "LABORATÓRIO DE FÍSICA 1"
+                },
+                {
+                    "codigo_disciplina": "ILL0064",
+                    "nome_disciplina": "LEITURA E PRODUÇÃO TEXTUAL 1"
+                },
+                {
+                    "codigo_disciplina": "ILL0063",
+                    "nome_disciplina": "LEITURA E PRODUÇÃO TEXTUAL II"
+                },
+                {
+                    "codigo_disciplina": "IMT0120",
+                    "nome_disciplina": "LÓGICA DIGITAL"
+                },
+                {
+                    "codigo_disciplina": "IMT0254",
+                    "nome_disciplina": "MICROCONTROLADORES"
+                },
+                {
+                    "codigo_disciplina": "IMT0249",
+                    "nome_disciplina": "OTIMIZAÇÃO NUMÉRICA"
+                },
+                {
+                    "codigo_disciplina": "IMT0250",
+                    "nome_disciplina": "PESQUISA OPERACIONAL"
+                },
+                {
+                    "codigo_disciplina": "IMT0284",
+                    "nome_disciplina": "PROBABILIDADE E ESTATÍSTICA"
+                },
+                {
+                    "codigo_disciplina": "QUI0030",
+                    "nome_disciplina": "PROCESSOS QUÍMICOS"
+                },
+                {
+                    "codigo_disciplina": "QUI0161",
+                    "nome_disciplina": "QUÍMICA GERAL TEÓRICA"
+                },
+                {
+                    "codigo_disciplina": "IMT0219",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO"
+                },
+                {
+                    "codigo_disciplina": "IMT0248",
+                    "nome_disciplina": "VIBRAÇÕES MECÂNICAS"
+                }
+            ]
+        }
+    ],
+    "INHCS - INSTITUTO DE HISTÓRIA E CIÊNCIAS SOCIAIS": [
+        {
+            "nome_curso": "CIÊNCIAS SOCIAIS",
+            "id_curso": "69675818",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "HCS0005",
+                    "nome_disciplina": "ANTROPOLOGIA I"
+                },
+                {
+                    "codigo_disciplina": "HCS0009",
+                    "nome_disciplina": "ANTROPOLOGIA III"
+                },
+                {
+                    "codigo_disciplina": "HCS0012",
+                    "nome_disciplina": "ANTROPOLOGIA V"
+                },
+                {
+                    "codigo_disciplina": "HCS0016",
+                    "nome_disciplina": "CIÊNCIA POLÍTICA I"
+                },
+                {
+                    "codigo_disciplina": "HCS0020",
+                    "nome_disciplina": "CIÊNCIA POLÍTICA III"
+                },
+                {
+                    "codigo_disciplina": "HCS0022",
+                    "nome_disciplina": "CIÊNCIA POLÍTICA V"
+                },
+                {
+                    "codigo_disciplina": "HCS0193",
+                    "nome_disciplina": "ESTATÍSTICA APLICADA ÀS CIÊNCIAS SOCIAIS"
+                },
+                {
+                    "codigo_disciplina": "HCS0074",
+                    "nome_disciplina": "FILOSOFIA"
+                },
+                {
+                    "codigo_disciplina": "HCS0113",
+                    "nome_disciplina": "HISTÓRIA I"
+                },
+                {
+                    "codigo_disciplina": "HCS0132",
+                    "nome_disciplina": "LAB. DE LINGUAGENS E REPRESENTAÇÕES CULTURAIS"
+                },
+                {
+                    "codigo_disciplina": "HCS0135",
+                    "nome_disciplina": "LABORATÓRIO DE AUDIOVISUAL"
+                },
+                {
+                    "codigo_disciplina": "HCS0140",
+                    "nome_disciplina": "MÉT. E TÉC. DE PESQ SOCIAL I - METODOLOGIA TEÓRICA"
+                },
+                {
+                    "codigo_disciplina": "HCS0143",
+                    "nome_disciplina": "MÉTODOS E TÉCNICAS DE PESQUISA SOCIAL II"
+                },
+                {
+                    "codigo_disciplina": "HCS0192",
+                    "nome_disciplina": "MÉTODOS QUALITATIVOS"
+                },
+                {
+                    "codigo_disciplina": "HCS0191",
+                    "nome_disciplina": "MÉTODOS QUANTITATIVOS"
+                },
+                {
+                    "codigo_disciplina": "HCS0224",
+                    "nome_disciplina": "PENSAMENTO ANTROPOLÓGICO BRASILEIRO"
+                },
+                {
+                    "codigo_disciplina": "HCS0161",
+                    "nome_disciplina": "SOCIOLOGIA I"
+                },
+                {
+                    "codigo_disciplina": "HCS0165",
+                    "nome_disciplina": "SOCIOLOGIA III"
+                },
+                {
+                    "codigo_disciplina": "HCS0168",
+                    "nome_disciplina": "SOCIOLOGIA V"
+                },
+                {
+                    "codigo_disciplina": "HCS0181",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO I"
+                },
+                {
+                    "codigo_disciplina": "HCS0182",
+                    "nome_disciplina": "TRABALHO DE CONCLUSÃO DE CURSO II"
+                }
+            ]
+        },
+        {
+            "nome_curso": "HISTÓRIA",
+            "id_curso": "69675844",
+            "disciplinas": [
+                {
+                    "codigo_disciplina": "HCS0188",
+                    "nome_disciplina": "ESTÁGIO SUPERVISIONADO I"
+                },
+                {
+                    "codigo_disciplina": "HCS0233",
+                    "nome_disciplina": "ESTÁGIO SUPERVISIONADO III"
+                },
+                {
+                    "codigo_disciplina": "FAE0041",
+                    "nome_disciplina": "FUNDAMENTOS FILOSÓF. E SÓCIO-HIST. DA EDUCAÇÃO"
+                },
+                {
+                    "codigo_disciplina": "HCS0086",
+                    "nome_disciplina": "HISTÓRIA DA AMÉRICA CONTEMPORÂNEA"
+                },
+                {
+                    "codigo_disciplina": "HCS0092",
+                    "nome_disciplina": "HISTÓRIA DA AMÉRICA PORTUGUESA"
+                },
+                {
+                    "codigo_disciplina": "HCS0093",
+                    "nome_disciplina": "HISTÓRIA DA AMÉRICA PRÉ-COLOMBIANA E COLONIAL"
+                },
+                {
+                    "codigo_disciplina": "HCS0100",
+                    "nome_disciplina": "HISTÓRIA DA BAIXA IDADE MÉDIA OCIDENTAL"
+                },
+                {
+                    "codigo_disciplina": "HCS0101",
+                    "nome_disciplina": "HISTÓRIA DAS POPULAÇÕES NEGRAS E INDÍGENAS NA SOCIEDADE BRASILEIRA"
+                },
+                {
+                    "codigo_disciplina": "HCS0102",
+                    "nome_disciplina": "HISTÓRIA DO BRASIL CONTEMPORÂNEO"
+                },
+                {
+                    "codigo_disciplina": "HCS0112",
+                    "nome_disciplina": "HISTÓRIA DO MUNDO CONTEMPORÂNEO"
+                },
+                {
+                    "codigo_disciplina": "ILL0065",
+                    "nome_disciplina": "LIBRAS - LÍNGUA BRASILEIRA DE SINAIS"
+                },
+                {
+                    "codigo_disciplina": "HCS0238",
+                    "nome_disciplina": "MONOGRAFIA"
+                },
+                {
+                    "codigo_disciplina": "HCS0144",
+                    "nome_disciplina": "MOVIMENTOS SOCIAIS E MUNDO DO TRABALHO"
+                },
+                {
+                    "codigo_disciplina": "HCS0145",
+                    "nome_disciplina": "O OCIDENTE MODERNO: ECONOMIA E CULTURA"
+                },
+                {
+                    "codigo_disciplina": "HCS0184",
+                    "nome_disciplina": "PESQUISA HISTÓRICA II"
+                },
+                {
+                    "codigo_disciplina": "FAE0260",
+                    "nome_disciplina": "POLÍTICAS EDUCACIONAIS NO BRASIL"
+                },
+                {
+                    "codigo_disciplina": "HCS0173",
+                    "nome_disciplina": "TEORIA E METODOLOGIA DA HISTÓRIA II"
+                },
+                {
+                    "codigo_disciplina": "HCS0174",
+                    "nome_disciplina": "TEORIA E METODOLOGIA DA HISTÓRIA III"
+                }
+            ]
+        }
+    ]
+}

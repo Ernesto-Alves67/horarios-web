@@ -43,61 +43,79 @@ function StatusScreen() {
   };
 
   const handleFileUpload = async (event) => {
-  const file = event.target.files[0];
-  if (!file) return;
+    const file = event.target.files[0];
+    if (!file) return;
 
-  const isHtml = file.type === 'text/html' || file.name.endsWith('.html');
-  const isPdf = file.type === 'application/pdf' || file.name.endsWith('.pdf');
+    const isHtml = file.type === 'text/html' || file.name.endsWith('.html');
+    const isPdf = file.type === 'application/pdf' || file.name.endsWith('.pdf');
 
-  if (!isHtml && !isPdf) {
-    setMessage({ text: 'Selecione um arquivo HTML ou PDF válido.', error: true });
-    return;
-  }
-
-  setIsLoading(true);
-  setMessage(null);
-
-  try {
-    let parsedSchedules = [];
-
-    if (isHtml) {
-      // logica html
-      let htmlContent = await readFileWithEncoding(file, 'utf-8');
-      const detectedCharset = detectCharsetFromHtml(htmlContent);
-      if (detectedCharset && detectedCharset !== 'utf-8') {
-        htmlContent = await readFileWithEncoding(file, detectedCharset);
-      }
-      parsedSchedules = processarArquivoHtml(htmlContent, saveUserData);
-    } 
-    else if (isPdf) {
-      // logica do pdf
-      const fullText = await extractTextFromPdf(file);
-      const { userData: pdfUser, schedules: pdfSchedules } = parseSigaaPdfText(fullText, parseHorario);
-      
-      if (pdfUser.nome || pdfUser.matricula) {
-        saveUserData(pdfUser);
-      }
-      parsedSchedules = pdfSchedules;
+    if (!isHtml && !isPdf) {
+      setMessage({ text: 'Selecione um arquivo HTML ou PDF válido.', error: true });
+      return;
     }
 
-    if (parsedSchedules && parsedSchedules.length > 0) {
-      LocalStorageHelper.setSchedules(parsedSchedules);
-      LocalStorageHelper.setFileLoaded(true);
-      setSchedules(parsedSchedules);
-      setHasSchedule(true);
+    setIsLoading(true);
+    setMessage(null);
 
-      const totalUnicos = new Set(parsedSchedules.map(s => s.codigo)).size;
-      setMessage({ text: `Horário carregado via ${isPdf ? 'PDF' : 'HTML'}! ${totalUnicos} aula(s).`, error: false });
-    } else {
-      setMessage({ text: 'Nenhuma aula encontrada no arquivo.', error: true });
+    try {
+      let parsedSchedules = [];
+
+      if (isHtml) {
+        // Processamento HTML
+        let htmlContent = await readFileWithEncoding(file, 'utf-8');
+        const detectedCharset = detectCharsetFromHtml(htmlContent);
+        if (detectedCharset && detectedCharset !== 'utf-8') {
+          htmlContent = await readFileWithEncoding(file, detectedCharset);
+        }
+        parsedSchedules = processarArquivoHtml(htmlContent, saveUserData);
+      } else if (isPdf) {
+        // Processamento PDF: Extração nativa de texto
+        const { extractTextFromPdf, parseSigaaPdfText } = await import('../../utils/pdfParser');
+        const fullText = await extractTextFromPdf(file);
+        let result = parseSigaaPdfText(fullText, parseHorario);
+
+        // Fallback OCR: Extrai dados do aluno caso o PDF seja gerado via Mobile
+        if (!result.userData.nome || !result.userData.matricula) {
+          setMessage({ text: 'Identificando dados do aluno (pode levar alguns segundos)...', error: false });
+
+          try {
+            const { extractHeaderViaOCR, parseOcrUserData } = await import('../../utils/pdfParser');
+            const ocrText = await extractHeaderViaOCR(file);
+            const ocrUserData = parseOcrUserData(ocrText);
+
+            result.userData.nome = ocrUserData.nome || result.userData.nome;
+            result.userData.matricula = ocrUserData.matricula || result.userData.matricula;
+            result.userData.curso = ocrUserData.curso || result.userData.curso;
+          } catch (ocrError) {
+            console.error("Erro no OCR do cabeçalho:", ocrError);
+          }
+        }
+
+        if (result.userData.nome || result.userData.matricula) {
+          saveUserData(result.userData);
+        }
+        parsedSchedules = result.schedules;
+      }
+
+      // Finaliza o carregamento salvando os estados
+      if (parsedSchedules && parsedSchedules.length > 0) {
+        LocalStorageHelper.setSchedules(parsedSchedules);
+        LocalStorageHelper.setFileLoaded(true);
+        setSchedules(parsedSchedules);
+        setHasSchedule(true);
+
+        const totalUnicos = new Set(parsedSchedules.map(s => s.codigo)).size;
+        setMessage({ text: `Horário carregado! ${totalUnicos} aula(s).`, error: false });
+      } else {
+        setMessage({ text: 'Nenhuma aula encontrada no arquivo.', error: true });
+      }
+    } catch (error) {
+      console.error('Erro ao processar arquivo:', error);
+      setMessage({ text: 'Erro ao processar o arquivo.', error: true });
+    } finally {
+      setIsLoading(false);
     }
-  } catch (error) {
-    console.error('Error processing file:', error);
-    setMessage({ text: 'Erro ao processar o arquivo.', error: true });
-  } finally {
-    setIsLoading(false);
-  }
-};
+  };
 
   const handleClearData = () => {
     LocalStorageHelper.setSchedules([]);
@@ -126,11 +144,11 @@ function StatusScreen() {
 
   const handleOpenSigaa = () => {
     const info = DeviceInfo.getDeviceInfo();
-    
+
     // verifica se a string do nome do dispositivo contém 'Mobile'
     const isMobile = info.deviceName.includes('Mobile');
-    
-    const urlSigaa = isMobile 
+
+    const urlSigaa = isMobile
       ? 'https://sigaa.sistemas.ufcat.edu.br/sigaa/mobile/touch/public/principal.jsf' // Link Mobile
       : 'https://sigaa.sistemas.ufcat.edu.br/sigaa/verTelaLogin.do'; // Link Clássico (PC/Mac)
 
@@ -202,10 +220,10 @@ function StatusScreen() {
 
       <Status_S.Controls>
         <Status_S.FileInput
-          ref={fileInputRef} 
-          type="file" 
+          ref={fileInputRef}
+          type="file"
           accept=".html,.pdf"
-          onChange={handleFileUpload} 
+          onChange={handleFileUpload}
           id="file-upload"
         />
         <Status_S.FileLabel htmlFor="file-upload">
@@ -235,7 +253,7 @@ function StatusScreen() {
           style={{
             width: '100%',
             background: 'none',
-            border: '1px solid var(--card-border)', // Ou use props.theme se preferir
+            border: '1px solid var(--card-border)',
             borderRadius: '8px',
             padding: '12px',
             color: '#666',
